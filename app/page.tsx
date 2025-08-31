@@ -1,69 +1,112 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import profilePic from "../src/images/ajda.png";
 import topsiProject from "../src/images/topsi-project.png";
+import azGradient from "../src/images/AZ-gradient.svg";
+import popsyLogo from "../src/images/popsy.png";
+import mooheroLogo from "../src/images/MooHero.svg";
+import topsiLogo from "../src/images/topsi.svg";
+import ajdaWalking from "../src/images/ajda-2.png";
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("home");
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["home", "about", "startups", "projects", "contact"];
-      const scrollPosition = window.scrollY + 100;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [formStatus, setFormStatus] = useState({
+    isSubmitting: false,
+    isSubmitted: false,
+    isError: false,
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormStatus({
+        isSubmitting: false,
+        isSubmitted: false,
+        isError: true,
+        message: 'Please fill out all fields.'
+      });
+      return;
+    }
+    
+    // Submit form
+    setFormStatus({
+      isSubmitting: true,
+      isSubmitted: false,
+      isError: false,
+      message: ''
+    });
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
       
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
+      const data = await response.json();
+      
+      if (response.ok) {
+        setFormStatus({
+          isSubmitting: false,
+          isSubmitted: true,
+          isError: false,
+          message: data.message || 'Message sent successfully!'
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        throw new Error(data.message || 'Something went wrong');
       }
-    };
-    
-    const handleMouseMove = (e: MouseEvent) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousemove", handleMouseMove);
-    
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+    } catch (error) {
+      setFormStatus({
+        isSubmitting: false,
+        isSubmitted: false,
+        isError: true,
+        message: error instanceof Error ? error.message : 'Failed to send message. Please try again.'
+      });
+    }
+  };
   
   return (
     <div className="relative font-sans min-h-screen bg-[#FCFCFC] dark:bg-[#0A0A0A] overflow-x-hidden">
-      {/* Custom cursor effect - very Gen-Z */}
-      <div 
-        className="pointer-events-none fixed hidden md:block w-6 h-6 rounded-full border-2 border-pink-500 z-50 transition-transform duration-100 ease-out"
-        style={{ 
-          left: `${cursorPosition.x}px`, 
-          top: `${cursorPosition.y}px`,
-          transform: 'translate(-50%, -50%)',
-        }}
-      />
+      {/* Custom cursor effect removed */}
       
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-40 backdrop-blur-md bg-white/70 dark:bg-black/70 border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
-            Ajda Zajc
-          </div>
+        <div className="mb-4 md:mb-0">
+              <Image src={azGradient} alt="Ajda Zajc" width={80} height={40} className="h-8 w-auto" />
+            </div>
           
           <div className="hidden md:flex space-x-8">
             {["home", "about", "startups", "projects", "contact"].map((item) => (
               <a 
                 key={item}
                 href={`#${item}`}
-                className={`capitalize text-sm transition-all hover:text-pink-500 ${activeSection === item ? 'text-pink-500 font-medium' : 'text-gray-600 dark:text-gray-300'}`}
+                className="capitalize text-sm transition-all hover:text-pink-500 text-gray-600 dark:text-gray-300"
               >
                 {item}
               </a>
@@ -123,8 +166,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full md:w-1/2 relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-pink-500 to-blue-500 mx-auto relative overflow-hidden">
-                {/* Add your photo to the public directory and update the src path */}
+              <div className="w-64 h-64 md:w-80 md:h-96 rounded-full bg-gradient-to-br from-pink-500 to-blue-500 mx-auto relative overflow-hidden">
                 <Image 
                   src={profilePic} 
                   alt="AJDA ZAJC" 
@@ -154,10 +196,10 @@ export default function Home() {
               <h3 className="text-xl font-semibold">Who am I?</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 I’m a software developer + designer from Ljubljana, Slovenia, who loves mixing code and creating something new. I like building things from scratch, and making something that works.
-                Startups have been my passion for a long time — from building smart collars for cows at MooHero 🐄 to creating my own AI-powered tool for hairdressers with Topsi AI 💇‍♀️. I’ve learned to move fast, adapt even faster, and turn ideas into products that hopefully make sense in the real world.
+                Startups have been my passion for a long time — from helping to build an app for smart collars for cows at MooHero 🐄 to creating an AI-powered tool for hairdressers with Topsi AI 💇‍♀️. I’ve learned to move fast, adapt even faster, and turn ideas into products that hopefully make sense in the real world.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                When I'm not coding, I like to visit new places and go outside of my comfort zone. I also like to draw, go horseback riding and have a good time with my family.
+                Outside of work, I love discovering new places and pushing myself out of my comfort zone. I also enjoy drawing, horseback riding, and spending time with my family.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <div>
@@ -202,6 +244,59 @@ export default function Home() {
         </div>
       </section>
       
+      {/* Employment History Section */}
+      <section id="employment" className="py-16 md:py-24 bg-white dark:bg-gray-800/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Employment History</h2>
+            <p className="text-gray-600 dark:text-gray-300">My professional journey and experience</p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-8">
+            {/* Topsi.ai */}
+            <div className="relative pl-8 border-l-2 border-pink-500">
+              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-white flex items-center justify-center shadow-md">
+                <Image src={topsiLogo} alt="Topsi.ai" width={20} height={20} className="rounded-full" />
+              </div>
+              <div className="mb-1 flex flex-wrap items-center gap-2">
+                <h3 className="text-xl font-bold">COO & Developer & Co-founder, Topsi.ai</h3>              </div>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Jan 2023 — Present</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                Creating an AI-powered tool for hairdressers that simplifies their day-to-day process, giving them color confidence and client clarity in one place.
+              </p>
+            </div>
+            
+            {/* MooHero */}
+            <div className="relative pl-8 border-l-2 border-pink-500">
+              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-white flex items-center justify-center shadow-md">
+                <Image src={mooheroLogo} alt="MooHero" width={20} height={20} className="rounded-full" />
+              </div>
+              <div className="mb-1">
+                <h3 className="text-xl font-bold">Software Developer / Designer, MooHero</h3>
+              </div>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Ljubljana</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                Working on smart collars for heat detection at a rapidly growing startup, where I've learned to adapt quickly, embrace change, and deliver solutions in a dynamic environment.
+              </p>
+            </div>
+            
+            {/* Popsy */}
+            <div className="relative pl-8 border-l-2 border-pink-500">
+              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-white flex items-center justify-center shadow-md">
+                <Image src={popsyLogo} alt="Popsy" width={20} height={20} className="rounded-full" />
+              </div>
+              <div className="mb-1">
+                <h3 className="text-xl font-bold">Software Developer, Popsy</h3>
+              </div>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Jun 2021 — Jan 2023</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                Helped to bring the company into Y Combinator acceptance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Startup Passion Section */}
       <section id="startups" className="py-16 md:py-24">
         <div className="container mx-auto px-6">
@@ -212,24 +307,19 @@ export default function Home() {
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">🚀 My Passion for Startups</h2>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-4">
-              I've always been drawn to startups because they let me actually make something of my own and see the impact of my work. In fast-moving environments like MooHero and Topsi AI, I've learned to adapt quickly, take on challenges outside my comfort zone, and wear many hats — not just coding, but also managing people, solving problems, and jumping into things that weren't technically "my job."
+              I've always been drawn to startups because they let me actually make something of my own and see the impact of my work. In fast-moving environments like MooHero and Topsi AI, I've learned to adapt quickly and take on challenges outside my comfort zone — not just coding, but also managing people, solving problems, and jumping into things that weren't technically "my job."
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-lg">
               That's what I love most about startups: the chance to grow fast, create something real, and feel like what I do actually matters.
             </p>
-              </div>
-              <div className="flex-1 relative aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700">
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-blue-500/20 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <svg className="w-16 h-16 mx-auto text-gray-400 dark:text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                    </svg>
-                    <p className="text-gray-500 dark:text-gray-400">Add your startup journey image here</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+          <Image 
+            src={ajdaWalking} 
+            alt="Ajda walking"  
+            className="rounded-xl max-w-[20rem]" 
+          />
+          </div>
+        </div>
         </div>
       </section>
       
@@ -241,7 +331,8 @@ export default function Home() {
             <p className="text-gray-600 dark:text-gray-300">This is my most recent project. I am part of the start up with two other girls. Together we are hoping to make a chanege in the hairdressing industry with our AI.</p>
           </div>
           
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto space-y-8">
+            {/* Topsi.ai Project */}
             <div className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
               <div className="relative aspect-video group">
                 <div className="absolute inset-0 overflow-hidden">
@@ -289,7 +380,12 @@ export default function Home() {
           </div>
           
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {formStatus.message && (
+                <div className={`p-4 rounded-lg ${formStatus.isError ? 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400' : 'bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400'}`}>
+                  {formStatus.message}
+                </div>
+              )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -298,8 +394,11 @@ export default function Home() {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
                     placeholder="Your name"
+                    disabled={formStatus.isSubmitting}
                   />
                 </div>
                 <div>
@@ -309,21 +408,13 @@ export default function Home() {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
                     placeholder="your.email@example.com"
+                    disabled={formStatus.isSubmitting}
                   />
                 </div>
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
-                  placeholder="What's this about?"
-                />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -332,16 +423,20 @@ export default function Home() {
                 <textarea
                   id="message"
                   rows={5}
+                  value={formData.message}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all"
                   placeholder="Tell me about your project..."
+                  disabled={formStatus.isSubmitting}
                 ></textarea>
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-blue-500 text-white font-medium hover:shadow-lg hover:shadow-pink-500/20 transition-all"
+                  className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-blue-500 text-white font-medium hover:shadow-lg hover:shadow-pink-500/20 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                  disabled={formStatus.isSubmitting}
                 >
-                  Send Message
+                  {formStatus.isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>
@@ -353,8 +448,8 @@ export default function Home() {
       <footer className="py-8 border-t border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent mb-4 md:mb-0">
-              Ajda Zajc
+            <div className="mb-4 md:mb-0">
+              <Image src={azGradient} alt="Ajda Zajc" width={80} height={40} className="h-8 w-auto" />
             </div>
             <div className="flex space-x-6">
               <a href="https://github.com/ajda00" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-500">

@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "My Portfolio | Creative Developer",
   description: "Personal portfolio showcasing my projects, skills, and creative work",
   keywords: ["portfolio", "developer", "designer", "creative", "projects"],
+  icons: {
+    icon: "/AZ.svg",
+  },
 };
 
 export default function RootLayout({

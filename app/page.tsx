@@ -195,8 +195,8 @@ export default function Home() {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Who am I?</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                I’m a software developer + designer from Ljubljana, Slovenia, who loves mixing code and creating something new. I like building things from scratch, and making something that works.
-                Startups have been my passion for a long time — from helping to build an app for smart collars for cows at MooHero 🐄 to creating an AI-powered tool for hairdressers with Topsi AI 💇‍♀️. I’ve learned to move fast, adapt even faster, and turn ideas into products that hopefully make sense in the real world.
+              I'm a software developer and designer from Ljubljana, Slovenia, who loves creating things from scratch and bringing new ideas to life.
+              Startups have been my passion throughout my adult life. From building a smart collar app for cows at MooHero 🐄 to creating an AI-powered tool for hairdressers with Topsi AI 💇‍♀️. Along the way, I've learned to move fast, adapt even faster, and turn ideas into real, working products.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 Outside of work, I love discovering new places and pushing myself out of my comfort zone. I also enjoy drawing, horseback riding, and spending time with my family.
@@ -260,9 +260,9 @@ export default function Home() {
               </div>
               <div className="mb-1 flex flex-wrap items-center gap-2">
                 <h3 className="text-xl font-bold">COO & Developer & Co-founder, Topsi.ai</h3>              </div>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Jan 2023 — Present</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Jan 2025 — Present</p>
               <p className="text-gray-600 dark:text-gray-300">
-                Creating an AI-powered tool for hairdressers that simplifies their day-to-day process, giving them color confidence and client clarity in one place.
+                Creating an AI-powered tool for hairdressers that simplifies their day-to-day process, giving them color confidence and client clarity all in one place.
               </p>
             </div>
             
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Ljubljana</p>
               <p className="text-gray-600 dark:text-gray-300">
-                Working on smart collars for heat detection at a rapidly growing startup, where I've learned to adapt quickly, embrace change, and deliver solutions in a dynamic environment.
+                Creating the UI interface at a rapidly growing startup that creates smart collars with heat detection, where I've learned to adapt quickly and deliver solutions in a dynamic environment.
               </p>
             </div>
             
@@ -290,7 +290,7 @@ export default function Home() {
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Jun 2021 — Jan 2023</p>
               <p className="text-gray-600 dark:text-gray-300">
-                Helped to bring the company into Y Combinator acceptance.
+              Built a no-code website builder that was accepted into Y Combinator.
               </p>
             </div>
           </div>
@@ -307,11 +307,10 @@ export default function Home() {
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">🚀 My Passion for Startups</h2>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-4">
-              I've always been drawn to startups because they let me actually make something of my own and see the impact of my work. In fast-moving environments like MooHero and Topsi AI, I've learned to adapt quickly and take on challenges outside my comfort zone — not just coding, but also managing people, solving problems, and jumping into things that weren't technically "my job."
+                Startups attract me because they’re never monotone and my work has a direct impact. In fast-moving environments like MooHero and Topsi AI, I've learned to adapt quickly and take on challenges outside my comfort zone — not just coding, but also managing people, solving problems, and jumping into things that weren't technically "my job."
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-lg">
-              That's what I love most about startups: the chance to grow fast, create something real, and feel like what I do actually matters.
-            </p>
+            It’s taught me to stay flexible, keep learning, and not overthink titles with the goal to build something that works and helps people.            </p>
           </div>
           <Image 
             src={ajdaWalking} 
@@ -328,7 +327,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
-            <p className="text-gray-600 dark:text-gray-300">This is my most recent project. I am part of the start up with two other girls. Together we are hoping to make a chanege in the hairdressing industry with our AI.</p>
+            <p className="text-gray-600 dark:text-gray-300">This is my most recent project. I am part of the start up with two other girls. Together we are hoping to make a change in the hairdressing industry with our solution that uses at it’s core.</p>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-8">

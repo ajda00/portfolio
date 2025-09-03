@@ -229,7 +229,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">LinkedIn</h4>
-                  <a href="https://linkedin.com/in/ajdazajc" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:underline">linkedin.com/in/ajdazajc</a>
+                  <a href="https://www.linkedin.com/in/ajda-zajc/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:underline">linkedin.com/in/ajda-zajc</a>
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Resume</h4>

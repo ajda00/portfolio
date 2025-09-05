@@ -11,6 +11,7 @@ import topsiLogo from "../src/images/topsi.svg";
 import ajdaWalking from "../src/images/ajda-2.png";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -97,9 +98,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-40 backdrop-blur-md bg-white/70 dark:bg-black/70 border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="mb-4 md:mb-0">
-              <Image src={azGradient} alt="Ajda Zajc" width={80} height={40} className="h-8 w-auto" />
-            </div>
+          <div className="mb-4 md:mb-0">
+            <Image src={azGradient} alt="Ajda Zajc" width={80} height={40} className="h-8 w-auto" />
+          </div>
           
           <div className="hidden md:flex space-x-8">
             {["home", "about", "startups", "projects", "contact"].map((item) => (
@@ -114,14 +115,38 @@ export default function Home() {
           </div>
           
           <div className="md:hidden">
-            {/* Mobile menu button would go here */}
-            <div className="w-6 h-6 flex flex-col justify-around cursor-pointer">
-              <span className="block w-full h-0.5 bg-gray-800 dark:bg-gray-200"></span>
-              <span className="block w-full h-0.5 bg-gray-800 dark:bg-gray-200"></span>
-              <span className="block w-full h-0.5 bg-gray-800 dark:bg-gray-200"></span>
+            {/* Mobile menu button */}
+            <div 
+              className="w-6 h-6 flex flex-col justify-around cursor-pointer" 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <span className={`block w-full h-0.5 bg-gray-800 dark:bg-gray-200 transition-all ${mobileMenuOpen ? 'transform rotate-45 translate-y-1.5' : ''}`}></span>
+              <span className={`block w-full h-0.5 bg-gray-800 dark:bg-gray-200 transition-all ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+              <span className={`block w-full h-0.5 bg-gray-800 dark:bg-gray-200 transition-all ${mobileMenuOpen ? 'transform -rotate-45 -translate-y-1.5' : ''}`}></span>
             </div>
           </div>
         </div>
+        
+        {/* Mobile menu dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-lg animate-fadeIn">
+            <div className="container mx-auto px-6 py-4">
+              <div className="flex flex-col space-y-4">
+                {["home", "about", "startups", "projects", "contact"].map((item) => (
+                  <a 
+                    key={item}
+                    href={`#${item}`}
+                    className="capitalize text-base py-2 transition-all hover:text-pink-500 text-gray-800 dark:text-gray-200"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
       
       {/* Hero Section */}

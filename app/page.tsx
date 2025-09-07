@@ -245,10 +245,6 @@ export default function Home() {
                   <a href="mailto:ajda.zajc@gmail.com" className="text-pink-500 hover:underline">ajda.zajc@gmail.com</a>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
-                  <p className="text-gray-800 dark:text-gray-200">+386 40 765 772</p>
-                </div>
-                <div>
                   <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Languages</h4>
                   <p className="text-gray-800 dark:text-gray-200">Slovenian, English</p>
                 </div>

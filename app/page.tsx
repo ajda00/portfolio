@@ -234,7 +234,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="font-display text-5xl md:text-[5rem] lg:text-[6.5rem] leading-[1.05] tracking-tight text-gray-900 dark:text-white whitespace-nowrap">
+          <h1 className="font-display text-4xl md:text-[5rem] lg:text-[6.5rem] leading-[1.05] tracking-tight text-gray-900 dark:text-white md:whitespace-nowrap">
             Building bold brands
             <br />
             with <em className="font-display italic text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400" style={{ paddingRight: '0.1em' }}>thoughtful design</em>

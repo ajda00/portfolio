@@ -20,10 +20,40 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Ajda Zajc | Web Design & Development for Startups",
-  description: "I design and build modern websites and mobile apps for startups and businesses. Based in Ljubljana, Slovenia. Y Combinator alumni experience.",
-  keywords: ["Ajda Zajc", "software developer", "designer", "portfolio", "Ljubljana", "Slovenia", "startups", "MooHero", "Topsi AI", "Popsy", "web development"],
-  authors: [{ name: "Ajda Zajc", url: "https://www.linkedin.com/in/ajda-zajc/" }],
+  title: {
+    default: "Izdelava spletnih strani | Ajda Zajc — Spletne strani, aplikacije & landing page",
+    template: "%s | Ajda Zajc",
+  },
+  description: "Izdelava spletne strani po meri — spletne strani, landing page in mobilne aplikacije za startupi in mala podjetja. Profesionalno oblikovanje in razvoj v Ljubljani. Hitra dostava, moderna tehnologija (Next.js, React). Od ideje do objave v nekaj dneh.",
+  keywords: [
+    "izdelava spletne strani",
+    "izdelava spletnih strani",
+    "spletna stran",
+    "spletne strani",
+    "izdelava spletne strani cena",
+    "izdelava spletne strani Ljubljana",
+    "oblikovanje spletnih strani",
+    "izdelava landing page",
+    "landing page",
+    "pristajalna stran",
+    "web design Ljubljana",
+    "web development Ljubljana",
+    "mobilne aplikacije",
+    "razvoj spletnih strani",
+    "spletna stran za podjetje",
+    "cenovna spletna stran",
+    "profesionalna spletna stran",
+    "moderna spletna stran",
+    "hitra spletna stran",
+    "Ajda Zajc",
+    "spletna agencija Ljubljana",
+    "oblikovanje",
+    "UI UX dizajn",
+    "React",
+    "Next.js",
+    "freelance web designer Slovenija",
+  ],
+  authors: [{ name: "Ajda Zajc", url: "https://ajdazajc.com" }],
   creator: "Ajda Zajc",
   publisher: "Ajda Zajc",
   formatDetection: {
@@ -34,22 +64,32 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ajdazajc.com"),
   alternates: {
     canonical: "/",
+    languages: {
+      "sl": "/",
+      "x-default": "/",
+    },
   },
   openGraph: {
-    title: "Ajda Zajc | Web Design & Development for Startups",
-    description: "I design and build modern websites and mobile apps for startups and businesses. Based in Ljubljana, Slovenia. Y Combinator alumni experience.",
+    title: "Izdelava spletnih strani | Ajda Zajc — od ideje do objave",
+    description: "Izdelava spletnih strani, landing page strani in mobilnih aplikacij. Oblikovanje in razvoj po meri za startupi in mala podjetja. Ljubljana, Slovenija.",
     url: "https://ajdazajc.com",
-    siteName: "Ajda Zajc Portfolio",
-    locale: "en_US",
+    siteName: "Ajda Zajc — Izdelava spletnih strani",
+    locale: "sl_SI",
     type: "website",
     images: [
       {
-        url: "/src/images/ajda.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ajda Zajc - Software Developer and Designer",
+        alt: "Ajda Zajc — Izdelava spletnih strani, landing page & mobilnih aplikacij",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Izdelava spletnih strani | Ajda Zajc",
+    description: "Spletne strani, landing page strani in mobilne aplikacije za startupi in mala podjetja. Ljubljana, Slovenija.",
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/AZ.svg",
@@ -61,9 +101,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 };
@@ -74,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="sl">
       <head>
         {/* Google tag (gtag.js) */}
         <Script
@@ -89,43 +129,197 @@ export default function RootLayout({
             gtag('config', 'G-2WB7W4V53G');
           `}
         </Script>
-        
-        {/* JSON-LD structured data */}
-        <Script id="schema-person" type="application/ld+json" strategy="beforeInteractive">
+
+        {/* LocalBusiness structured data — helps Google show you for local searches */}
+        <Script id="schema-local-business" type="application/ld+json" strategy="beforeInteractive">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Ajda Zajc",
+              "@type": "ProfessionalService",
+              "name": "Ajda Zajc — Izdelava spletnih strani",
               "url": "https://ajdazajc.com",
-              "image": "https://ajdazajc.com/src/images/ajda.png",
-              "jobTitle": "Software Developer & Designer",
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Topsi.ai"
+              "image": "https://ajdazajc.com/og-image.png",
+              "description": "Izdelava spletnih strani, landing page strani in mobilnih aplikacij za startupi in mala podjetja. Oblikovanje in razvoj po meri.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ljubljana",
+                "addressCountry": "SI"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 46.0569,
+                "longitude": 14.5058
+              },
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Slovenia"
+                }
+              ],
+              "founder": {
+                "@type": "Person",
+                "name": "Ajda Zajc",
+                "jobTitle": "Oblikovalka in razvijalka spletnih strani",
+                "sameAs": [
+                  "https://www.linkedin.com/in/ajda-zajc/",
+                  "https://github.com/ajda00"
+                ]
+              },
+              "knowsAbout": [
+                "Izdelava spletnih strani",
+                "Landing page",
+                "Mobilne aplikacije",
+                "Web Design",
+                "UI/UX Design",
+                "React",
+                "Next.js",
+                "Celostna podoba"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Storitve",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Izdelava spletnih strani",
+                      "description": "Oblikovanje in razvoj spletnih strani po meri z Next.js, React in TypeScript."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Izdelava landing page strani",
+                      "description": "Landing page strani, ki pritegnejo pozornost in pripeljejo stranke."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Mobilne aplikacije",
+                      "description": "iOS in Android aplikacije z nativnim občutkom."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Celostna podoba in blagovna znamka",
+                      "description": "Logotipi, barve in vizualni jezik, ki izstopa."
+                    }
+                  }
+                ]
               },
               "sameAs": [
                 "https://www.linkedin.com/in/ajda-zajc/",
                 "https://github.com/ajda00"
-              ],
-              "knowsAbout": ["Software Development", "Web Design", "Startups", "UI/UX Design"],
-              "description": "Software developer and designer from Ljubljana, Slovenia. Experienced in startups, web development, and creating innovative solutions."
+              ]
             }
           `}
         </Script>
-        
+
         <Script id="schema-website" type="application/ld+json" strategy="beforeInteractive">
           {`
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Ajda Zajc Portfolio",
+              "name": "Ajda Zajc — Izdelava spletnih strani",
               "url": "https://ajdazajc.com",
-              "description": "Personal portfolio of Ajda Zajc, software developer and designer",
+              "description": "Izdelava spletnih strani, landing page in mobilnih aplikacij. Ljubljana, Slovenija.",
+              "inLanguage": "sl",
               "author": {
                 "@type": "Person",
                 "name": "Ajda Zajc"
               }
+            }
+          `}
+        </Script>
+
+        <Script id="schema-faq" type="application/ld+json" strategy="beforeInteractive">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Koliko stane izdelava spletne strani?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cena izdelave spletne strani je odvisna od obsega projekta. Enostavna predstavitvena stran se začne pri 500€, medtem ko bolj kompleksne spletne strani z dodatnimi funkcionalnostmi (rezervacijski sistem, e-trgovina) stanejo več. Vsak projekt ocenim individualno po brezplačnem posvetu."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Kako dolgo traja izdelava spletne strani?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Večino spletnih strani dostavim v 1–2 tednih. Enostaven landing page je lahko pripravljen v nekaj dneh, medtem ko bolj obsežni projekti z mobilno aplikacijo ali kompleksnim dizajnom trajajo 3–4 tedne."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Katere tehnologije uporabljate za izdelavo spletnih strani?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Spletne strani gradim z modernimi tehnologijami: Next.js, React, TypeScript in Tailwind CSS. To zagotavlja hitro nalaganje, odlično SEO optimizacijo in enostavno vzdrževanje. Za mobilne aplikacije uporabljam Ionic in Angular."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Ali ponujate tudi oblikovanje (dizajn) spletne strani?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da, ponujam celoten paket — od oblikovanja (UI/UX dizajn v Figmi) do razvoja in objave spletne strani. Ni vam treba iskati ločenega oblikovalca in razvijalca."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Ali je spletna stran optimizirana za mobilne naprave in Google?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutno. Vsaka spletna stran, ki jo izdelam, je popolnoma odzivna (responsive) in optimizirana za iskalnike (SEO). Uporabljam hitre tehnologije, ki zagotavljajo odlične rezultate na Google PageSpeed testu."
+                  }
+                }
+              ]
+            }
+          `}
+        </Script>
+
+        <Script id="schema-breadcrumb" type="application/ld+json" strategy="beforeInteractive">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Domov",
+                  "item": "https://ajdazajc.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Izdelava spletnih strani",
+                  "item": "https://ajdazajc.com/#storitve"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Portfolio",
+                  "item": "https://ajdazajc.com/#delo"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Kontakt",
+                  "item": "https://ajdazajc.com/#kontakt"
+                }
+              ]
             }
           `}
         </Script>

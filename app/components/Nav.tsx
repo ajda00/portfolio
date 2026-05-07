@@ -18,13 +18,7 @@ export default function Nav() {
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/">
-            <Image
-              src={azGradient}
-              alt="Ajda Zajc Logo"
-              width={80}
-              height={40}
-              className="h-7 w-auto"
-            />
+            <Image src={azGradient} alt="Ajda Zajc Logo" width={80} height={40} className="h-7 w-auto" />
           </Link>
 
           <div className="flex items-center gap-8">
@@ -32,7 +26,7 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hidden md:inline text-[13px] tracking-wide text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="hidden md:inline text-[13px] tracking-wide text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 {link.label}
               </Link>

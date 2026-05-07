@@ -28,71 +28,6 @@ export const metadata: Metadata = {
   },
 };
 
-const steps = [
-  {
-    step: "01",
-    title: "Analiza in strategija",
-    desc: "Spoznam vaše podjetje, cilje in ciljno publiko. Skupaj definiramo strukturo strani, ključna sporočila in funkcionalnosti.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15a2.251 2.251 0 0 1 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25Z" />
-      </svg>
-    ),
-  },
-  {
-    step: "02",
-    title: "Oblikovanje (UI/UX dizajn)",
-    desc: "V Figmi oblikujem vizualni dizajn — barve, tipografijo, postavitev in uporabniško izkušnjo. Osnutek prejmete v 24–72 urah.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
-      </svg>
-    ),
-  },
-  {
-    step: "03",
-    title: "Razvoj in programiranje",
-    desc: "Dizajn pretvorim v delujočo spletno stran z Next.js, React in TypeScript. Hitra, SEO-optimizirana in pripravljena za rast.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-      </svg>
-    ),
-  },
-  {
-    step: "04",
-    title: "Testiranje in objava",
-    desc: "Stran testiram na vseh napravah, optimiziram hitrost in jo objavim na vaši domeni. Po objavi nudim podporo in vzdrževanje.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
-      </svg>
-    ),
-  },
-];
-
-const tiers = [
-  {
-    name: "Landing page",
-    price: "od 500 €",
-    desc: "Enostranska stran za hiter start",
-    features: ["Enostranska stran", "Odziven dizajn", "SEO osnove", "Kontaktni obrazec", "Dostava v 3–5 dneh"],
-  },
-  {
-    name: "Poslovna spletna stran",
-    price: "od 1.200 €",
-    desc: "Celovita predstavitev podjetja",
-    features: ["Več podstrani", "Celostno oblikovanje", "SEO optimizacija", "Blog ali novice", "Dostava v 1–2 tednih"],
-    featured: true,
-  },
-  {
-    name: "Kompleksna rešitev",
-    price: "po dogovoru",
-    desc: "Aplikacije in e-trgovine po meri",
-    features: ["E-trgovina ali aplikacija", "Prilagojene funkcionalnosti", "Integracije (API-ji)", "Mobilna aplikacija", "Dolgoročno sodelovanje"],
-  },
-];
-
 const faqs = [
   {
     q: "Koliko stane izdelava spletne strani?",
@@ -100,7 +35,7 @@ const faqs = [
   },
   {
     q: "Kako dolgo traja izdelava spletne strani?",
-    a: "Enostaven landing page je pripravljen v 3–5 dneh. Poslovna spletna stran v 1–2 tednih. Bolj obsežni projekti z mobilno aplikacijo ali kompleksnim dizajnom trajajo 3–4 tedne. Vedno se dogovoriva za realen rok.",
+    a: "Enostaven landing page je pripravljen v 3–5 dneh. Poslovna spletna stran v 1–2 tednih. Bolj obsežni projekti z mobilno aplikacijo ali kompleksnim dizajnom trajajo 3–4 tedne.",
   },
   {
     q: "Ali je spletna stran optimizirana za Google (SEO)?",
@@ -116,116 +51,73 @@ const faqs = [
   },
 ];
 
-const techStack = [
-  "Next.js", "React", "TypeScript", "Tailwind CSS",
-  "Figma", "Vercel", "Node.js", "Ionic",
-];
-
 export default function IzdelavaSpletneStrani() {
   return (
     <div className="relative min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A] overflow-x-hidden">
       <Nav />
 
       {/* ==================== HERO ==================== */}
-      <section className="relative pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-b from-pink-50/80 via-blue-50/40 to-transparent dark:from-pink-950/20 dark:via-blue-950/10 dark:to-transparent" />
-          <div className="absolute top-20 left-1/4 w-96 h-96 bg-pink-200/30 dark:bg-pink-900/10 rounded-full blur-3xl" />
-          <div className="absolute top-40 right-1/4 w-80 h-80 bg-blue-200/30 dark:bg-blue-900/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="max-w-5xl mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-sm text-gray-400 dark:text-gray-500 mb-8">
+      <section className="relative pt-32 pb-16 md:pt-44 md:pb-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <nav aria-label="Breadcrumb" className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20">
             <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Domov</Link>
-            <span className="mx-2">/</span>
-            <span className="text-gray-600 dark:text-gray-300">Izdelava spletnih strani</span>
+            <span className="mx-2.5 text-gray-300 dark:text-gray-700">/</span>
+            <span className="text-gray-500 dark:text-gray-400">Storitve</span>
           </nav>
 
-          <h1 className="font-[family-name:var(--font-serif-display)] text-4xl sm:text-5xl md:text-[4rem] leading-[1.1] tracking-tight text-gray-900 dark:text-white max-w-3xl">
-            Izdelava spletne strani —
-            <br />
-            <em className="font-[family-name:var(--font-serif-display)] italic text-gray-400 dark:text-gray-500">profesionalno, hitro, po meri</em>
-          </h1>
-
-          <p className="mt-6 md:mt-8 text-gray-500 dark:text-gray-400 text-base md:text-lg max-w-2xl leading-relaxed">
-            Ponujam celotno izdelavo spletne strani — od ideje in oblikovanja do razvoja in objave. Moderna tehnologija, odziven dizajn in optimizacija za iskalnike so vključeni v vsak projekt.
-          </p>
-
-          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start gap-4">
-            <Link
-              href="/#kontakt"
-              className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium text-sm hover:opacity-90 transition-opacity"
-            >
-              Brezplačen posvet
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-              </svg>
-            </Link>
-            <Link
-              href="/#delo"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              Oglej si portfolio
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6 items-end">
+            <div className="lg:col-span-8">
+              <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-5">
+                Oblikovanje & razvoj
+              </p>
+              <h1 className="font-[family-name:var(--font-serif-display)] text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[1.0] tracking-tight text-gray-900 dark:text-white">
+                Izdelava
+                <br />
+                spletne strani
+              </h1>
+            </div>
+            <div className="lg:col-span-4 lg:pb-3">
+              <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-md">
+                Od ideje in oblikovanja do razvoja in objave. Moderna tehnologija, odziven dizajn in optimizacija za iskalnike — vključeno v vsak projekt.
+              </p>
+              <div className="mt-6">
+                <Link
+                  href="/#kontakt"
+                  className="group inline-flex items-center gap-3 text-[14px] font-medium text-gray-900 dark:text-white"
+                >
+                  <span className="w-10 h-10 rounded-full bg-gray-900 dark:bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-4 h-4 text-white dark:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>
+                  </span>
+                  Brezplačen posvet
+                </Link>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Divider line */}
+        <div className="max-w-6xl mx-auto px-6 mt-16 md:mt-24">
+          <div className="h-px bg-gray-200 dark:bg-gray-800" />
         </div>
       </section>
 
-      {/* ==================== ZAKAJ ==================== */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-[13px] uppercase tracking-widest text-pink-500 dark:text-pink-400 font-medium mb-3">
-              Zakaj profesionalno
-            </p>
-            <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-gray-900 dark:text-white">
-              Zakaj potrebujete profesionalno spletno stran
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {/* ==================== NUMBERS ==================== */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-3 gap-6">
             {[
-              {
-                title: "Prvi vtis v 3 sekundah",
-                desc: "Obiskovalec se odloči v manj kot 3 sekundah, ali bo ostal. Profesionalna stran zagotavlja, da prvi vtis deluje v vašo korist.",
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "SEO in vidnost na Googlu",
-                desc: "Spletna stran po meri je optimizirana za iskalnike — prilagojena vašim poslovnim ciljem, ne generičnim predlogam.",
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Hitrast in zanesljivost",
-                desc: "Nalaganje pod 2 sekundi, popolnoma odzivna na vseh napravah, grajena s tehnologijami, ki jih uporabljajo najboljša podjetja.",
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-                  </svg>
-                ),
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className="group p-6 rounded-2xl bg-white dark:bg-gray-900/60 border border-gray-100 dark:border-gray-800 hover:border-gray-200 dark:hover:border-gray-700 hover:shadow-lg hover:shadow-gray-100/50 dark:hover:shadow-none transition-all duration-300"
-              >
-                <div className="w-11 h-11 rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 mb-4 group-hover:bg-gray-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-gray-900 transition-colors duration-300">
-                  {card.icon}
-                </div>
-                <h3 className="font-semibold text-[15px] text-gray-900 dark:text-white mb-1.5">
-                  {card.title}
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                  {card.desc}
+              { number: "20+", label: "dostavljenih projektov" },
+              { number: "5+", label: "let izkušenj" },
+              { number: "1–2", label: "tedna do objave" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center md:text-left">
+                <span className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-gray-900 dark:text-white">
+                  {stat.number}
+                </span>
+                <p className="mt-1 text-[13px] text-gray-400 dark:text-gray-500 tracking-wide">
+                  {stat.label}
                 </p>
               </div>
             ))}
@@ -233,30 +125,121 @@ export default function IzdelavaSpletneStrani() {
         </div>
       </section>
 
-      {/* ==================== PROCES ==================== */}
-      <section className="relative py-20 md:py-28 bg-gray-900 dark:bg-white/[0.03] overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-[13px] uppercase tracking-widest text-pink-400 font-medium mb-3">
+      {/* ==================== WHAT YOU GET ==================== */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+            <div className="lg:col-span-4">
+              <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4 sticky top-28">
+                Kaj dobite
+              </p>
+              <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug sticky top-36">
+                Vsaka spletna stran je zgrajena za rezultate
+              </h2>
+            </div>
+            <div className="lg:col-span-8">
+              <div className="space-y-0">
+                {[
+                  {
+                    num: "01",
+                    title: "Dizajn po meri",
+                    desc: "Vsaka stran je oblikovana od začetka v Figmi — brez predlog, brez kompromisov. Vaša blagovna znamka, vaša zgodba, vaš dizajn.",
+                  },
+                  {
+                    num: "02",
+                    title: "Moderna tehnologija",
+                    desc: "Next.js, React, TypeScript. Enake tehnologije kot Vercel, Netflix in Notion. Hitra, varna, pripravljena za rast.",
+                  },
+                  {
+                    num: "03",
+                    title: "SEO optimizacija",
+                    desc: "Struktura, meta podatki, hitrost nalaganja, strukturirani podatki — vse je vgrajeno od začetka, ne dodano naknadno.",
+                  },
+                  {
+                    num: "04",
+                    title: "Odziven na vseh napravah",
+                    desc: "Pixel-perfect na telefonu, tablici in namizju. Brez lomljenja, brez kompromisov pri uporabniški izkušnji.",
+                  },
+                  {
+                    num: "05",
+                    title: "Hitra dostava",
+                    desc: "Landing page v 3–5 dneh. Poslovna stran v 1–2 tednih. Jasen rok, brez presenečenj.",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={item.num}
+                    className={`group grid grid-cols-[auto_1fr] gap-6 md:gap-10 py-8 md:py-10 ${
+                      i < 4 ? "border-b border-gray-100 dark:border-gray-800/60" : ""
+                    }`}
+                  >
+                    <span className="font-[family-name:var(--font-mono)] text-[12px] text-gray-300 dark:text-gray-700 pt-1 tabular-nums">
+                      {item.num}
+                    </span>
+                    <div>
+                      <h3 className="text-[17px] font-semibold text-gray-900 dark:text-white mb-2 group-hover:translate-x-1 transition-transform duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== PROCESS ==================== */}
+      <section className="relative py-24 md:py-32 bg-gray-900 dark:bg-[#111] overflow-hidden">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }} />
+
+        <div className="relative max-w-6xl mx-auto px-6">
+          <div className="mb-16 md:mb-20">
+            <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
               Proces
             </p>
-            <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-white">
-              Kako poteka izdelava spletne strani
+            <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-white max-w-xl">
+              Od ideje do objave v štirih korakih
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
-            {steps.map((item) => (
-              <div key={item.step} className="flex flex-col items-center text-center">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-semibold mb-5">
-                  Korak {item.step}
-                </p>
-                <div className="w-14 h-14 rounded-2xl bg-gray-800 flex items-center justify-center text-white mb-6">
-                  {item.icon}
-                </div>
-                <h3 className="font-semibold text-white text-base mb-2">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-800/50 rounded-2xl overflow-hidden">
+            {[
+              {
+                step: "01",
+                title: "Strategija",
+                desc: "Spoznam vaše cilje, publiko in konkurenco. Definiramo strukturo in funkcionalnosti.",
+              },
+              {
+                step: "02",
+                title: "Oblikovanje",
+                desc: "V Figmi oblikujem vizualni dizajn. Osnutek prejmete v 24–72 urah za pregled.",
+              },
+              {
+                step: "03",
+                title: "Razvoj",
+                desc: "Dizajn pretvorim v kodo z Next.js in React. Hitra, čista, pripravljena za rast.",
+              },
+              {
+                step: "04",
+                title: "Objava",
+                desc: "Testiranje na vseh napravah, optimizacija hitrosti in objava na vaši domeni.",
+              },
+            ].map((item) => (
+              <div key={item.step} className="bg-gray-900 dark:bg-[#111] p-8 md:p-10">
+                <span className="font-[family-name:var(--font-mono)] text-[11px] text-gray-600 block mb-8 tabular-nums">
+                  {item.step}
+                </span>
+                <h3 className="text-lg font-semibold text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed max-w-[260px]">
+                <p className="text-[14px] text-gray-400 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -265,66 +248,92 @@ export default function IzdelavaSpletneStrani() {
         </div>
       </section>
 
-      {/* ==================== CENIK ==================== */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-[13px] uppercase tracking-widest text-pink-500 dark:text-pink-400 font-medium mb-3">
-              Cenik
-            </p>
-            <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-gray-900 dark:text-white">
-              Kaj vključuje cena
-            </h2>
-            <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
-              Vsak projekt je unikaten. Ceno določim individualno po brezplačnem posvetu. Orientacijske cene:
-            </p>
+      {/* ==================== PRICING ==================== */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-16">
+            <div className="lg:col-span-5">
+              <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
+                Investicija
+              </p>
+              <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug">
+                Transparentne cene, brez skritih stroškov
+              </h2>
+            </div>
+            <div className="lg:col-span-7 lg:flex lg:items-end">
+              <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">
+                Vsak projekt je unikaten — ceno določim individualno po brezplačnem posvetu. Spodnje cene so orientacijske.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {tiers.map((tier) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+            {[
+              {
+                name: "Landing page",
+                price: "500 €",
+                prefix: "od",
+                features: ["Enostranska stran", "Odziven dizajn", "SEO osnove", "Kontaktni obrazec", "Dostava v 3–5 dneh"],
+              },
+              {
+                name: "Poslovna stran",
+                price: "1.200 €",
+                prefix: "od",
+                features: ["Več podstrani", "Celostno oblikovanje", "SEO optimizacija", "Blog ali novice", "Dostava v 1–2 tednih"],
+                featured: true,
+              },
+              {
+                name: "Kompleksna rešitev",
+                price: "Po meri",
+                prefix: "",
+                features: ["E-trgovina ali aplikacija", "Prilagojene funkcionalnosti", "Integracije (API-ji)", "Mobilna aplikacija", "Dolgoročno sodelovanje"],
+              },
+            ].map((tier) => (
               <div
                 key={tier.name}
-                className={`relative p-7 rounded-2xl border transition-all duration-300 ${
+                className={`relative rounded-2xl p-8 md:p-9 transition-all duration-300 ${
                   tier.featured
-                    ? "border-gray-900 dark:border-white bg-gray-900 dark:bg-white shadow-xl shadow-gray-900/10 dark:shadow-white/10 scale-[1.02]"
-                    : "border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900/60 hover:shadow-lg hover:shadow-gray-100/50 dark:hover:shadow-none hover:border-gray-200 dark:hover:border-gray-700"
+                    ? "bg-gray-900 dark:bg-white ring-1 ring-gray-900 dark:ring-white"
+                    : "bg-white dark:bg-gray-900/60 ring-1 ring-gray-100 dark:ring-gray-800 hover:ring-gray-200 dark:hover:ring-gray-700"
                 }`}
               >
-                {tier.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-3 py-1 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white text-[11px] font-semibold uppercase tracking-wider">
-                      Priljubljeno
+                <div className="mb-8">
+                  <h3
+                    className={`text-[15px] font-medium mb-6 ${
+                      tier.featured ? "text-gray-400 dark:text-gray-500" : "text-gray-400 dark:text-gray-500"
+                    }`}
+                  >
+                    {tier.name}
+                  </h3>
+                  <div className="flex items-baseline gap-1.5">
+                    {tier.prefix && (
+                      <span className={`text-sm ${tier.featured ? "text-gray-500 dark:text-gray-400" : "text-gray-400"}`}>
+                        {tier.prefix}
+                      </span>
+                    )}
+                    <span
+                      className={`font-[family-name:var(--font-serif-display)] text-4xl md:text-5xl ${
+                        tier.featured ? "text-white dark:text-gray-900" : "text-gray-900 dark:text-white"
+                      }`}
+                    >
+                      {tier.price}
                     </span>
                   </div>
-                )}
-                <h3
-                  className={`font-semibold text-lg mb-1 ${
-                    tier.featured ? "text-white dark:text-gray-900" : "text-gray-900 dark:text-white"
-                  }`}
-                >
-                  {tier.name}
-                </h3>
-                <p className={`text-sm mb-3 ${tier.featured ? "text-gray-400 dark:text-gray-500" : "text-gray-400 dark:text-gray-500"}`}>
-                  {tier.desc}
-                </p>
-                <p
-                  className={`text-3xl font-bold mb-6 ${
-                    tier.featured ? "text-white dark:text-gray-900" : "text-gray-900 dark:text-white"
-                  }`}
-                >
-                  {tier.price}
-                </p>
-                <ul className="space-y-3">
+                </div>
+
+                <div className={`h-px mb-8 ${tier.featured ? "bg-gray-800 dark:bg-gray-200" : "bg-gray-100 dark:bg-gray-800"}`} />
+
+                <ul className="space-y-3.5">
                   {tier.features.map((f) => (
                     <li
                       key={f}
-                      className={`text-sm flex items-start gap-2.5 ${
+                      className={`text-[14px] flex items-center gap-3 ${
                         tier.featured ? "text-gray-300 dark:text-gray-600" : "text-gray-500 dark:text-gray-400"
                       }`}
                     >
-                      <svg className="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                      </svg>
+                      <span className={`w-1 h-1 rounded-full shrink-0 ${
+                        tier.featured ? "bg-gray-500 dark:bg-gray-400" : "bg-gray-300 dark:bg-gray-600"
+                      }`} />
                       {f}
                     </li>
                   ))}
@@ -335,89 +344,126 @@ export default function IzdelavaSpletneStrani() {
         </div>
       </section>
 
-      {/* ==================== TECH STACK ==================== */}
-      <section className="py-20 md:py-28 bg-gray-50/80 dark:bg-gray-900/20">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-[13px] uppercase tracking-widest text-pink-500 dark:text-pink-400 font-medium mb-3">
+      {/* ==================== TECH ==================== */}
+      <section className="py-16 md:py-20 border-y border-gray-100 dark:border-gray-800/50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium shrink-0">
               Tehnologije
             </p>
-            <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-gray-900 dark:text-white">
-              Moderna tehnologija za hitro spletno stran
-            </h2>
-            <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
-              Uporabljam iste tehnologije kot najuspešnejša tehnološka podjetja na svetu — za hitrost, varnost in odlično uporabniško izkušnjo.
-            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 md:gap-x-8">
+              {["Next.js", "React", "TypeScript", "Tailwind CSS", "Figma", "Vercel", "Node.js", "Ionic"].map((tech) => (
+                <span
+                  key={tech}
+                  className="text-[14px] text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-default"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-4 py-2 rounded-full border border-gray-200 dark:border-gray-800 text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900/60"
-              >
-                {tech}
-              </span>
-            ))}
+        </div>
+      </section>
+
+      {/* ==================== TRUST ==================== */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+            <div className="lg:col-span-5">
+              <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
+                Izkušnje
+              </p>
+              <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug">
+                Gradim produkte za prave uporabnike
+              </h2>
+            </div>
+            <div className="lg:col-span-7 space-y-8">
+              <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed">
+                Izkušnje pri Popsy (Y Combinator), MooHero in Topsi AI so me naučile hitrega dela in gradnje stvari, ki delujejo. Vsak projekt obravnavam z enako pozornostjo do detajlov — od enostranskega landing pagea do kompleksne aplikacije.
+              </p>
+              <div className="flex flex-wrap gap-x-10 gap-y-4">
+                {[
+                  { name: "Popsy", note: "Y Combinator" },
+                  { name: "Topsi.ai", note: "Soustanoviteljica" },
+                  { name: "MooHero", note: "Dizajn & razvoj" },
+                  { name: "manjatk.com", note: "Spletna stran" },
+                ].map((brand) => (
+                  <div key={brand.name}>
+                    <span className="text-[15px] font-semibold text-gray-900 dark:text-white">{brand.name}</span>
+                    <span className="text-[13px] text-gray-400 dark:text-gray-500 ml-2">{brand.note}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ==================== FAQ ==================== */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-[13px] uppercase tracking-widest text-pink-500 dark:text-pink-400 font-medium mb-3">
-              Pogosta vprašanja
-            </p>
-            <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-gray-900 dark:text-white">
-              Vse o izdelavi spletne strani
-            </h2>
-          </div>
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqs.map((faq) => (
-              <details
-                key={faq.q}
-                className="group bg-white dark:bg-gray-900/60 rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden"
-              >
-                <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-[15px] font-medium text-gray-900 dark:text-white">
-                  {faq.q}
-                  <svg className="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </summary>
-                <p className="px-6 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                  {faq.a}
-                </p>
-              </details>
-            ))}
+      <section className="py-20 md:py-28 bg-gray-50/80 dark:bg-[#0d0d0d]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+            <div className="lg:col-span-4">
+              <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4 lg:sticky lg:top-28">
+                Pogosta vprašanja
+              </p>
+              <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug lg:sticky lg:top-36">
+                Vse o izdelavi spletne strani
+              </h2>
+            </div>
+            <div className="lg:col-span-8">
+              <div className="space-y-0">
+                {faqs.map((faq, i) => (
+                  <details
+                    key={faq.q}
+                    className={`group ${
+                      i < faqs.length - 1 ? "border-b border-gray-200 dark:border-gray-800" : ""
+                    }`}
+                  >
+                    <summary className="flex items-start justify-between cursor-pointer py-6 text-[15px] font-medium text-gray-900 dark:text-white select-none">
+                      <span className="pr-6">{faq.q}</span>
+                      <span className="mt-1 w-5 h-5 shrink-0 flex items-center justify-center text-gray-400">
+                        <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <p className="pb-6 pr-12 text-[14px] text-gray-500 dark:text-gray-400 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ==================== CTA ==================== */}
-      <section className="relative py-20 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gray-900 dark:bg-white/[0.03]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-transparent to-blue-500/10" />
-        <div className="relative max-w-5xl mx-auto px-6 text-center">
-          <p className="text-[13px] uppercase tracking-widest text-gray-400 mb-4">
+      <section className="py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-6">
             Naslednji korak
           </p>
-          <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-white mb-4">
-            Pripravljeni na novo spletno stran?
+          <h2 className="font-[family-name:var(--font-serif-display)] text-4xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6 max-w-3xl mx-auto leading-[1.05]">
+            Začnimo z vašim projektom
           </h2>
-          <p className="text-gray-400 text-base mb-8 max-w-xl mx-auto">
-            Pošljite mi povpraševanje in v 24 urah prejmete odgovor z oceno projekta. Posvet je brezplačen.
+          <p className="text-[15px] text-gray-500 dark:text-gray-400 mb-10 max-w-md mx-auto leading-relaxed">
+            Pošljite povpraševanje — v 24 urah prejmete odgovor z oceno projekta. Posvet je brezplačen.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/#kontakt"
-              className="px-7 py-3.5 rounded-full bg-white text-gray-900 font-medium text-sm hover:bg-gray-100 transition-colors"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium text-[14px] hover:opacity-90 transition-opacity"
             >
               Pošlji povpraševanje
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              </svg>
             </Link>
             <Link
               href="/#delo"
-              className="px-7 py-3.5 rounded-full border border-gray-700 text-gray-300 font-medium text-sm hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-gray-500 dark:text-gray-400 font-medium text-[14px] hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               Oglej si portfolio
             </Link>

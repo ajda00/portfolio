@@ -1,6 +1,6 @@
 import { getDictionary } from "../../lib/i18n";
 import type { Lang } from "../../lib/types";
-import HeroShader from "./HeroShader";
+import HeroPortfolio from "./HeroPortfolio";
 
 interface Props {
   lang: Lang;
@@ -12,10 +12,8 @@ export default function Hero({ lang }: Props) {
   const workId = l.nav.items[1];
 
   return (
-    <HeroShader
-      kicker={l.hero.kicker}
+    <HeroPortfolio
       title1={l.hero.title1}
-      titleConnector={l.hero.titleConnector}
       titleEm={l.hero.titleEm}
       subtitle={l.hero.subtitle}
       cta1={{ label: l.hero.cta1, href: `#${contactId}` }}

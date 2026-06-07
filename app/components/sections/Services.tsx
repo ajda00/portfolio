@@ -12,52 +12,48 @@ export default function Services({ lang }: Props) {
   const sectionId = l.nav.items[0];
 
   return (
-    <section id={sectionId} className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <SectionReveal className="lg:col-span-4">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 dark:text-white leading-[1.1] max-w-[16ch]">
-              {l.services.title}
-            </h2>
-          </SectionReveal>
+    <section id={sectionId} className="bg-app pt-20 md:pt-28 pb-24 md:pb-32">
+      <div className="max-w-6xl mx-auto px-6">
+        <SectionReveal className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <span className="pill-outline mb-6">
+            <span>{l.services.label}</span>
+          </span>
+          <h2
+            className="font-display text-ink leading-[1.05] tracking-[-0.03em] mt-4"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
+          >
+            <span className="font-light">{l.services.title.split(" ").slice(0, -1).join(" ")} </span>
+            <span className="font-bold">{l.services.title.split(" ").slice(-1)[0]}</span>
+          </h2>
+        </SectionReveal>
 
-          <div className="lg:col-span-8">
-            {l.services.items.map((service, i) => (
-              <SectionReveal
-                key={service.title}
-                delay={i * 0.04}
-                y={16}
-                className={`group grid grid-cols-[auto_1fr] gap-6 md:gap-10 py-7 md:py-8 ${
-                  i < l.services.items.length - 1
-                    ? "border-b border-gray-100 dark:border-gray-800/60"
-                    : ""
-                }`}
-              >
-                <span className="font-mono text-[12px] text-gray-300 dark:text-gray-700 pt-0.5 tabular-nums">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="text-[16px] font-semibold text-gray-900 dark:text-white mb-1.5 group-hover:translate-x-1 transition-transform duration-300">
-                    {service.title}
-                  </h3>
-                  <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-[60ch]">
-                    {service.description}
-                  </p>
-                </div>
-              </SectionReveal>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {l.services.items.map((service) => (
+            <SectionReveal
+              key={service.title}
+              y={16}
+              className="group bg-bg-elev rounded-3xl p-6 md:p-8 transition-shadow hover:shadow-card"
+            >
+              <h3 className="font-display text-xl md:text-2xl font-semibold text-ink mb-3 tracking-tight">
+                {service.title}
+              </h3>
+              <p className="text-[15px] text-muted leading-relaxed max-w-[42ch]">
+                {service.description}
+              </p>
+            </SectionReveal>
+          ))}
         </div>
 
-        <SectionReveal className="mt-20 pt-10 border-t border-gray-100 dark:border-gray-800/50 flex flex-col md:flex-row md:items-baseline md:justify-between gap-6">
-          <p className="text-sm font-medium text-gray-400 dark:text-gray-500 shrink-0">
+        {/* Tech stack footer */}
+        <SectionReveal className="mt-16 pt-8 border-t border-line flex flex-col md:flex-row md:items-baseline md:justify-between gap-5">
+          <p className="text-sm font-medium text-muted shrink-0">
             {l.services.techLabel}
           </p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 md:gap-x-8">
+          <div className="flex flex-wrap gap-2">
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="text-[14px] text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors cursor-default"
+                className="px-3 py-1.5 rounded-full bg-bg-elev border border-line text-[12px] font-medium text-muted"
               >
                 {tech}
               </span>

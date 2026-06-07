@@ -91,7 +91,7 @@ const sl: Dict = {
     titleEm: "premišljenim dizajnom",
     titleConnector: "z ",
     subtitle:
-      "Spletne strani in aplikacije za startupe in mala podjetja. Od strategije do objave, vse v eni glavi.",
+      "Spletne strani in aplikacije za startupe in mala podjetja. Od strategije in oblikovanja do razvoja in objave.",
     cta1: "Pošlji povpraševanje",
     cta2: "Oglej si portfolio",
   },

@@ -125,146 +125,153 @@ export default function Contact({ lang }: Props) {
   };
 
   return (
-    <section
-      id={sectionId}
-      className="py-24 md:py-32 bg-gray-50/80 dark:bg-[#0d0d0d]"
-    >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <SectionReveal className="lg:col-span-4">
-            <h2 className="font-heading font-bold text-3xl md:text-5xl text-gray-900 dark:text-white mb-4 leading-[1.05] max-w-[14ch]">
-              {l.contact.title}
-            </h2>
-            <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed max-w-[55ch]">
-              {l.contact.subtitle}
-            </p>
-          </SectionReveal>
+    <section id={sectionId} className="bg-app py-20 md:py-28">
+      <div className="max-w-4xl mx-auto px-6">
+        <SectionReveal className="text-center mb-12 md:mb-16">
+          <span className="pill-outline mb-6">
+            <span>{l.contact.label}</span>
+          </span>
+          <h2
+            className="font-display text-ink leading-[1.05] tracking-[-0.03em] mb-4 mt-4"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
+          >
+            <span className="font-light">{l.contact.title.split(" ").slice(0, -1).join(" ")} </span>
+            <span className="font-bold">{l.contact.title.split(" ").slice(-1)[0]}</span>
+          </h2>
+          <p className="text-base md:text-lg text-muted leading-relaxed max-w-[55ch] mx-auto">
+            {l.contact.subtitle}
+          </p>
+        </SectionReveal>
 
-          <SectionReveal className="lg:col-span-8" delay={0.1}>
-            <form className="space-y-5" onSubmit={handleSubmit} noValidate>
-              <div
-                aria-live="polite"
-                role={formStatus.isError ? "alert" : undefined}
-                className={formStatus.message ? "" : "sr-only"}
-              >
-                {formStatus.message && (
-                  <div
-                    className={`p-4 rounded-xl text-sm ${
-                      formStatus.isError
-                        ? "bg-red-50 text-red-600 dark:bg-red-900/20 dark:text-red-400"
-                        : "bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400"
-                    }`}
-                  >
-                    {formStatus.message}
-                  </div>
-                )}
-              </div>
+        <SectionReveal delay={0.1}>
+          <form
+            className="space-y-5 bg-bg-elev p-8 md:p-10 rounded-3xl shadow-soft"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            <div
+              aria-live="polite"
+              role={formStatus.isError ? "alert" : undefined}
+              className={formStatus.message ? "" : "sr-only"}
+            >
+              {formStatus.message && (
+                <div
+                  className={`p-4 rounded-xl text-sm ${
+                    formStatus.isError
+                      ? "bg-red-50 text-red-700"
+                      : "bg-yellow-soft text-ink"
+                  }`}
+                >
+                  {formStatus.message}
+                </div>
+              )}
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-[13px] font-medium text-gray-500 dark:text-gray-400 mb-1.5"
-                  >
-                    {l.contact.name}
-                  </label>
-                  <input
-                    ref={nameRef}
-                    type="text"
-                    id="name"
-                    autoComplete="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#111] text-gray-900 dark:text-white focus:ring-2 ring-accent focus:border-transparent outline-none transition-all text-base"
-                    placeholder={l.contact.namePlaceholder}
-                    disabled={formStatus.isSubmitting}
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-[13px] font-medium text-gray-500 dark:text-gray-400 mb-1.5"
-                  >
-                    {l.contact.email}
-                  </label>
-                  <input
-                    ref={emailRef}
-                    type="email"
-                    id="email"
-                    autoComplete="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    onBlur={handleEmailBlur}
-                    aria-invalid={emailError || undefined}
-                    aria-describedby={emailError ? "email-error" : undefined}
-                    className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111] text-gray-900 dark:text-white focus:ring-2 focus:border-transparent outline-none transition-all text-base ${
-                      emailError
-                        ? "border-red-300 dark:border-red-700 focus:ring-red-500"
-                        : "border-gray-200 dark:border-gray-800 ring-accent"
-                    }`}
-                    placeholder={l.contact.emailPlaceholder}
-                    disabled={formStatus.isSubmitting}
-                  />
-                  {emailError && (
-                    <p
-                      id="email-error"
-                      className="mt-1.5 text-[12px] text-red-600 dark:text-red-400"
-                    >
-                      {l.contact.invalidEmail}
-                    </p>
-                  )}
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label
-                  htmlFor="message"
-                  className="block text-[13px] font-medium text-gray-500 dark:text-gray-400 mb-1.5"
+                  htmlFor="name"
+                  className="block text-[13px] font-medium text-muted mb-1.5"
                 >
-                  {l.contact.message}
+                  {l.contact.name}
                 </label>
-                <textarea
-                  ref={messageRef}
-                  id="message"
-                  rows={5}
-                  value={formData.message}
+                <input
+                  ref={nameRef}
+                  type="text"
+                  id="name"
+                  autoComplete="name"
+                  value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#111] text-gray-900 dark:text-white focus:ring-2 ring-accent focus:border-transparent outline-none transition-all text-base"
-                  placeholder={l.contact.messagePlaceholder}
+                  className="w-full px-4 py-3 rounded-xl border border-line bg-app text-ink placeholder:text-muted-soft focus:ring-2 focus:ring-ink focus:border-transparent outline-none transition-all text-base"
+                  placeholder={l.contact.namePlaceholder}
                   disabled={formStatus.isSubmitting}
                 />
               </div>
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium text-[14px] hover:opacity-90 transition-opacity disabled:opacity-50"
-                disabled={formStatus.isSubmitting}
-              >
-                {formStatus.isSubmitting && (
-                  <svg aria-hidden="true"
-                    className="w-4 h-4 animate-spin"
-                    viewBox="0 0 24 24"
-                    fill="none"
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-[13px] font-medium text-muted mb-1.5"
+                >
+                  {l.contact.email}
+                </label>
+                <input
+                  ref={emailRef}
+                  type="email"
+                  id="email"
+                  autoComplete="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  onBlur={handleEmailBlur}
+                  aria-invalid={emailError || undefined}
+                  aria-describedby={emailError ? "email-error" : undefined}
+                  className={`w-full px-4 py-3 rounded-xl border bg-app text-ink placeholder:text-muted-soft focus:ring-2 focus:border-transparent outline-none transition-all text-base ${
+                    emailError
+                      ? "border-red-300 focus:ring-red-500"
+                      : "border-line focus:ring-ink"
+                  }`}
+                  placeholder={l.contact.emailPlaceholder}
+                  disabled={formStatus.isSubmitting}
+                />
+                {emailError && (
+                  <p
+                    id="email-error"
+                    className="mt-1.5 text-[12px] text-red-600"
                   >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      opacity="0.25"
-                    />
-                    <path
-                      d="M22 12a10 10 0 0 1-10 10"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+                    {l.contact.invalidEmail}
+                  </p>
                 )}
-                {formStatus.isSubmitting ? l.contact.sending : l.contact.send}
-              </button>
-            </form>
-          </SectionReveal>
-        </div>
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-[13px] font-medium text-muted mb-1.5"
+              >
+                {l.contact.message}
+              </label>
+              <textarea
+                ref={messageRef}
+                id="message"
+                rows={5}
+                value={formData.message}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 rounded-xl border border-line bg-app text-ink placeholder:text-muted-soft focus:ring-2 focus:ring-ink focus:border-transparent outline-none transition-all text-base"
+                placeholder={l.contact.messagePlaceholder}
+                disabled={formStatus.isSubmitting}
+              />
+            </div>
+            <button
+              type="submit"
+              className="press inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-ink text-white font-medium text-[14px] hover:opacity-90 disabled:opacity-50"
+              disabled={formStatus.isSubmitting}
+            >
+              {formStatus.isSubmitting && (
+                <svg
+                  aria-hidden="true"
+                  className="w-4 h-4 animate-spin"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    opacity="0.25"
+                  />
+                  <path
+                    d="M22 12a10 10 0 0 1-10 10"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              )}
+              {formStatus.isSubmitting ? l.contact.sending : l.contact.send}
+            </button>
+          </form>
+        </SectionReveal>
       </div>
     </section>
   );

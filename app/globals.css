@@ -1,73 +1,68 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/* Color system                                                       */
-/* Brand hue: warm bronze. OKLCH-derived scale for harmonic lightness. */
+/* Color system — minimalist refined portfolio                         */
+/* Off-white + white + black + warm yellow. Subtle grays.              */
 /* ------------------------------------------------------------------ */
 
 :root {
   /* Surfaces */
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: oklch(96% 0.003 80); /* ~#F2F1EE — soft off-white */
+  --bg-elev: oklch(100% 0 0); /* pure white for cards */
+  --bg-deep: oklch(93% 0.003 80); /* slightly deeper off-white band */
+  --ink: oklch(15% 0.003 80); /* ~#171717 — near-black text */
+  --ink-deep: oklch(8% 0.003 80); /* ~#0A0A0A — deep card bg */
 
-  /* Bronze accent scale. Hue ~70, chroma ~0.06.
-     - accent: brand voice, used for emphasis and large/medium text.
-     - accent-ink: darker shade. Use this when accent text sits on light bg
-       at body sizes (4.5:1 against #fafafa).
-     - accent-light: paler shade, used for subtle separators.
-     - accent-subtle: cream surface, used for soft section washes. */
-  --accent: oklch(56% 0.06 70);             /* ~#9a7c5e */
-  --accent-ink: oklch(43% 0.06 70);         /* ~#705534 — body-text-safe */
-  --accent-light: oklch(72% 0.05 70);       /* ~#b8a089 */
-  --accent-subtle: oklch(95% 0.012 70);     /* ~#f3ece2 — cream surface */
+  /* Text */
+  --foreground: var(--ink);
+  --muted: oklch(45% 0.003 80); /* ~#666 — muted secondary */
+  --muted-soft: oklch(60% 0.003 80); /* ~#9A9A9A — subtle/captions */
+  --line: oklch(88% 0.003 80); /* ~#DDD — hairline dividers */
 
-  /* Brand-tinted near-black, replaces gray-900 on dark sections so the
-     dark surfaces feel like the brand instead of "generic dark mode". */
-  --surface-dark: oklch(15% 0.015 70);      /* ~#241f19 */
-  --surface-dark-elev: oklch(20% 0.015 70); /* ~#332b22 elevation step */
+  /* Accent — warm yellow */
+  --yellow: oklch(86% 0.14 90); /* ~#F5D547 — primary accent */
+  --yellow-soft: oklch(92% 0.08 90); /* ~#F5E5A8 — soft yellow background */
+  --khaki: oklch(75% 0.05 85); /* ~#C7B98F — outlined pill */
+
+  /* Background */
+  --background: var(--bg);
 }
 
 :root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-bricolage);
+  --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-serif-display);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-
-    /* In dark mode lift lightness and trim chroma slightly. */
-    --accent: oklch(78% 0.08 80);             /* ~#cda87a */
-    --accent-ink: oklch(85% 0.08 80);         /* ~#dcb98c — body-link on dark */
-    --accent-light: oklch(56% 0.06 70);       /* ~#96785a, inversion of light --accent */
-    --accent-subtle: oklch(22% 0.015 70);     /* ~#322a22 — deep cream for surfaces */
-
-    --surface-dark: oklch(12% 0.015 70);      /* ~#1c1813 */
-    --surface-dark-elev: oklch(17% 0.015 70); /* ~#2a2419 */
+    --bg: oklch(15% 0.003 80);
+    --bg-elev: oklch(20% 0.003 80);
+    --bg-deep: oklch(12% 0.003 80);
+    --foreground: oklch(95% 0.003 80);
+    --muted: oklch(70% 0.003 80);
+    --muted-soft: oklch(55% 0.003 80);
+    --line: oklch(28% 0.003 80);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
   font-optical-sizing: auto;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* Italic serif accent — used for one-word emphasis in display headings only */
-.font-display {
-  font-family: var(--font-display), Georgia, "Times New Roman", serif;
-}
+/* ------------------------------------------------------------------ */
+/* Typography utilities                                                */
+/* ------------------------------------------------------------------ */
 
-/* Display sans for headings. Same family as body via the variable axis;
-   the heavier weight + tracking-tight + balanced wrap is the contrast. */
+.font-display,
 .font-heading {
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
@@ -76,60 +71,175 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
-/* Accent utilities                                                    */
+/* Palette utilities                                                   */
 /* ------------------------------------------------------------------ */
 
-.text-accent {
-  color: var(--accent);
+.text-ink { color: var(--ink); }
+.text-ink-deep { color: var(--ink-deep); }
+.text-muted { color: var(--muted); }
+.text-muted-soft { color: var(--muted-soft); }
+.text-yellow { color: var(--yellow); }
+.text-khaki { color: var(--khaki); }
+
+.bg-app { background-color: var(--bg); }
+.bg-elev { background-color: var(--bg-elev); }
+.bg-deep { background-color: var(--bg-deep); }
+.bg-ink { background-color: var(--ink); }
+.bg-ink-deep { background-color: var(--ink-deep); }
+.bg-yellow { background-color: var(--yellow); }
+.bg-yellow-soft { background-color: var(--yellow-soft); }
+.bg-khaki { background-color: var(--khaki); }
+
+.border-line { border-color: var(--line); }
+.border-ink { border-color: var(--ink); }
+.border-yellow { border-color: var(--yellow); }
+.border-khaki { border-color: var(--khaki); }
+
+.fill-yellow { fill: var(--yellow); }
+.fill-ink { fill: var(--ink); }
+
+/* Legacy accent shortcuts — most components still reference these.
+   Remap so they keep working until each section is individually retreated. */
+.text-accent { color: var(--ink); }
+.bg-accent { background-color: var(--ink); }
+.bg-accent-subtle { background-color: var(--bg-deep); }
+.bg-surface-dark { background-color: var(--ink-deep); }
+.bg-surface-dark-elev { background-color: var(--ink); }
+.border-accent { border-color: var(--ink); }
+.border-accent-soft { border-color: var(--line); }
+.ring-accent { --tw-ring-color: var(--ink); }
+
+.text-cream { color: var(--bg); }
+.bg-cream { background-color: var(--bg); }
+.text-coral { color: var(--ink); }
+.bg-coral { background-color: var(--ink); }
+.bg-coral-soft { background-color: var(--ink-deep); }
+.text-green { color: var(--ink); }
+.bg-green { background-color: var(--bg); }
+.fill-coral { fill: var(--ink); }
+.fill-cream { fill: var(--bg); }
+.fill-green { fill: var(--ink); }
+
+/* ------------------------------------------------------------------ */
+/* Card / panel utilities                                              */
+/* ------------------------------------------------------------------ */
+
+.card {
+  background-color: var(--bg-elev);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
 }
 
-.text-accent-ink {
-  color: var(--accent-ink);
+.card-lg {
+  background-color: var(--bg-elev);
+  border-radius: 1.75rem;
+  padding: 2rem;
 }
 
-.bg-accent {
-  background-color: var(--accent);
+.card-dark {
+  background-color: var(--ink-deep);
+  color: var(--bg);
+  border-radius: 1.75rem;
+  padding: 2rem;
 }
 
-.bg-accent-subtle {
-  background-color: var(--accent-subtle);
+/* Subtle elevation shadow */
+.shadow-soft {
+  box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.06);
+}
+.shadow-card {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 32px -12px rgba(0, 0, 0, 0.08);
+}
+.shadow-brand-sm { box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.06); }
+.shadow-brand-md { box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.08); }
+.shadow-brand-lg { box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.10); }
+
+/* Pill chip — yellow filled */
+.pill-yellow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--yellow);
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
-.bg-surface-dark {
-  background-color: var(--surface-dark);
-}
-
-.bg-surface-dark-elev {
-  background-color: var(--surface-dark-elev);
-}
-
-.border-accent {
-  border-color: var(--accent);
-}
-
-.border-accent-soft {
-  border-color: color-mix(in oklch, var(--accent) 18%, transparent);
-}
-
-.ring-accent {
-  --tw-ring-color: var(--accent);
-}
-
-/* Subtle accent underline for inline links — restrained but unambiguous. */
-.link-accent {
-  color: var(--accent-ink);
-  text-decoration: underline;
-  text-decoration-color: color-mix(in oklch, var(--accent) 40%, transparent);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 200ms ease;
-}
-.link-accent:hover {
-  text-decoration-color: var(--accent);
+/* Pill chip — outlined khaki */
+.pill-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--khaki);
+  border: 1px solid var(--khaki);
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 /* ------------------------------------------------------------------ */
-/* Misc                                                               */
+/* Subtle grid background — used on the hero zone                      */
 /* ------------------------------------------------------------------ */
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Misc + a11y + interactions                                          */
+/* ------------------------------------------------------------------ */
+
+::selection {
+  background-color: var(--yellow);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 500;
+  font-size: 14px;
+  transition: top 200ms ease-out;
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+.press {
+  transition:
+    transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 200ms ease;
+}
+.press:active {
+  transform: scale(0.97) translateY(1px);
+}
+
+/* Noise overlay removed — minimalist aesthetic prefers clean surfaces.
+   Keep utility class as no-op so existing markup doesn't break. */
+.noise {
+  position: relative;
+}
 
 @keyframes fadeIn {
   from {
@@ -141,7 +251,6 @@ body {
     transform: translateY(0);
   }
 }
-
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
@@ -154,8 +263,13 @@ p {
   text-wrap: pretty;
 }
 
-/* Selection picks up the brand. Tiny detail; reads as deliberate. */
-::selection {
-  background-color: color-mix(in oklch, var(--accent) 35%, transparent);
-  color: var(--foreground);
+/* Sparkle float kept as no-op for compatibility */
+.sparkle-float {
+  animation: none;
+}
+
+/* Duotone removed — minimalist aesthetic, no photo treatment */
+.duotone-green {
+  filter: none;
+  mix-blend-mode: normal;
 }

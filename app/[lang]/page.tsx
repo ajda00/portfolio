@@ -22,9 +22,12 @@ export default async function Home({ params }: Props) {
   if (!isLang(lang)) notFound();
 
   return (
-    <div className="relative min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A] overflow-x-clip">
+    <div className="noise relative min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A] overflow-x-clip">
+      <a href="#main-content" className="skip-link">
+        {lang === "sl" ? "Preskoči na vsebino" : "Skip to content"}
+      </a>
       <Nav lang={lang} />
-      <main>
+      <main id="main-content">
         <Hero lang={lang} />
         <Stats lang={lang} />
         <MorphMarquee lang={lang} />

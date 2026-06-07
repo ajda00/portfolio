@@ -72,17 +72,17 @@ export default function Process({ lang }: Props) {
           </h2>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.06] rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           {l.process.steps.map((step, i) => (
             <SectionReveal
               key={step.title}
               delay={i * 0.06}
-              className="bg-surface-dark p-8 md:p-10 relative"
+              className="relative md:pr-6"
             >
-              <span className="absolute top-6 right-6 font-mono text-[11px] text-gray-600 tabular-nums">
+              <span className="absolute top-0 right-0 font-mono text-[11px] text-gray-500 tabular-nums">
                 {String(i + 1).padStart(2, "0")} / 03
               </span>
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center mb-6">
                 {icons[i]}
               </div>
               <h3 className="text-lg font-semibold text-white mb-3">

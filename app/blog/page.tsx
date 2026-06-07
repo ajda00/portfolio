@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 import { allPosts } from "./_posts";
 
 export const metadata: Metadata = {
@@ -16,25 +16,36 @@ export const metadata: Metadata = {
 export default function BlogIndex() {
   return (
     <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A]">
-      <Nav />
+      <Nav lang="sl" variant="sub" />
 
       <main className="pt-32 pb-20 md:pt-44 md:pb-28">
         <div className="max-w-6xl mx-auto px-6">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20">
-            <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Domov</Link>
+          <nav
+            aria-label="Breadcrumb"
+            className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20"
+          >
+            <Link
+              href="/sl"
+              className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            >
+              Domov
+            </Link>
             <span className="mx-2.5 text-gray-300 dark:text-gray-700">/</span>
             <span className="text-gray-500 dark:text-gray-400">Blog</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-4">
-              <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">Blog</p>
+              <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
+                Blog
+              </p>
               <h1 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug">
                 Nasveti, vodniki in razmišljanja
               </h1>
               <p className="mt-4 text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed">
-                O izdelavi spletnih strani, oblikovanju in digitalnem marketingu.
+                O izdelavi spletnih strani, oblikovanju in digitalnem
+                marketingu.
               </p>
             </div>
 
@@ -61,8 +72,18 @@ export default function BlogIndex() {
                     </p>
                     <span className="mt-3 inline-flex items-center gap-1.5 text-[13px] text-gray-400 group-hover:text-accent transition-colors">
                       Preberi več
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                      <svg
+                        className="w-3.5 h-3.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                        />
                       </svg>
                     </span>
                   </Link>
@@ -73,7 +94,7 @@ export default function BlogIndex() {
         </div>
       </main>
 
-      <Footer />
+      <Footer lang="sl" />
     </div>
   );
 }

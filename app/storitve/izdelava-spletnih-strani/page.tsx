@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
+import Nav from "../../components/Nav";
 
 export const metadata: Metadata = {
   title: "Izdelava spletne strani | Profesionalna spletna stran po meri",
@@ -54,13 +54,21 @@ const faqs = [
 export default function IzdelavaSpletneStrani() {
   return (
     <div className="relative min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A] overflow-x-hidden">
-      <Nav />
+      <Nav lang="sl" variant="sub" />
 
       {/* ==================== HERO ==================== */}
       <section className="relative pt-32 pb-16 md:pt-44 md:pb-24">
         <div className="max-w-6xl mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20">
-            <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Domov</Link>
+          <nav
+            aria-label="Breadcrumb"
+            className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20"
+          >
+            <Link
+              href="/sl"
+              className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            >
+              Domov
+            </Link>
             <span className="mx-2.5 text-gray-300 dark:text-gray-700">/</span>
             <span className="text-gray-500 dark:text-gray-400">Storitve</span>
           </nav>
@@ -78,16 +86,28 @@ export default function IzdelavaSpletneStrani() {
             </div>
             <div className="lg:col-span-4 lg:pb-3">
               <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-md">
-                Od ideje in oblikovanja do razvoja in objave. Moderna tehnologija, odziven dizajn in optimizacija za iskalnike — vključeno v vsak projekt.
+                Od ideje in oblikovanja do razvoja in objave. Moderna
+                tehnologija, odziven dizajn in optimizacija za iskalnike —
+                vključeno v vsak projekt.
               </p>
               <div className="mt-6">
                 <Link
-                  href="/#kontakt"
+                  href="/sl#kontakt"
                   className="group inline-flex items-center gap-3 text-[14px] font-medium text-gray-900 dark:text-white"
                 >
                   <span className="w-10 h-10 rounded-full bg-gray-900 dark:bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-4 h-4 text-white dark:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    <svg
+                      className="w-4 h-4 text-white dark:text-gray-900"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      />
                     </svg>
                   </span>
                   Brezplačen posvet
@@ -169,7 +189,9 @@ export default function IzdelavaSpletneStrani() {
                   <div
                     key={item.num}
                     className={`group grid grid-cols-[auto_1fr] gap-6 md:gap-10 py-8 md:py-10 ${
-                      i < 4 ? "border-b border-gray-100 dark:border-gray-800/60" : ""
+                      i < 4
+                        ? "border-b border-gray-100 dark:border-gray-800/60"
+                        : ""
                     }`}
                   >
                     <span className="font-[family-name:var(--font-mono)] text-[12px] text-gray-300 dark:text-gray-700 pt-1 tabular-nums">
@@ -194,10 +216,14 @@ export default function IzdelavaSpletneStrani() {
       {/* ==================== PROCESS ==================== */}
       <section className="relative py-24 md:py-32 bg-gray-900 dark:bg-[#111] overflow-hidden">
         {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }} />
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
 
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="mb-16 md:mb-20">
@@ -232,7 +258,10 @@ export default function IzdelavaSpletneStrani() {
                 desc: "Testiranje na vseh napravah, optimizacija hitrosti in objava na vaši domeni.",
               },
             ].map((item) => (
-              <div key={item.step} className="bg-gray-900 dark:bg-[#111] p-8 md:p-10">
+              <div
+                key={item.step}
+                className="bg-gray-900 dark:bg-[#111] p-8 md:p-10"
+              >
                 <span className="font-[family-name:var(--font-mono)] text-[11px] text-gray-600 block mb-8 tabular-nums">
                   {item.step}
                 </span>
@@ -262,7 +291,8 @@ export default function IzdelavaSpletneStrani() {
             </div>
             <div className="lg:col-span-7 lg:flex lg:items-end">
               <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">
-                Vsak projekt je unikaten — ceno določim individualno po brezplačnem posvetu. Spodnje cene so orientacijske.
+                Vsak projekt je unikaten — ceno določim individualno po
+                brezplačnem posvetu. Spodnje cene so orientacijske.
               </p>
             </div>
           </div>
@@ -273,20 +303,38 @@ export default function IzdelavaSpletneStrani() {
                 name: "Landing page",
                 price: "500 €",
                 prefix: "od",
-                features: ["Enostranska stran", "Odziven dizajn", "SEO osnove", "Kontaktni obrazec", "Dostava v 3–5 dneh"],
+                features: [
+                  "Enostranska stran",
+                  "Odziven dizajn",
+                  "SEO osnove",
+                  "Kontaktni obrazec",
+                  "Dostava v 3–5 dneh",
+                ],
               },
               {
                 name: "Poslovna stran",
                 price: "1.200 €",
                 prefix: "od",
-                features: ["Več podstrani", "Celostno oblikovanje", "SEO optimizacija", "Blog ali novice", "Dostava v 1–2 tednih"],
+                features: [
+                  "Več podstrani",
+                  "Celostno oblikovanje",
+                  "SEO optimizacija",
+                  "Blog ali novice",
+                  "Dostava v 1–2 tednih",
+                ],
                 featured: true,
               },
               {
                 name: "Kompleksna rešitev",
                 price: "Po meri",
                 prefix: "",
-                features: ["E-trgovina ali aplikacija", "Prilagojene funkcionalnosti", "Integracije (API-ji)", "Mobilna aplikacija", "Dolgoročno sodelovanje"],
+                features: [
+                  "E-trgovina ali aplikacija",
+                  "Prilagojene funkcionalnosti",
+                  "Integracije (API-ji)",
+                  "Mobilna aplikacija",
+                  "Dolgoročno sodelovanje",
+                ],
               },
             ].map((tier) => (
               <div
@@ -300,20 +348,26 @@ export default function IzdelavaSpletneStrani() {
                 <div className="mb-8">
                   <h3
                     className={`text-[15px] font-medium mb-6 ${
-                      tier.featured ? "text-gray-400 dark:text-gray-500" : "text-gray-400 dark:text-gray-500"
+                      tier.featured
+                        ? "text-gray-400 dark:text-gray-500"
+                        : "text-gray-400 dark:text-gray-500"
                     }`}
                   >
                     {tier.name}
                   </h3>
                   <div className="flex items-baseline gap-1.5">
                     {tier.prefix && (
-                      <span className={`text-sm ${tier.featured ? "text-gray-500 dark:text-gray-400" : "text-gray-400"}`}>
+                      <span
+                        className={`text-sm ${tier.featured ? "text-gray-500 dark:text-gray-400" : "text-gray-400"}`}
+                      >
                         {tier.prefix}
                       </span>
                     )}
                     <span
                       className={`font-[family-name:var(--font-serif-display)] text-4xl md:text-5xl ${
-                        tier.featured ? "text-white dark:text-gray-900" : "text-gray-900 dark:text-white"
+                        tier.featured
+                          ? "text-white dark:text-gray-900"
+                          : "text-gray-900 dark:text-white"
                       }`}
                     >
                       {tier.price}
@@ -321,19 +375,27 @@ export default function IzdelavaSpletneStrani() {
                   </div>
                 </div>
 
-                <div className={`h-px mb-8 ${tier.featured ? "bg-gray-800 dark:bg-gray-200" : "bg-gray-100 dark:bg-gray-800"}`} />
+                <div
+                  className={`h-px mb-8 ${tier.featured ? "bg-gray-800 dark:bg-gray-200" : "bg-gray-100 dark:bg-gray-800"}`}
+                />
 
                 <ul className="space-y-3.5">
                   {tier.features.map((f) => (
                     <li
                       key={f}
                       className={`text-[14px] flex items-center gap-3 ${
-                        tier.featured ? "text-gray-300 dark:text-gray-600" : "text-gray-500 dark:text-gray-400"
+                        tier.featured
+                          ? "text-gray-300 dark:text-gray-600"
+                          : "text-gray-500 dark:text-gray-400"
                       }`}
                     >
-                      <span className={`w-1 h-1 rounded-full shrink-0 ${
-                        tier.featured ? "bg-gray-500 dark:bg-gray-400" : "bg-gray-300 dark:bg-gray-600"
-                      }`} />
+                      <span
+                        className={`w-1 h-1 rounded-full shrink-0 ${
+                          tier.featured
+                            ? "bg-gray-500 dark:bg-gray-400"
+                            : "bg-gray-300 dark:bg-gray-600"
+                        }`}
+                      />
                       {f}
                     </li>
                   ))}
@@ -352,7 +414,16 @@ export default function IzdelavaSpletneStrani() {
               Tehnologije
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-3 md:gap-x-8">
-              {["Next.js", "React", "TypeScript", "Tailwind CSS", "Figma", "Vercel", "Node.js", "Ionic"].map((tech) => (
+              {[
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Figma",
+                "Vercel",
+                "Node.js",
+                "Ionic",
+              ].map((tech) => (
                 <span
                   key={tech}
                   className="text-[14px] text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-default"
@@ -379,7 +450,10 @@ export default function IzdelavaSpletneStrani() {
             </div>
             <div className="lg:col-span-7 space-y-8">
               <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed">
-                Izkušnje pri Popsy (Y Combinator), MooHero in Topsi AI so me naučile hitrega dela in gradnje stvari, ki delujejo. Vsak projekt obravnavam z enako pozornostjo do detajlov — od enostranskega landing pagea do kompleksne aplikacije.
+                Izkušnje pri Popsy (Y Combinator), MooHero in Topsi AI so me
+                naučile hitrega dela in gradnje stvari, ki delujejo. Vsak
+                projekt obravnavam z enako pozornostjo do detajlov — od
+                enostranskega landing pagea do kompleksne aplikacije.
               </p>
               <div className="flex flex-wrap gap-x-10 gap-y-4">
                 {[
@@ -389,8 +463,12 @@ export default function IzdelavaSpletneStrani() {
                   { name: "manjatk.com", note: "Spletna stran" },
                 ].map((brand) => (
                   <div key={brand.name}>
-                    <span className="text-[15px] font-semibold text-gray-900 dark:text-white">{brand.name}</span>
-                    <span className="text-[13px] text-gray-400 dark:text-gray-500 ml-2">{brand.note}</span>
+                    <span className="text-[15px] font-semibold text-gray-900 dark:text-white">
+                      {brand.name}
+                    </span>
+                    <span className="text-[13px] text-gray-400 dark:text-gray-500 ml-2">
+                      {brand.note}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -417,14 +495,26 @@ export default function IzdelavaSpletneStrani() {
                   <details
                     key={faq.q}
                     className={`group ${
-                      i < faqs.length - 1 ? "border-b border-gray-200 dark:border-gray-800" : ""
+                      i < faqs.length - 1
+                        ? "border-b border-gray-200 dark:border-gray-800"
+                        : ""
                     }`}
                   >
                     <summary className="flex items-start justify-between cursor-pointer py-6 text-[15px] font-medium text-gray-900 dark:text-white select-none">
                       <span className="pr-6">{faq.q}</span>
                       <span className="mt-1 w-5 h-5 shrink-0 flex items-center justify-center text-gray-400">
-                        <svg className="w-4 h-4 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        <svg
+                          className="w-4 h-4 transition-transform duration-200 group-open:rotate-45"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1.5}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M12 4.5v15m7.5-7.5h-15"
+                          />
                         </svg>
                       </span>
                     </summary>
@@ -449,20 +539,31 @@ export default function IzdelavaSpletneStrani() {
             Začnimo z vašim projektom
           </h2>
           <p className="text-[15px] text-gray-500 dark:text-gray-400 mb-10 max-w-md mx-auto leading-relaxed">
-            Pošljite povpraševanje — v 24 urah prejmete odgovor z oceno projekta. Posvet je brezplačen.
+            Pošljite povpraševanje — v 24 urah prejmete odgovor z oceno
+            projekta. Posvet je brezplačen.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/#kontakt"
+              href="/sl#kontakt"
               className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium text-[14px] hover:opacity-90 transition-opacity"
             >
               Pošlji povpraševanje
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                />
               </svg>
             </Link>
             <Link
-              href="/#delo"
+              href="/sl#delo"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-gray-500 dark:text-gray-400 font-medium text-[14px] hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               Oglej si portfolio
@@ -471,7 +572,7 @@ export default function IzdelavaSpletneStrani() {
         </div>
       </section>
 
-      <Footer />
+      <Footer lang="sl" />
 
       {/* Structured Data */}
       <script
@@ -506,8 +607,18 @@ export default function IzdelavaSpletneStrani() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Domov", item: "https://ajdazajc.com" },
-              { "@type": "ListItem", position: 2, name: "Izdelava spletnih strani", item: "https://ajdazajc.com/storitve/izdelava-spletnih-strani" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Domov",
+                item: "https://ajdazajc.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Izdelava spletnih strani",
+                item: "https://ajdazajc.com/storitve/izdelava-spletnih-strani",
+              },
             ],
           }),
         }}

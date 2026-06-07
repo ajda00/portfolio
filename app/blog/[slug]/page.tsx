@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
+import Nav from "../../components/Nav";
 import { allPosts, getPostBySlug } from "../_posts";
 
 type Props = {
@@ -42,17 +42,32 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A]">
-      <Nav />
+      <Nav lang="sl" variant="sub" />
 
       <main className="pt-32 pb-20 md:pt-44 md:pb-28">
         <div className="max-w-6xl mx-auto px-6">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20">
-            <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Domov</Link>
+          <nav
+            aria-label="Breadcrumb"
+            className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20"
+          >
+            <Link
+              href="/sl"
+              className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            >
+              Domov
+            </Link>
             <span className="mx-2.5 text-gray-300 dark:text-gray-700">/</span>
-            <Link href="/blog" className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Blog</Link>
+            <Link
+              href="/blog"
+              className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            >
+              Blog
+            </Link>
             <span className="mx-2.5 text-gray-300 dark:text-gray-700">/</span>
-            <span className="text-gray-500 dark:text-gray-400">{post.title}</span>
+            <span className="text-gray-500 dark:text-gray-400">
+              {post.title}
+            </span>
           </nav>
 
           <article className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -74,10 +89,16 @@ export default async function BlogPost({ params }: Props) {
                 </p>
                 <div className="h-px bg-gray-100 dark:bg-gray-800 my-6" />
                 <div className="flex flex-col gap-2">
-                  <Link href="/storitve/izdelava-spletnih-strani" className="text-[13px] text-accent hover:underline">
+                  <Link
+                    href="/storitve/izdelava-spletnih-strani"
+                    className="text-[13px] text-accent hover:underline"
+                  >
                     Izdelava spletnih strani
                   </Link>
-                  <Link href="/#kontakt" className="text-[13px] text-accent hover:underline">
+                  <Link
+                    href="/sl#kontakt"
+                    className="text-[13px] text-accent hover:underline"
+                  >
                     Kontakt
                   </Link>
                 </div>
@@ -87,7 +108,9 @@ export default async function BlogPost({ params }: Props) {
             {/* Content */}
             <div className="lg:col-span-9">
               <header className="mb-12">
-                <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">Blog</p>
+                <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
+                  Blog
+                </p>
                 <h1 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl lg:text-5xl text-gray-900 dark:text-white leading-tight">
                   {post.title}
                 </h1>
@@ -101,14 +124,20 @@ export default async function BlogPost({ params }: Props) {
                 {post.content.split("\n\n").map((block, i) => {
                   if (block.startsWith("## ")) {
                     return (
-                      <h2 key={i} className="text-2xl font-[family-name:var(--font-serif-display)] text-gray-900 dark:text-white mt-12 mb-4">
+                      <h2
+                        key={i}
+                        className="text-2xl font-[family-name:var(--font-serif-display)] text-gray-900 dark:text-white mt-12 mb-4"
+                      >
                         {block.replace("## ", "")}
                       </h2>
                     );
                   }
                   if (block.startsWith("### ")) {
                     return (
-                      <h3 key={i} className="text-lg font-semibold text-gray-900 dark:text-white mt-8 mb-3">
+                      <h3
+                        key={i}
+                        className="text-lg font-semibold text-gray-900 dark:text-white mt-8 mb-3"
+                      >
                         {block.replace("### ", "")}
                       </h3>
                     );
@@ -117,7 +146,10 @@ export default async function BlogPost({ params }: Props) {
                     return (
                       <ul key={i} className="space-y-2.5 my-5">
                         {block.split("\n").map((li, j) => (
-                          <li key={j} className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed flex items-start gap-3">
+                          <li
+                            key={j}
+                            className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed flex items-start gap-3"
+                          >
                             <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600 mt-2.5 shrink-0" />
                             {li.replace("- ", "")}
                           </li>
@@ -128,11 +160,18 @@ export default async function BlogPost({ params }: Props) {
                   const parts = block.split(/\[([^\]]+)\]\(([^)]+)\)/);
                   if (parts.length > 1) {
                     return (
-                      <p key={i} className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed my-5">
+                      <p
+                        key={i}
+                        className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed my-5"
+                      >
                         {parts.map((part, j) => {
                           if (j % 3 === 1) {
                             return (
-                              <Link key={j} href={parts[j + 1]} className="text-accent hover:underline">
+                              <Link
+                                key={j}
+                                href={parts[j + 1]}
+                                className="text-accent hover:underline"
+                              >
                                 {part}
                               </Link>
                             );
@@ -144,7 +183,10 @@ export default async function BlogPost({ params }: Props) {
                     );
                   }
                   return (
-                    <p key={i} className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed my-5">
+                    <p
+                      key={i}
+                      className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed my-5"
+                    >
                       {block}
                     </p>
                   );
@@ -154,7 +196,8 @@ export default async function BlogPost({ params }: Props) {
               {/* CTA */}
               <div className="mt-16 pt-10 border-t border-gray-100 dark:border-gray-800">
                 <p className="text-[15px] text-gray-500 dark:text-gray-400 mb-5">
-                  Potrebujete profesionalno spletno stran? Poglejte ponudbo ali me kontaktirajte za brezplačen posvet.
+                  Potrebujete profesionalno spletno stran? Poglejte ponudbo ali
+                  me kontaktirajte za brezplačen posvet.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -162,11 +205,26 @@ export default async function BlogPost({ params }: Props) {
                     className="group inline-flex items-center gap-3 text-[14px] font-medium text-gray-900 dark:text-white"
                   >
                     <span className="w-9 h-9 rounded-full bg-gray-900 dark:bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-3.5 h-3.5 text-white dark:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" /></svg>
+                      <svg
+                        className="w-3.5 h-3.5 text-white dark:text-gray-900"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                        />
+                      </svg>
                     </span>
                     Izdelava spletnih strani
                   </Link>
-                  <Link href="/#kontakt" className="text-[14px] text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium transition-colors py-2">
+                  <Link
+                    href="/sl#kontakt"
+                    className="text-[14px] text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium transition-colors py-2"
+                  >
                     Kontakt
                   </Link>
                 </div>
@@ -176,7 +234,7 @@ export default async function BlogPost({ params }: Props) {
         </div>
       </main>
 
-      <Footer />
+      <Footer lang="sl" />
 
       <script
         type="application/ld+json"
@@ -187,8 +245,16 @@ export default async function BlogPost({ params }: Props) {
             headline: post.title,
             description: post.description,
             datePublished: post.date,
-            author: { "@type": "Person", name: "Ajda Zajc", url: "https://ajdazajc.com" },
-            publisher: { "@type": "Organization", name: "Ajda Zajc", url: "https://ajdazajc.com" },
+            author: {
+              "@type": "Person",
+              name: "Ajda Zajc",
+              url: "https://ajdazajc.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Ajda Zajc",
+              url: "https://ajdazajc.com",
+            },
           }),
         }}
       />
@@ -199,9 +265,24 @@ export default async function BlogPost({ params }: Props) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Domov", item: "https://ajdazajc.com" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://ajdazajc.com/blog" },
-              { "@type": "ListItem", position: 3, name: post.title, item: `https://ajdazajc.com/blog/${post.slug}` },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Domov",
+                item: "https://ajdazajc.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://ajdazajc.com/blog",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: `https://ajdazajc.com/blog/${post.slug}`,
+              },
             ],
           }),
         }}

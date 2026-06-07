@@ -1,17 +1,36 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ */
+/* Color system                                                       */
+/* Brand hue: warm bronze. OKLCH-derived scale for harmonic lightness. */
+/* ------------------------------------------------------------------ */
+
 :root {
+  /* Surfaces */
   --background: #ffffff;
   --foreground: #171717;
-  --accent: #96785A;
-  --accent-light: #B8A089;
-  --accent-subtle: #F5F0EB;
+
+  /* Bronze accent scale. Hue ~70, chroma ~0.06.
+     - accent: brand voice, used for emphasis and large/medium text.
+     - accent-ink: darker shade. Use this when accent text sits on light bg
+       at body sizes (4.5:1 against #fafafa).
+     - accent-light: paler shade, used for subtle separators.
+     - accent-subtle: cream surface, used for soft section washes. */
+  --accent: oklch(56% 0.06 70);             /* ~#9a7c5e */
+  --accent-ink: oklch(43% 0.06 70);         /* ~#705534 — body-text-safe */
+  --accent-light: oklch(72% 0.05 70);       /* ~#b8a089 */
+  --accent-subtle: oklch(95% 0.012 70);     /* ~#f3ece2 — cream surface */
+
+  /* Brand-tinted near-black, replaces gray-900 on dark sections so the
+     dark surfaces feel like the brand instead of "generic dark mode". */
+  --surface-dark: oklch(15% 0.015 70);      /* ~#241f19 */
+  --surface-dark-elev: oklch(20% 0.015 70); /* ~#332b22 elevation step */
 }
 
 :root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-bricolage);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-serif-display);
 }
@@ -20,9 +39,15 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --accent: #C9A87C;
-    --accent-light: #96785A;
-    --accent-subtle: #1a1610;
+
+    /* In dark mode lift lightness and trim chroma slightly. */
+    --accent: oklch(78% 0.08 80);             /* ~#cda87a */
+    --accent-ink: oklch(85% 0.08 80);         /* ~#dcb98c — body-link on dark */
+    --accent-light: oklch(56% 0.06 70);       /* ~#96785a, inversion of light --accent */
+    --accent-subtle: oklch(22% 0.015 70);     /* ~#322a22 — deep cream for surfaces */
+
+    --surface-dark: oklch(12% 0.015 70);      /* ~#1c1813 */
+    --surface-dark-elev: oklch(17% 0.015 70); /* ~#2a2419 */
   }
 }
 
@@ -30,14 +55,36 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+/* Italic serif accent — used for one-word emphasis in display headings only */
 .font-display {
-  font-family: var(--font-display), Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
 }
+
+/* Display sans for headings. Same family as body via the variable axis;
+   the heavier weight + tracking-tight + balanced wrap is the contrast. */
+.font-heading {
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+/* ------------------------------------------------------------------ */
+/* Accent utilities                                                    */
+/* ------------------------------------------------------------------ */
 
 .text-accent {
   color: var(--accent);
+}
+
+.text-accent-ink {
+  color: var(--accent-ink);
 }
 
 .bg-accent {
@@ -48,30 +95,67 @@ body {
   background-color: var(--accent-subtle);
 }
 
+.bg-surface-dark {
+  background-color: var(--surface-dark);
+}
+
+.bg-surface-dark-elev {
+  background-color: var(--surface-dark-elev);
+}
+
 .border-accent {
   border-color: var(--accent);
+}
+
+.border-accent-soft {
+  border-color: color-mix(in oklch, var(--accent) 18%, transparent);
 }
 
 .ring-accent {
   --tw-ring-color: var(--accent);
 }
 
-/* Mobile menu animation */
+/* Subtle accent underline for inline links — restrained but unambiguous. */
+.link-accent {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklch, var(--accent) 40%, transparent);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 200ms ease;
+}
+.link-accent:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* ------------------------------------------------------------------ */
+/* Misc                                                               */
+/* ------------------------------------------------------------------ */
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* Hide scrollbar for showcase */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Selection picks up the brand. Tiny detail; reads as deliberate. */
+::selection {
+  background-color: color-mix(in oklch, var(--accent) 35%, transparent);
+  color: var(--foreground);
 }

@@ -1,30 +1,50 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import {
+  Bricolage_Grotesque,
+  DM_Serif_Display,
+  Geist_Mono,
+} from "next/font/google";
+import { headers } from "next/headers";
 import Script from "next/script";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const dmSerif = DM_Serif_Display({
   variable: "--font-serif-display",
   weight: "400",
   subsets: ["latin"],
+  display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: {
-    default: "Izdelava spletnih strani | Ajda Zajc — Spletne strani, aplikacije & landing page",
+    default:
+      "Izdelava spletnih strani | Ajda Zajc — Spletne strani, aplikacije & landing page",
     template: "%s | Ajda Zajc",
   },
-  description: "Izdelava spletne strani po meri — spletne strani, landing page in mobilne aplikacije za startupi in mala podjetja. Profesionalno oblikovanje in razvoj v Ljubljani. Hitra dostava, moderna tehnologija (Next.js, React). Od ideje do objave v nekaj dneh.",
+  description:
+    "Izdelava spletne strani po meri — spletne strani, landing page in mobilne aplikacije za startupi in mala podjetja. Profesionalno oblikovanje in razvoj v Ljubljani. Hitra dostava, moderna tehnologija (Next.js, React). Od ideje do objave v nekaj dneh.",
   keywords: [
     "izdelava spletne strani",
     "izdelava spletnih strani",
@@ -65,13 +85,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "sl": "/",
-      "x-default": "/",
+      sl: "/sl",
+      en: "/en",
+      "x-default": "/sl",
     },
   },
   openGraph: {
     title: "Izdelava spletnih strani | Ajda Zajc — od ideje do objave",
-    description: "Izdelava spletnih strani, landing page strani in mobilnih aplikacij. Oblikovanje in razvoj po meri za startupi in mala podjetja. Ljubljana, Slovenija.",
+    description:
+      "Izdelava spletnih strani, landing page strani in mobilnih aplikacij. Oblikovanje in razvoj po meri za startupi in mala podjetja. Ljubljana, Slovenija.",
     url: "https://ajdazajc.com",
     siteName: "Ajda Zajc — Izdelava spletnih strani",
     locale: "sl_SI",
@@ -88,7 +110,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Izdelava spletnih strani | Ajda Zajc",
-    description: "Spletne strani, landing page strani in mobilne aplikacije za startupi in mala podjetja. Ljubljana, Slovenija.",
+    description:
+      "Spletne strani, landing page strani in mobilne aplikacije za startupi in mala podjetja. Ljubljana, Slovenija.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -108,15 +131,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const h = await headers();
+  const lang = h.get("x-url-lang") === "en" ? "en" : "sl";
+
   return (
-    <html lang="sl">
+    <html lang={lang}>
       <head>
-        {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2WB7W4V53G"
           strategy="afterInteractive"
@@ -130,8 +155,11 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* LocalBusiness structured data — helps Google show you for local searches */}
-        <Script id="schema-local-business" type="application/ld+json" strategy="beforeInteractive">
+        <Script
+          id="schema-local-business"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+        >
           {`
             {
               "@context": "https://schema.org",
@@ -175,44 +203,6 @@ export default function RootLayout({
                 "Next.js",
                 "Celostna podoba"
               ],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Storitve",
-                "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Izdelava spletnih strani",
-                      "description": "Oblikovanje in razvoj spletnih strani po meri z Next.js, React in TypeScript."
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Izdelava landing page strani",
-                      "description": "Landing page strani, ki pritegnejo pozornost in pripeljejo stranke."
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Mobilne aplikacije",
-                      "description": "iOS in Android aplikacije z nativnim občutkom."
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Celostna podoba in blagovna znamka",
-                      "description": "Logotipi, barve in vizualni jezik, ki izstopa."
-                    }
-                  }
-                ]
-              },
               "sameAs": [
                 "https://www.linkedin.com/in/ajda-zajc/",
                 "https://github.com/ajda00"
@@ -221,7 +211,11 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Script id="schema-website" type="application/ld+json" strategy="beforeInteractive">
+        <Script
+          id="schema-website"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+        >
           {`
             {
               "@context": "https://schema.org",
@@ -238,7 +232,11 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Script id="schema-faq" type="application/ld+json" strategy="beforeInteractive">
+        <Script
+          id="schema-faq"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+        >
           {`
             {
               "@context": "https://schema.org",
@@ -288,44 +286,9 @@ export default function RootLayout({
             }
           `}
         </Script>
-
-        <Script id="schema-breadcrumb" type="application/ld+json" strategy="beforeInteractive">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Domov",
-                  "item": "https://ajdazajc.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Izdelava spletnih strani",
-                  "item": "https://ajdazajc.com/#storitve"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Portfolio",
-                  "item": "https://ajdazajc.com/#delo"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "name": "Kontakt",
-                  "item": "https://ajdazajc.com/#kontakt"
-                }
-              ]
-            }
-          `}
-        </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSerif.variable} antialiased`}
+        className={`${bricolage.variable} ${geistMono.variable} ${dmSerif.variable} antialiased`}
       >
         {children}
       </body>

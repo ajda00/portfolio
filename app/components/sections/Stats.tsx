@@ -3,7 +3,7 @@
 import { animate, useInView, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import ajdaWalking from "../../../src/images/ajda-2.png";
+import ajdaWalking from "../../../src/images/ajda-wisteria.jpg";
 import { statsValues } from "../../lib/data";
 import { getDictionary } from "../../lib/i18n";
 import type { Lang } from "../../lib/types";
@@ -92,7 +92,7 @@ export default function Stats({ lang }: Props) {
 
   return (
     <section className="bg-deep py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1360px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           {/* Black bio card */}
           <div className="lg:col-span-4 relative bg-ink-deep text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between min-h-[420px]">

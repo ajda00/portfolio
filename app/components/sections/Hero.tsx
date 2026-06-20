@@ -15,6 +15,7 @@ export default function Hero({ lang }: Props) {
     <HeroPortfolio
       title1={l.hero.title1}
       titleEm={l.hero.titleEm}
+      titleConnector={l.hero.titleConnector}
       subtitle={l.hero.subtitle}
       cta1={{ label: l.hero.cta1, href: `#${contactId}` }}
       cta2={{ label: l.hero.cta2, href: `#${workId}` }}

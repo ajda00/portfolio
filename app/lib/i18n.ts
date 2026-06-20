@@ -29,8 +29,11 @@ type Dict = {
     title: string;
     visitSite: string;
     other: string;
-    projects: Record<"topsi" | "manjatk" | "ordinem", { desc: string; role: string }>;
-    otherProjects: Record<"popsy" | "moohero" | "devilwears", string>;
+    projects: Record<
+      "topsi" | "manjatk" | "ordinem" | "moohero" | "nina",
+      { desc: string; role: string }
+    >;
+    otherProjects: Record<"popsy" | "devilwears", string>;
   };
   process: {
     label: string;
@@ -73,7 +76,11 @@ type Dict = {
     success: string;
     error: string;
   };
-  footer: { rights: string };
+  footer: {
+    rights: string;
+    cta: { heading: string; subtitle: string; primary: string; secondary: string };
+    columns: { pages: string; social: string };
+  };
   language: { toggleAria: string };
 };
 
@@ -149,10 +156,17 @@ const sl: Dict = {
         desc: "Spletna stran za gradbeno svetovanje. Tih, zanesljiv dizajn za zahtevno publiko.",
         role: "Oblikovanje & razvoj",
       },
+      moohero: {
+        desc: "Nadzorna plošča in mobilna aplikacija za spremljanje živine s pametno ovratnico.",
+        role: "UI dizajn & marketing",
+      },
+      nina: {
+        desc: "Portfolio in spletna trgovina umetnice Nine Hribar. Galerija del in sistem za naročila.",
+        role: "Oblikovanje & razvoj",
+      },
     },
     otherProjects: {
       popsy: "No-code gradnik spletnih strani, sprejet v Y Combinator. Zgradila sem jedro produkta.",
-      moohero: "Nadzorna plošča in mobilna aplikacija za spremljanje živine s pametno ovratnico.",
       devilwears: "Etsy trgovina z digitalnimi printi. Blagovna znamka, identiteta in oblikovanje izložbe.",
     },
   },
@@ -231,7 +245,20 @@ const sl: Dict = {
     success: "Sporočilo poslano. Odgovorim v 24 urah.",
     error: "Pošiljanje ni uspelo. Poskusi znova ali piši na domen.zajc@gmail.com.",
   },
-  footer: { rights: "Vse pravice pridržane." },
+  footer: {
+    rights: "Vse pravice pridržane.",
+    cta: {
+      heading: "Pripravljeni na nov projekt?",
+      subtitle:
+        "Če iščeš oblikovalko in razvijalko, ki posluša, razume in gradi premišljeno, začnimo pogovor.",
+      primary: "Pošlji povpraševanje",
+      secondary: "E-mail",
+    },
+    columns: {
+      pages: "Strani",
+      social: "Družbena omrežja",
+    },
+  },
   language: { toggleAria: "Preklopi jezik" },
 };
 
@@ -307,10 +334,17 @@ const en: Dict = {
         desc: "Site for a construction consultancy. Quiet, confident design for a serious audience.",
         role: "Design & Development",
       },
+      moohero: {
+        desc: "Smart-collar dashboard and mobile app for livestock monitoring with heat detection.",
+        role: "UI design & marketing",
+      },
+      nina: {
+        desc: "Portfolio and online store for artist Nina Hribar. Gallery of works and a custom-order flow.",
+        role: "Design & Development",
+      },
     },
     otherProjects: {
       popsy: "No-code website builder accepted into Y Combinator. Built the core product.",
-      moohero: "Smart-collar dashboard and mobile app for livestock monitoring with heat detection.",
       devilwears: "Etsy shop selling digital design prints. Brand, identity, and storefront.",
     },
   },
@@ -389,7 +423,20 @@ const en: Dict = {
     success: "Message sent. I'll reply within 24 hours.",
     error: "Sending failed. Try again or email domen.zajc@gmail.com.",
   },
-  footer: { rights: "All rights reserved." },
+  footer: {
+    rights: "All rights reserved.",
+    cta: {
+      heading: "Ready to start your project?",
+      subtitle:
+        "If you're looking for a designer and developer who listens, understands, and builds with intention, let's start the conversation.",
+      primary: "Get in touch",
+      secondary: "Email",
+    },
+    columns: {
+      pages: "Pages",
+      social: "Social",
+    },
+  },
   language: { toggleAria: "Switch language" },
 };
 

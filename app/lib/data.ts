@@ -1,12 +1,13 @@
 import type { StaticImageData } from "next/image";
-import mooheroLogo from "../../src/images/MooHero.svg";
 import manjatkShowcase from "../../src/images/manjatk-showcase.png";
+import mooheroShowcase from "../../src/images/moohero-showcase.png";
+import ninaShowcase from "../../src/images/nina-showcase.png";
 import ordinemShowcase from "../../src/images/ordinem-showcase.png";
 import popsyLogo from "../../src/images/popsy.png";
 import topsiShowcase from "../../src/images/topsi-showcase.png";
 
-export type ProjectKey = "topsi" | "manjatk" | "ordinem";
-export type OtherProjectKey = "popsy" | "moohero" | "devilwears";
+export type ProjectKey = "topsi" | "manjatk" | "ordinem" | "moohero" | "nina";
+export type OtherProjectKey = "popsy" | "devilwears";
 
 export interface FeaturedProject {
   key: ProjectKey;
@@ -47,6 +48,20 @@ export const featuredProjects: FeaturedProject[] = [
     image: ordinemShowcase,
     tags: ["Next.js", "TypeScript", "Web App"],
   },
+  {
+    key: "moohero",
+    name: "MooHero",
+    url: "https://www.moohero.com/",
+    image: mooheroShowcase,
+    tags: ["UI Design", "Mobile", "Marketing"],
+  },
+  {
+    key: "nina",
+    name: "ninahribar.art",
+    url: "https://ninahribar.art",
+    image: ninaShowcase,
+    tags: ["Next.js", "Portfolio", "Design"],
+  },
 ];
 
 export const otherProjects: OtherProject[] = [
@@ -57,13 +72,6 @@ export const otherProjects: OtherProject[] = [
     logo: popsyLogo,
     badge: "YC",
     tags: ["React", "TypeScript", "Web Platform"],
-  },
-  {
-    key: "moohero",
-    name: "MooHero",
-    url: "https://www.moohero.com/",
-    logo: mooheroLogo,
-    tags: ["UI Design", "Mobile", "Marketing"],
   },
   {
     key: "devilwears",

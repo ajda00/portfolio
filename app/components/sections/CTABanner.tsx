@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { getDictionary } from "../../lib/i18n";
 import type { Lang } from "../../lib/types";
+import { BorderRotate } from "../ui/animated-gradient-border";
 
 interface Props {
   lang: Lang;
@@ -27,11 +28,20 @@ export default function CTABanner({ lang }: Props) {
 
   return (
     <section className="bg-app py-16 md:py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          {...reveal}
-          className="bg-ink-deep text-white rounded-3xl p-10 md:p-16 lg:p-20 text-center"
-        >
+      <div className="max-w-[1360px] mx-auto px-6">
+        <motion.div {...reveal}>
+          <BorderRotate
+            animationSpeed={6}
+            borderWidth={2}
+            borderRadius={24}
+            backgroundColor="#0a0a0a"
+            gradientColors={{
+              primary: "#3a3a3a",
+              secondary: "#f5d547",
+              accent: "#fff4be",
+            }}
+            className="text-white p-10 md:p-16 lg:p-20 text-center"
+          >
           <h2
             className="font-display text-white leading-[1.05] tracking-[-0.03em] mb-6 mx-auto max-w-3xl"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
@@ -56,6 +66,7 @@ export default function CTABanner({ lang }: Props) {
               {l.cta.cta2}
             </a>
           </div>
+          </BorderRotate>
         </motion.div>
       </div>
     </section>

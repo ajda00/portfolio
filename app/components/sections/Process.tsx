@@ -11,7 +11,7 @@ export default function Process({ lang }: Props) {
 
   return (
     <section className="bg-app pt-20 md:pt-28 pb-24 md:pb-32">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1360px] mx-auto px-6">
         <SectionReveal className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <span className="pill-outline mb-6">
             <span>{l.process.label}</span>

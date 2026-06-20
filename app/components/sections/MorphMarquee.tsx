@@ -16,12 +16,11 @@ export default function MorphMarquee({ lang }: Props) {
       aria-hidden="true"
       className="bg-app py-12 md:py-16 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1360px] mx-auto px-6">
         <GooeyText
           texts={words[lang]}
           morphTime={1.2}
           cooldownTime={0.6}
-          className="h-[72px] sm:h-[88px] md:h-[104px]"
           textClassName="font-display font-bold text-ink tracking-[-0.04em] !text-[clamp(2rem,6vw,3.5rem)]"
         />
       </div>

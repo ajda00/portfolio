@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import ajdaWalking from "../../src/images/ajda-2.png";
+import azLogo from "../../src/images/AZ.svg";
 import { getDictionary } from "../lib/i18n";
 import type { Lang } from "../lib/types";
 import LanguageToggle from "./LanguageToggle";
@@ -40,7 +40,7 @@ export default function Nav({ lang, variant = "home" }: Props) {
   return (
     <header className="fixed top-0 left-0 w-full z-40 px-4 pt-4">
       <nav
-        className="max-w-6xl mx-auto bg-bg-elev/95 backdrop-blur-md border border-line rounded-full px-4 py-2.5 flex justify-between items-center shadow-soft"
+        className="max-w-[1360px] mx-auto bg-bg-elev/95 backdrop-blur-md border border-line rounded-full px-4 py-2.5 flex justify-between items-center shadow-soft"
         aria-label="Main navigation"
       >
         <Link
@@ -48,15 +48,14 @@ export default function Nav({ lang, variant = "home" }: Props) {
           aria-label="Ajda Zajc"
           className="flex items-center gap-2 text-ink text-sm md:text-base font-semibold"
         >
-          <span className="w-7 h-7 rounded-full overflow-hidden bg-bg-deep">
-            <Image
-              src={ajdaWalking}
-              alt=""
-              width={28}
-              height={28}
-              className="w-full h-full object-cover object-top"
-            />
-          </span>
+          <Image
+            src={azLogo}
+            alt="Ajda Zajc"
+            width={32}
+            height={18}
+            priority
+            className="h-5 w-auto"
+          />
           <span>Ajda Zajc</span>
         </Link>
 

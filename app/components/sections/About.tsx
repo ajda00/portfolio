@@ -1,5 +1,6 @@
 import Image from "next/image";
-import ajdaWalking from "../../../src/images/ajda-2.png";
+import ajdaFlowers from "../../../src/images/ajda-flowers.jpg";
+import mooheroAward from "../../../src/images/moohero-startup-of-year.jpg";
 import { getDictionary } from "../../lib/i18n";
 import type { Lang } from "../../lib/types";
 import SectionReveal from "../SectionReveal";
@@ -14,16 +15,16 @@ export default function About({ lang }: Props) {
 
   return (
     <section id={sectionId} className="bg-app py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1360px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <SectionReveal className="lg:col-span-5" y={32}>
             <div className="relative w-full max-w-md mx-auto aspect-[4/5] rounded-3xl overflow-hidden bg-bg-deep shadow-soft">
               <Image
-                src={ajdaWalking}
+                src={ajdaFlowers}
                 alt="Ajda Zajc"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
             </div>
           </SectionReveal>
@@ -77,6 +78,42 @@ export default function About({ lang }: Props) {
             </SectionReveal>
           </div>
         </div>
+
+        <SectionReveal delay={0.1} className="mt-16 md:mt-20 max-w-4xl mx-auto">
+          <figure>
+            <div className="relative aspect-[3/2] rounded-3xl overflow-hidden bg-bg-deep shadow-soft">
+              <Image
+                src={mooheroAward}
+                alt={
+                  lang === "sl"
+                    ? "Ekipa MooHero z nagrado Slovenski start:up leta 2026"
+                    : "MooHero team with the Slovenian Startup of the Year 2026 award"
+                }
+                fill
+                sizes="(min-width: 1024px) 56rem, 100vw"
+                className="object-cover object-center"
+              />
+            </div>
+            <figcaption className="mt-4 flex items-baseline gap-3 text-sm">
+              <span className="pill-yellow">
+                <span className="font-semibold">2026</span>
+              </span>
+              <span className="text-muted leading-relaxed">
+                {lang === "sl" ? (
+                  <>
+                    <span className="font-medium text-ink">MooHero</span> — finalist
+                    Slovenskega start:upa leta.
+                  </>
+                ) : (
+                  <>
+                    <span className="font-medium text-ink">MooHero</span> — Slovenian
+                    Startup of the Year finalist.
+                  </>
+                )}
+              </span>
+            </figcaption>
+          </figure>
+        </SectionReveal>
       </div>
     </section>
   );

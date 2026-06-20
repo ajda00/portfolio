@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import { techStack } from "../../lib/data";
 import { getDictionary } from "../../lib/i18n";
 import type { Lang } from "../../lib/types";
@@ -13,8 +14,8 @@ export default function Services({ lang }: Props) {
 
   return (
     <section id={sectionId} className="bg-app pt-20 md:pt-28 pb-24 md:pb-32">
-      <div className="max-w-6xl mx-auto px-6">
-        <SectionReveal className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <div className="max-w-[1360px] mx-auto px-6">
+        <SectionReveal className="max-w-3xl mb-16 md:mb-20">
           <span className="pill-outline mb-6">
             <span>{l.services.label}</span>
           </span>
@@ -22,29 +23,39 @@ export default function Services({ lang }: Props) {
             className="font-display text-ink leading-[1.05] tracking-[-0.03em] mt-4"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
-            <span className="font-light">{l.services.title.split(" ").slice(0, -1).join(" ")} </span>
-            <span className="font-bold">{l.services.title.split(" ").slice(-1)[0]}</span>
+            <span className="font-light">
+              {l.services.title.split(" ").slice(0, -1).join(" ")}{" "}
+            </span>
+            <span className="font-bold">
+              {l.services.title.split(" ").slice(-1)[0]}
+            </span>
           </h2>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 md:gap-y-12">
           {l.services.items.map((service) => (
             <SectionReveal
               key={service.title}
               y={16}
-              className="group bg-bg-elev rounded-3xl p-6 md:p-8 transition-shadow hover:shadow-card"
+              className="flex flex-row gap-5 items-start"
             >
-              <h3 className="font-display text-xl md:text-2xl font-semibold text-ink mb-3 tracking-tight">
-                {service.title}
-              </h3>
-              <p className="text-[15px] text-muted leading-relaxed max-w-[42ch]">
-                {service.description}
-              </p>
+              <Check
+                className="w-5 h-5 mt-1 text-ink shrink-0"
+                strokeWidth={2.5}
+                aria-hidden="true"
+              />
+              <div className="flex flex-col gap-1">
+                <p className="text-ink font-medium leading-snug">
+                  {service.title}
+                </p>
+                <p className="text-sm text-muted leading-relaxed max-w-[42ch]">
+                  {service.description}
+                </p>
+              </div>
             </SectionReveal>
           ))}
         </div>
 
-        {/* Tech stack footer */}
         <SectionReveal className="mt-16 pt-8 border-t border-line flex flex-col md:flex-row md:items-baseline md:justify-between gap-5">
           <p className="text-sm font-medium text-muted shrink-0">
             {l.services.techLabel}

@@ -28,7 +28,7 @@ export default function Footer({ lang }: Props) {
         paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))",
       }}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1360px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <Link href={home} aria-label="Ajda Zajc">
             <span className="font-display font-semibold text-base">Ajda Zajc</span>

@@ -58,7 +58,7 @@ export default function IzdelavaSpletneStrani() {
 
       {/* ==================== HERO ==================== */}
       <section className="relative pt-32 pb-16 md:pt-44 md:pb-24">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <nav
             aria-label="Breadcrumb"
             className="text-[13px] tracking-wide text-gray-400 dark:text-gray-500 mb-16 md:mb-20"
@@ -118,14 +118,14 @@ export default function IzdelavaSpletneStrani() {
         </div>
 
         {/* Divider line */}
-        <div className="max-w-6xl mx-auto px-6 mt-16 md:mt-24">
+        <div className="max-w-[1360px] mx-auto px-6 mt-16 md:mt-24">
           <div className="h-px bg-gray-200 dark:bg-gray-800" />
         </div>
       </section>
 
       {/* ==================== NUMBERS ==================== */}
       <section className="py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <div className="grid grid-cols-3 gap-6">
             {[
               { number: "20+", label: "dostavljenih projektov" },
@@ -147,7 +147,7 @@ export default function IzdelavaSpletneStrani() {
 
       {/* ==================== WHAT YOU GET ==================== */}
       <section className="py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-4">
               <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4 sticky top-28">
@@ -225,7 +225,7 @@ export default function IzdelavaSpletneStrani() {
           }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-6">
+        <div className="relative max-w-[1360px] mx-auto px-6">
           <div className="mb-16 md:mb-20">
             <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
               Proces
@@ -279,7 +279,7 @@ export default function IzdelavaSpletneStrani() {
 
       {/* ==================== PRICING ==================== */}
       <section className="py-24 md:py-32">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-16">
             <div className="lg:col-span-5">
               <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
@@ -408,7 +408,7 @@ export default function IzdelavaSpletneStrani() {
 
       {/* ==================== TECH ==================== */}
       <section className="py-16 md:py-20 border-y border-gray-100 dark:border-gray-800/50">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium shrink-0">
               Tehnologije
@@ -438,7 +438,7 @@ export default function IzdelavaSpletneStrani() {
 
       {/* ==================== TRUST ==================== */}
       <section className="py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-5">
               <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4">
@@ -479,7 +479,7 @@ export default function IzdelavaSpletneStrani() {
 
       {/* ==================== FAQ ==================== */}
       <section className="py-20 md:py-28 bg-gray-50/80 dark:bg-[#0d0d0d]">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-4">
               <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4 lg:sticky lg:top-28">
@@ -531,7 +531,7 @@ export default function IzdelavaSpletneStrani() {
 
       {/* ==================== CTA ==================== */}
       <section className="py-24 md:py-32">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-[1360px] mx-auto px-6 text-center">
           <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-6">
             Naslednji korak
           </p>

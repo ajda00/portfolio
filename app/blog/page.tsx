@@ -19,7 +19,7 @@ export default function BlogIndex() {
       <Nav lang="sl" variant="sub" />
 
       <main className="pt-32 pb-20 md:pt-44 md:pb-28">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-[1360px] mx-auto px-6">
           {/* Breadcrumb */}
           <nav
             aria-label="Breadcrumb"

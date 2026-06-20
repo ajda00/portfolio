@@ -88,7 +88,7 @@ export function GooeyText({
 
   return (
     <div className={cn("relative", className)}>
-      <svg className="absolute h-0 w-0" aria-hidden="true" focusable="false">
+      <svg aria-hidden="true" focusable="false">
         <defs>
           <filter id="threshold">
             <feColorMatrix

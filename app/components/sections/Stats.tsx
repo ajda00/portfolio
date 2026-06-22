@@ -47,12 +47,12 @@ function StatValue({ raw }: { raw: string }) {
 export default function Stats({ lang }: Props) {
   const l = getDictionary(lang);
 
-  const bio = lang === "sl" ? "Sem Ajda Zajc" : "I'm Ajda Zajc";
+  const bio = lang === "sl" ? "Jaz sem Ajda." : "I'm Ajda.";
   const bioText =
     lang === "sl"
-      ? "Oblikovalka in razvijalka iz Ljubljane. Gradim spletne strani in aplikacije za startupe in mala podjetja. Od strategije do objave, vse v eni glavi."
-      : "Designer and developer based in Ljubljana. I build websites and apps for startups and small businesses. Strategy to launch, no handoff seams.";
-  const aboutLabel = lang === "sl" ? "O meni" : "About me";
+      ? "Oblikovalka in razvijalka iz Ljubljane. Gradim spletne strani in aplikacije za startupe in mala podjetja. Vsak projekt obravnavam, kot da bo moj."
+      : "Designer and developer from Ljubljana. I build websites and apps for startups and small businesses. Every project gets treated like it's my own.";
+  const aboutLabel = lang === "sl" ? "Več o meni" : "More about me";
 
   // Build 4 stat cards. statsValues = ["20+", "5+", "Web & Mobile"]; pad with one more.
   const stats = [
@@ -61,32 +61,32 @@ export default function Stats({ lang }: Props) {
       label: lang === "sl" ? "let" : "years",
       context:
         lang === "sl"
-          ? "Izkušnje pri Popsy (Y Combinator), MooHero in Topsi AI."
-          : "Built products at Popsy (Y Combinator), MooHero, and Topsi AI.",
+          ? "Najprej v Popsy (Y Combinator), zatem v MooHero in Topsi AI."
+          : "Started at Popsy (Y Combinator), then MooHero and Topsi AI.",
     },
     {
       value: statsValues[0], // "20+"
       label: lang === "sl" ? "projektov" : "projects",
       context:
         lang === "sl"
-          ? "Od enostavnih landing strani do kompleksnih aplikacij."
-          : "From simple landing pages to complex apps.",
+          ? "Od enostranskih landing pageov do mobilnih aplikacij za salone."
+          : "From one-page landings to mobile apps for salons.",
     },
     {
       value: "100%",
-      label: lang === "sl" ? "solo delo" : "solo work",
+      label: lang === "sl" ? "po meri" : "custom",
       context:
         lang === "sl"
-          ? "Oblikovanje in razvoj v isti glavi. Brez izgubljenih prevodov."
-          : "Design and dev in one head. No handoff drift.",
+          ? "Vsako delo narejeno za točno tvoj projekt. Brez stock fotografij, brez kupljenih predlog."
+          : "Everything made for your specific project. No stock photos, no purchased templates.",
     },
     {
       value: "24h",
-      label: lang === "sl" ? "odgovor" : "response",
+      label: lang === "sl" ? "odgovor" : "reply",
       context:
         lang === "sl"
-          ? "Odgovorim na povpraševanje v roku enega dne."
-          : "I reply to inquiries within one business day.",
+          ? "Odpišem v 24 urah. Tudi ob nedeljah."
+          : "I write back inside a day. Sundays included.",
     },
   ];
 

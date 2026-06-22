@@ -79,8 +79,8 @@ export default function Footer({ lang }: Props) {
           <p>
             &copy; {new Date().getFullYear()} Ajda Zajc s.p. {l.footer.rights}
           </p>
-          <a href="mailto:domen.zajc@gmail.com" className="hover:text-ink transition-colors">
-            domen.zajc@gmail.com
+          <a href="mailto:ajda.zajc@gmail.com" className="hover:text-ink transition-colors">
+            ajda.zajc@gmail.com
           </a>
         </div>
       </div>

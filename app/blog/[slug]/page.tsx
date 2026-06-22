@@ -82,7 +82,7 @@ export default async function BlogPost({ params }: Props) {
                   })}
                 </time>
                 <p className="mt-4 text-[13px] text-gray-400 dark:text-gray-500">
-                  Avtorica
+                  Pisala
                 </p>
                 <p className="text-[14px] font-medium text-gray-900 dark:text-white">
                   Ajda Zajc
@@ -196,8 +196,8 @@ export default async function BlogPost({ params }: Props) {
               {/* CTA */}
               <div className="mt-16 pt-10 border-t border-gray-100 dark:border-gray-800">
                 <p className="text-[15px] text-gray-500 dark:text-gray-400 mb-5">
-                  Potrebujete profesionalno spletno stran? Poglejte ponudbo ali
-                  me kontaktirajte za brezplačen posvet.
+                  Iščeš nekoga, ki bi naredil tvojo spletno stran? Poglej
+                  ponudbo ali piši na kratko, pa se dogovoriva.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -219,13 +219,13 @@ export default async function BlogPost({ params }: Props) {
                         />
                       </svg>
                     </span>
-                    Izdelava spletnih strani
+                    Storitve
                   </Link>
                   <Link
                     href="/sl#kontakt"
                     className="text-[14px] text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium transition-colors py-2"
                   >
-                    Kontakt
+                    Pogovor
                   </Link>
                 </div>
               </div>

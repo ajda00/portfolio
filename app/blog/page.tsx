@@ -5,9 +5,9 @@ import Nav from "../components/Nav";
 import { allPosts } from "./_posts";
 
 export const metadata: Metadata = {
-  title: "Blog — Nasveti za spletne strani in digitalni marketing",
+  title: "Blog | Razmišljanja o spletnih straneh, oblikovanju in marketingu",
   description:
-    "Praktični nasveti za izdelavo spletne strani, SEO optimizacijo in digitalni marketing za mala podjetja in startupi.",
+    "Vodniki in razmišljanja o izdelavi spletnih strani, oblikovanju, SEO osnovah in digitalnem marketingu za startupe in mala podjetja.",
   alternates: {
     canonical: "/blog",
   },
@@ -41,11 +41,11 @@ export default function BlogIndex() {
                 Blog
               </p>
               <h1 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug">
-                Nasveti, vodniki in razmišljanja
+                Razmišljanja in vodniki.
               </h1>
               <p className="mt-4 text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed">
-                O izdelavi spletnih strani, oblikovanju in digitalnem
-                marketingu.
+                O izdelavi spletnih strani, oblikovanju in vsem, kar opazim
+                med delom.
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export default function BlogIndex() {
                       {post.description}
                     </p>
                     <span className="mt-3 inline-flex items-center gap-1.5 text-[13px] text-gray-400 group-hover:text-accent transition-colors">
-                      Preberi več
+                      Naprej
                       <svg
                         className="w-3.5 h-3.5"
                         fill="none"

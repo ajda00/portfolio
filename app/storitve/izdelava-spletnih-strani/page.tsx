@@ -4,9 +4,9 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 
 export const metadata: Metadata = {
-  title: "Izdelava spletne strani | Profesionalna spletna stran po meri",
+  title: "Izdelava spletne strani | Po meri, hitro, brez predlog",
   description:
-    "Izdelava spletne strani za podjetja in startupi v Ljubljani. Profesionalno oblikovanje in razvoj po meri z Next.js in React. Hitra dostava, cena od 500€. Brezplačen posvet.",
+    "Izdelava spletne strani po meri za startupe in mala podjetja v Ljubljani. Oblikovanje in razvoj v Next.js in Reactu. Landing page od 500 €, predstavitvena od 1.200 €. Klic je brezplačen.",
   keywords: [
     "izdelava spletne strani",
     "izdelava spletne strani cena",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     canonical: "/storitve/izdelava-spletnih-strani",
   },
   openGraph: {
-    title: "Izdelava spletne strani — profesionalno, hitro, po meri",
+    title: "Izdelava spletne strani po meri | Ajda Zajc",
     description:
-      "Profesionalna izdelava spletne strani za podjetja in startupi. Od oblikovanja do objave v 1–2 tednih. Ljubljana, Slovenija.",
+      "Spletne strani in aplikacije, narejene s pozornostjo. Od skice v Figmi do objave na tvoji domeni. 1–2 tedna, brez predlog. Ljubljana, Slovenija.",
     url: "https://ajdazajc.com/storitve/izdelava-spletnih-strani",
     type: "website",
   },
@@ -30,24 +30,24 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "Koliko stane izdelava spletne strani?",
-    a: "Cena je odvisna od obsega projekta. Enostaven landing page se začne pri 500 €, poslovna spletna stran z več podstranmi pri 1.200 €, kompleksnejše rešitve (e-trgovina, aplikacija) pa ocenim individualno. Vedno ponudim brezplačen posvet pred začetkom.",
+    q: "Koliko stane spletna stran?",
+    a: "Odvisno od obsega. Landing page se začne pri 500 €, predstavitvena pri 1.200 €, e-trgovina ali aplikacija po dogovoru. Pred začetkom vedno pošljem fiksno oceno po brezplačnem klicu.",
   },
   {
-    q: "Kako dolgo traja izdelava spletne strani?",
-    a: "Enostaven landing page je pripravljen v 3–5 dneh. Poslovna spletna stran v 1–2 tednih. Bolj obsežni projekti z mobilno aplikacijo ali kompleksnim dizajnom trajajo 3–4 tedne.",
+    q: "Kako dolgo traja izdelava?",
+    a: "Landing page: 3–5 dni. Predstavitvena: 1–2 tedna. Kompleksnejši projekti z aplikacijo ali zahtevnim dizajnom: 3–4 tedne. Datum povem na začetku in ga držim.",
   },
   {
-    q: "Ali je spletna stran optimizirana za Google (SEO)?",
-    a: "Da. Vsaka spletna stran, ki jo izdelam, je tehnično optimizirana za iskalnike — hitra, z ustrezno strukturo, meta podatki in čisto kodo. To pomeni boljše uvrstitve na Googlu brez dodatnega plačila za SEO osnove.",
+    q: "Je stran pripravljena za Google (SEO)?",
+    a: "Da. Vsaka stran je tehnično pripravljena za iskalnike: hitra, s pravo strukturo, čisto kodo in meta podatki. SEO osnova je vključena, ne plačaš je posebej.",
   },
   {
-    q: "Ali ponujate tudi vzdrževanje po objavi?",
-    a: "Seveda. Po objavi nudim podporo za vsebinske spremembe, tehnične posodobitve in optimizacije. Dogovorimo se lahko za mesečno vzdrževanje ali pomoč po potrebi.",
+    q: "Ponujaš tudi vzdrževanje po objavi?",
+    a: "Ja. Po objavi delam manjše spremembe, posodobitve in optimizacije po potrebi. Lahko se dogovoriva za mesečno vzdrževanje ali pa me pokličeš, ko kaj potrebuješ.",
   },
   {
     q: "Kaj potrebujem za začetek?",
-    a: "Samo idejo o tem, kaj želite doseči s spletno stranjo. Skupaj bova definirala strukturo, vsebine in dizajn. Če imate že pripravljene tekste ali fotografije, je to super — sicer vam pomagam tudi pri tem.",
+    a: "Samo idejo. Strukturo, dizajn in vsebine narediva skupaj. Če imaš že pripravljene tekste ali fotografije, super. Če ne, ti pomagam tudi pri tem.",
   },
 ];
 
@@ -79,16 +79,16 @@ export default function IzdelavaSpletneStrani() {
                 Oblikovanje & razvoj
               </p>
               <h1 className="font-[family-name:var(--font-serif-display)] text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[1.0] tracking-tight text-gray-900 dark:text-white">
-                Izdelava
+                Spletne strani,
                 <br />
-                spletne strani
+                narejene s pozornostjo.
               </h1>
             </div>
             <div className="lg:col-span-4 lg:pb-3">
               <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-md">
-                Od ideje in oblikovanja do razvoja in objave. Moderna
-                tehnologija, odziven dizajn in optimizacija za iskalnike —
-                vključeno v vsak projekt.
+                Od skice v Figmi do objave na tvoji domeni. Hitra koda, čist
+                dizajn, SEO osnova vključena. Brez predlog in brez bližnjic, ki
+                bi jih čez leto obžalovala.
               </p>
               <div className="mt-6">
                 <Link
@@ -110,7 +110,7 @@ export default function IzdelavaSpletneStrani() {
                       />
                     </svg>
                   </span>
-                  Brezplačen posvet
+                  Brezplačen klic
                 </Link>
               </div>
             </div>
@@ -129,8 +129,8 @@ export default function IzdelavaSpletneStrani() {
           <div className="grid grid-cols-3 gap-6">
             {[
               { number: "20+", label: "dostavljenih projektov" },
-              { number: "5+", label: "let izkušenj" },
-              { number: "1–2", label: "tedna do objave" },
+              { number: "5+", label: "let za Figmo in editor" },
+              { number: "1–2", label: "tedna do žive strani" },
             ].map((stat) => (
               <div key={stat.label} className="text-center md:text-left">
                 <span className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-gray-900 dark:text-white">
@@ -151,10 +151,10 @@ export default function IzdelavaSpletneStrani() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-4">
               <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4 sticky top-28">
-                Kaj dobite
+                Kaj dobiš
               </p>
               <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug sticky top-36">
-                Vsaka spletna stran je zgrajena za rezultate
+                Vse, kar pričakuješ. In par stvari, ki jih ne.
               </h2>
             </div>
             <div className="lg:col-span-8">
@@ -163,27 +163,27 @@ export default function IzdelavaSpletneStrani() {
                   {
                     num: "01",
                     title: "Dizajn po meri",
-                    desc: "Vsaka stran je oblikovana od začetka v Figmi — brez predlog, brez kompromisov. Vaša blagovna znamka, vaša zgodba, vaš dizajn.",
+                    desc: "Vsaka stran nastane v Figmi od prve črte. Brez predlog, brez kompromisov pri identiteti. Tvoja zgodba, ne predloga, ki si jo morata deliti s tisočimi drugimi.",
                   },
                   {
                     num: "02",
                     title: "Moderna tehnologija",
-                    desc: "Next.js, React, TypeScript. Enake tehnologije kot Vercel, Netflix in Notion. Hitra, varna, pripravljena za rast.",
+                    desc: "Next.js, React, TypeScript. Iste tehnologije kot Vercel, Netflix in Notion. Hiter zagon, varna baza, pripravljeno za rast.",
                   },
                   {
                     num: "03",
-                    title: "SEO optimizacija",
-                    desc: "Struktura, meta podatki, hitrost nalaganja, strukturirani podatki — vse je vgrajeno od začetka, ne dodano naknadno.",
+                    title: "SEO že vgrajen",
+                    desc: "Struktura, meta podatki, strukturirani podatki, hitrost nalaganja. Od prvega dne, ne dvajsetega.",
                   },
                   {
                     num: "04",
-                    title: "Odziven na vseh napravah",
-                    desc: "Pixel-perfect na telefonu, tablici in namizju. Brez lomljenja, brez kompromisov pri uporabniški izkušnji.",
+                    title: "Najprej za telefon",
+                    desc: "Vse, kar zgradim, je v prvi vrsti narejeno za telefon. Pixel-perfect na tablici in namizju. Nič se ne lomi, nikjer.",
                   },
                   {
                     num: "05",
-                    title: "Hitra dostava",
-                    desc: "Landing page v 3–5 dneh. Poslovna stran v 1–2 tednih. Jasen rok, brez presenečenj.",
+                    title: "Dostavim v dogovorjenem roku",
+                    desc: "Landing page v 3–5 dneh. Predstavitvena stran v 1–2 tednih. Datum povem na začetku in ga držim.",
                   },
                 ].map((item, i) => (
                   <div
@@ -231,7 +231,7 @@ export default function IzdelavaSpletneStrani() {
               Proces
             </p>
             <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-5xl text-white max-w-xl">
-              Od ideje do objave v štirih korakih
+              Od ideje do žive strani v štirih korakih.
             </h2>
           </div>
 
@@ -240,22 +240,22 @@ export default function IzdelavaSpletneStrani() {
               {
                 step: "01",
                 title: "Strategija",
-                desc: "Spoznam vaše cilje, publiko in konkurenco. Definiramo strukturo in funkcionalnosti.",
+                desc: "Razumem cilje, publiko, konkurenco. Definirava strukturo in funkcionalnosti, preden začnem risati.",
               },
               {
                 step: "02",
                 title: "Oblikovanje",
-                desc: "V Figmi oblikujem vizualni dizajn. Osnutek prejmete v 24–72 urah za pregled.",
+                desc: "Vizualni dizajn v Figmi. Osnutek dobiš v 24–72 urah za pregled, preden napišem prvo vrstico kode.",
               },
               {
                 step: "03",
                 title: "Razvoj",
-                desc: "Dizajn pretvorim v kodo z Next.js in React. Hitra, čista, pripravljena za rast.",
+                desc: "Dizajn pretvorim v kodo z Next.js in React. Hitro, čisto, pripravljeno za rast.",
               },
               {
                 step: "04",
                 title: "Objava",
-                desc: "Testiranje na vseh napravah, optimizacija hitrosti in objava na vaši domeni.",
+                desc: "Testiranje na vseh napravah, optimizacija hitrosti, objava na tvoji domeni.",
               },
             ].map((item) => (
               <div
@@ -286,13 +286,13 @@ export default function IzdelavaSpletneStrani() {
                 Investicija
               </p>
               <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug">
-                Transparentne cene, brez skritih stroškov
+                Cene, ki jih lahko prepišeš v Excel.
               </h2>
             </div>
             <div className="lg:col-span-7 lg:flex lg:items-end">
               <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">
-                Vsak projekt je unikaten — ceno določim individualno po
-                brezplačnem posvetu. Spodnje cene so orientacijske.
+                Vsak projekt je drugačen, zato ti pošljem fiksno oceno po prvem
+                klicu. Spodnje cene so orientacijske. Klic je brezplačen.
               </p>
             </div>
           </div>
@@ -312,7 +312,7 @@ export default function IzdelavaSpletneStrani() {
                 ],
               },
               {
-                name: "Poslovna stran",
+                name: "Predstavitvena stran",
                 price: "1.200 €",
                 prefix: "od",
                 features: [
@@ -325,8 +325,8 @@ export default function IzdelavaSpletneStrani() {
                 featured: true,
               },
               {
-                name: "Kompleksna rešitev",
-                price: "Po meri",
+                name: "Po meri",
+                price: "Po dogovoru",
                 prefix: "",
                 features: [
                   "E-trgovina ali aplikacija",
@@ -445,15 +445,15 @@ export default function IzdelavaSpletneStrani() {
                 Izkušnje
               </p>
               <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug">
-                Gradim produkte za prave uporabnike
+                Gradila sem za pravo uporabnico, ne za PowerPoint.
               </h2>
             </div>
             <div className="lg:col-span-7 space-y-8">
               <p className="text-[15px] text-gray-500 dark:text-gray-400 leading-relaxed">
-                Izkušnje pri Popsy (Y Combinator), MooHero in Topsi AI so me
-                naučile hitrega dela in gradnje stvari, ki delujejo. Vsak
-                projekt obravnavam z enako pozornostjo do detajlov — od
-                enostranskega landing pagea do kompleksne aplikacije.
+                Pri Popsy (Y Combinator), MooHero in Topsi AI sem se naučila,
+                da dobre stvari preživijo samo, če jih nekdo zares uporablja.
+                Vsak projekt obravnavam z isto pozornostjo, od enostavnega
+                landing pagea do aplikacije, ki bo prišla v App Store.
               </p>
               <div className="flex flex-wrap gap-x-10 gap-y-4">
                 {[
@@ -483,10 +483,10 @@ export default function IzdelavaSpletneStrani() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-4">
               <p className="text-[13px] uppercase tracking-[0.2em] text-accent font-medium mb-4 lg:sticky lg:top-28">
-                Pogosta vprašanja
+                Vprašanja
               </p>
               <h2 className="font-[family-name:var(--font-serif-display)] text-3xl md:text-4xl text-gray-900 dark:text-white leading-snug lg:sticky lg:top-36">
-                Vse o izdelavi spletne strani
+                Stvari, ki me ljudje najpogosteje vprašajo.
               </h2>
             </div>
             <div className="lg:col-span-8">
@@ -536,11 +536,11 @@ export default function IzdelavaSpletneStrani() {
             Naslednji korak
           </p>
           <h2 className="font-[family-name:var(--font-serif-display)] text-4xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6 max-w-3xl mx-auto leading-[1.05]">
-            Začnimo z vašim projektom
+            Pošlji par stavkov o projektu.
           </h2>
           <p className="text-[15px] text-gray-500 dark:text-gray-400 mb-10 max-w-md mx-auto leading-relaxed">
-            Pošljite povpraševanje — v 24 urah prejmete odgovor z oceno
-            projekta. Posvet je brezplačen.
+            V 24 urah dobiš odgovor in prvo oceno. Klic je brezplačen, brez
+            obveznosti, brez agencijskega scenarija.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -566,7 +566,7 @@ export default function IzdelavaSpletneStrani() {
               href="/sl#delo"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-gray-500 dark:text-gray-400 font-medium text-[14px] hover:text-gray-900 dark:hover:text-white transition-colors"
             >
-              Oglej si portfolio
+              Poglej projekte
             </Link>
           </div>
         </div>
@@ -588,7 +588,7 @@ export default function IzdelavaSpletneStrani() {
               url: "https://ajdazajc.com",
             },
             description:
-              "Profesionalna izdelava spletne strani po meri — oblikovanje, razvoj in objava za podjetja in startupi v Ljubljani.",
+              "Izdelava spletne strani po meri za startupe in mala podjetja v Ljubljani. Oblikovanje v Figmi, razvoj v Next.js, objava na tvoji domeni.",
             areaServed: { "@type": "Country", name: "Slovenia" },
             serviceType: "Izdelava spletnih strani",
             offers: {

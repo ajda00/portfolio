@@ -50,8 +50,8 @@ export default function Stats({ lang }: Props) {
   const bio = lang === "sl" ? "Jaz sem Ajda." : "I'm Ajda.";
   const bioText =
     lang === "sl"
-      ? "Oblikovalka in razvijalka iz Ljubljane. Gradim spletne strani in aplikacije za startupe in mala podjetja. Vsak projekt obravnavam, kot da bo moj."
-      : "Designer and developer from Ljubljana. I build websites and apps for startups and small businesses. Every project gets treated like it's my own.";
+      ? "Oblikovalka in razvijalka iz Ljubljane. Gradim spletne strani in aplikacije za startupe in mala podjetja."
+      : "Designer and developer from Ljubljana. I build websites and apps for startups and small businesses.";
   const aboutLabel = lang === "sl" ? "Več o meni" : "More about me";
 
   // Build 4 stat cards. statsValues = ["20+", "5+", "Web & Mobile"]; pad with one more.

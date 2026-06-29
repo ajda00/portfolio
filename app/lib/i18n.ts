@@ -197,24 +197,24 @@ const sl: Dict = {
   },
   approach: {
     label: "Pristop",
-    title: "Trije načini, kako narediti znamko bolj človeško.",
+    title: "Moj cilj je izstopati v dobi AI dizajna.",
     intro:
-      "Zdaj, ko AI piše in oblikuje vse, vse na internetu izgleda enako. Edini način, da izstopaš, je, da pokažeš človeka za znamko. To so trije načini, kako po mojem mnenju lahko znamko naredimo bolj človeško.",
+      "Zdaj, ko AI piše in oblikuje vse, vse na internetu izgleda enako. Tu lahko pomagam z osebno noto — vzamem si čas, razmislim, razumem produkt in poskušam izvabiti edinstvenost.",
     items: [
       {
-        title: "Piši boljše vsebine.",
+        title: "Pomagam pri pisanju boljše vsebine.",
         description:
-          "Naslovi, ki jih uporabljaš na svoji spletni strani, opisi pri tvojih objavah — vsaka pisna informacija na vsakem stiku z znamko, v preprostem jeziku, ki res prihaja od tebe.",
+          "Naslovi, opisi, vsaka beseda na strani — v preprostem jeziku, ki res prihaja od tebe.",
       },
       {
-        title: "Pokaži prave ljudi.",
+        title: "Potrudim se narediti spletno stran osebno.",
         description:
-          "Še vedno vidim veliko znamk, ki na spletnih straneh uporabljajo stock fotografije. Uporabiti moraš prave slike svoje ekipe, ustanovitelja ali kogarkoli, ki dejansko dela v podjetju.",
+          "Brez stock fotografij — prave slike tebe, ekipe in dela.",
       },
       {
-        title: "Zmanjšaj vizualne efekte.",
+        title: "Poenostavim spletno stran.",
         description:
-          "Ko imaš veliko scroll animacij, senc, gradientov, vse skupaj deluje preveč produkcijsko. Bolj kot poenostaviš spletno stran in odstraniš nepotrebne efekte, lažje uporabnik razume tvoj izdelek in se odloči za akcijo.",
+          "Manj scroll animacij, senc in gradientov — uporabnik hitreje razume produkt in klikne.",
       },
     ],
   },
@@ -227,7 +227,7 @@ const sl: Dict = {
     resume: "Življenjepis",
   },
   cta: {
-    title: "Imaš idejo. Imam Figmo in editor.",
+    title: "Slišiva se na prvem klicu, da predebatirava idejo.",
     subtitle: "Pošlji par stavkov o projektu. V 24 urah dobiš odgovor in prvo oceno.",
     cta1: "Pošlji povpraševanje",
     cta2: "Poglej projekte",
@@ -238,7 +238,7 @@ const sl: Dict = {
     items: [
       {
         q: "Koliko stane spletna stran?",
-        a: "Odvisno od projekta. Enostranska se začne pri 500 €, večja predstavitvena pri 1.200 €, e-trgovina ali aplikacija po dogovoru. Vedno pošljem oceno po brezplačnem klicu, preden začneva.",
+        a: "Odvisno od projekta. Spletna stran se začne pri 600 €, večja predstavitvena pri 1.200 €, e-trgovina ali aplikacija po dogovoru. Vedno pošljem oceno po brezplačnem klicu, preden začneva.",
       },
       {
         q: "Kako hitro je narejena?",
@@ -251,10 +251,6 @@ const sl: Dict = {
       {
         q: "Ponujaš tudi oblikovanje?",
         a: "Da, to je polovica posla. Figma do produkcije, brez ločenega dizajnerja in razvijalca, ki si pošiljata e-maile.",
-      },
-      {
-        q: "Je stran prilagojena za telefone?",
-        a: "Vse, kar zgradim, je v prvi vrsti narejeno za telefon. Namizje je bonus.",
       },
     ],
   },
@@ -399,24 +395,24 @@ const en: Dict = {
   },
   approach: {
     label: "Approach",
-    title: "Three ways to humanize a brand.",
+    title: "My goal is to stand out in the age of AI design.",
     intro:
-      "Right now, with AI writing and designing everything, everything on the internet is starting to look the same. The only way to stand out is to expose the human behind the brand. These are three ways I personally think we can use to humanize a brand.",
+      "Now that AI writes and designs everything, everything on the internet starts to look the same. This is where I can help with a personal touch — I take the time, think it through, understand the product, and try to draw out what makes it unique.",
     items: [
       {
-        title: "Write better content.",
+        title: "I help with writing better content.",
         description:
-          "The headings you use on your websites, captions you use on your posts — every text-based information you use on every touchpoint of your business, in plain language that comes genuinely from you.",
+          "Headlines, captions, every word on your site — in plain language that genuinely comes from you.",
       },
       {
-        title: "Show real people.",
+        title: "I make the website feel personal.",
         description:
-          "I still see a lot of brands use stock images on their websites. You need to use the real images from your team or the founder or the staff or anyone actually working in the business.",
+          "No stock photos — real images of you, your team, your work.",
       },
       {
-        title: "Reduce visual effects.",
+        title: "I keep the website simple.",
         description:
-          "When you have a lot of scroll animations, drop shadows, a lot of gradients, everything feels overproduced. The more you simplify your websites and strip away these unnecessary effects, the easier it becomes for users to understand your product and take action.",
+          "Fewer scroll animations, shadows, and gradients — visitors understand the product and click faster.",
       },
     ],
   },
@@ -429,7 +425,7 @@ const en: Dict = {
     resume: "CV",
   },
   cta: {
-    title: "You have an idea. I have Figma and an editor.",
+    title: "Let's hop on a first call to talk the idea through.",
     subtitle: "Send a few sentences about the project. You get a reply and a first estimate inside 24 hours.",
     cta1: "Send a brief",
     cta2: "See projects",
@@ -440,7 +436,7 @@ const en: Dict = {
     items: [
       {
         q: "How much does a website cost?",
-        a: "Depends. A single-page site starts at €500, a small business site at €1,200, e-commerce or an app on quote. I always send a number after a free call, before we start.",
+        a: "Depends. A website starts at €600, a small business site at €1,200, e-commerce or an app on quote. I always send a number after a free call, before we start.",
       },
       {
         q: "How fast can you build it?",
@@ -453,10 +449,6 @@ const en: Dict = {
       {
         q: "Do you also do design?",
         a: "Yes, that's half the job. Figma through to production. No separate designer and developer emailing each other.",
-      },
-      {
-        q: "Is the site mobile-friendly?",
-        a: "Everything I build is mobile-first. Desktop is the bonus.",
       },
     ],
   },

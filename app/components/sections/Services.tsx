@@ -15,20 +15,6 @@ export default function Services({ lang }: Props) {
   return (
     <section id={sectionId} className="bg-app pt-20 md:pt-28 pb-24 md:pb-32">
       <div className="max-w-[1360px] mx-auto px-6">
-        <SectionReveal className="max-w-3xl mb-16 md:mb-20">
-          <h2
-            className="font-display text-ink leading-[1.05] tracking-[-0.03em]"
-            style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
-          >
-            <span className="font-light">
-              {l.services.title.split(" ").slice(0, -1).join(" ")}{" "}
-            </span>
-            <span className="font-bold">
-              {l.services.title.split(" ").slice(-1)[0]}
-            </span>
-          </h2>
-        </SectionReveal>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 md:gap-y-12">
           {l.services.items.map((service) => (
             <SectionReveal

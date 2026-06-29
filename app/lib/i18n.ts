@@ -146,7 +146,7 @@ const sl: Dict = {
   },
   work: {
     label: "Portfolio",
-    title: "Projekti, ki sem jih pomagala graditi.",
+    title: "Projekti, ki sem jih naredila ali pomagala graditi.",
     visitSite: "Odpri stran",
     other: "Še nekaj projektov",
     projects: {
@@ -345,7 +345,7 @@ const en: Dict = {
   },
   work: {
     label: "Portfolio",
-    title: "Things I helped build.",
+    title: "Projects I built or helped build.",
     visitSite: "Open site",
     other: "A few more",
     projects: {

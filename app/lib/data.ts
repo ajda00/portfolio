@@ -7,7 +7,7 @@ import popsyLogo from "../../src/images/popsy.png";
 import topsiHero from "../../src/images/topsi-hero.png";
 
 export type ProjectKey = "topsi" | "manjatk" | "ordinem" | "moohero" | "nina";
-export type OtherProjectKey = "popsy" | "devilwears" | "talk9";
+export type OtherProjectKey = "popsy" | "devilwears" | "talk9" | "printpop";
 
 export interface FeaturedProject {
   key: ProjectKey;
@@ -87,6 +87,13 @@ export const otherProjects: OtherProject[] = [
     logo: null,
     badge: "Inovativna SI",
     tags: ["AI", "Voice", "Product Design"],
+  },
+  {
+    key: "printpop",
+    name: "PrintPop",
+    url: "https://printpop.vercel.app/",
+    logo: null,
+    tags: ["Side Project", "Etsy", "Tool"],
   },
 ];
 

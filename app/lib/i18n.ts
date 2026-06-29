@@ -33,7 +33,7 @@ type Dict = {
       "topsi" | "manjatk" | "ordinem" | "moohero" | "nina",
       { desc: string; role: string }
     >;
-    otherProjects: Record<"popsy" | "devilwears" | "talk9", string>;
+    otherProjects: Record<"popsy" | "devilwears" | "talk9" | "printpop", string>;
   };
   process: {
     label: string;
@@ -175,6 +175,7 @@ const sl: Dict = {
       popsy: "No-code gradnik spletnih strani, ki je prišel v Y Combinator. Pisala sem jedro produkta.",
       devilwears: "Etsy trgovina z digitalnimi printi. Blagovna znamka, identiteta, listingi.",
       talk9: "AI agenti za pogovorne aplikacije. Srebrno priznanje Inovativna Slovenija 2026.",
+      printpop: "Orodje za Etsy prodajalce. Samodejno razreže digitalno umetnost v vse formate, ki jih platforma zahteva.",
     },
   },
   process: {
@@ -199,7 +200,7 @@ const sl: Dict = {
     label: "Pristop",
     title: "Moj cilj je izstopati v dobi AI dizajna.",
     intro:
-      "Zdaj, ko AI piše in oblikuje vse, vse na internetu izgleda enako. Tu lahko pomagam z osebno noto — vzamem si čas, razmislim, razumem produkt in poskušam izvabiti edinstvenost.",
+      "Zdaj, ko AI piše in oblikuje vse, vse na internetu izgleda enako. Tu lahko pomagam z osebno noto. Vzamem si čas, razmislim, razumem produkt in poskušam izvabiti edinstvenost.",
     items: [
       {
         title: "Pomagam pri pisanju boljše vsebine.",
@@ -220,8 +221,8 @@ const sl: Dict = {
   },
   about: {
     label: "O meni",
-    title1: "Oblikujem v Figmi.",
-    title2: "Kodiram v VS Code.",
+    title1: "Oblikujem",
+    title2: "in kodiram.",
     p1: "V Ljubljani gradim spletne strani in aplikacije za startupe in mala podjetja.",
     p2: "Začela sem pri Popsy (Y Combinator), nadaljevala v MooHero in Topsi AI. Tam sem se naučila tri stvari: hitrost ni nasprotje natančnosti, dobre stvari preživijo samo, če jih nekdo zares uporablja, in dober dizajn brez dobre kode ni dovolj.",
     resume: "Življenjepis",
@@ -241,7 +242,7 @@ const sl: Dict = {
         a: "Odvisno od projekta. Spletna stran se začne pri 600 €, večja predstavitvena pri 1.200 €, e-trgovina ali aplikacija po dogovoru. Vedno pošljem oceno po brezplačnem klicu, preden začneva.",
       },
       {
-        q: "Kako hitro je narejena?",
+        q: "Kako dolgo traja izdelava spletne strani?",
         a: "Landing page: 3–5 dni. Predstavitvena stran: 1–2 tedna. Aplikacija ali zahtevnejši projekt: 3–4 tedne. Roke spoštujem (zato jih obljubim, samo če lahko).",
       },
       {
@@ -257,7 +258,7 @@ const sl: Dict = {
   contact: {
     label: "Kontakt",
     title: "Povej mi o projektu.",
-    subtitle: "Brief, ideja, naključna misel ob 1h zjutraj. Odpišem v 24 urah.",
+    subtitle: "Odpišem v 24 urah.",
     name: "Ime",
     namePlaceholder: "Tvoje ime",
     email: "E-pošta",
@@ -373,6 +374,7 @@ const en: Dict = {
       popsy: "No-code site builder that got into Y Combinator. I wrote the core of the product.",
       devilwears: "Etsy shop selling digital prints. Brand, identity, listings.",
       talk9: "AI agents for conversational apps. Silver award, Inovativna Slovenija 2026.",
+      printpop: "Tool for Etsy sellers. Auto-resizes digital artwork into every print format the platform requires.",
     },
   },
   process: {
@@ -397,7 +399,7 @@ const en: Dict = {
     label: "Approach",
     title: "My goal is to stand out in the age of AI design.",
     intro:
-      "Now that AI writes and designs everything, everything on the internet starts to look the same. This is where I can help with a personal touch — I take the time, think it through, understand the product, and try to draw out what makes it unique.",
+      "Now that AI writes and designs everything, everything on the internet starts to look the same. This is where I can help with a personal touch. I take the time, think it through, understand the product, and try to draw out what makes it unique.",
     items: [
       {
         title: "I help with writing better content.",
@@ -418,8 +420,8 @@ const en: Dict = {
   },
   about: {
     label: "About",
-    title1: "I design in Figma.",
-    title2: "I code in VS Code.",
+    title1: "I design",
+    title2: "and code.",
     p1: "Based in Ljubljana, I build websites and apps for startups and small businesses.",
     p2: "I started at Popsy (Y Combinator), then MooHero and Topsi AI. I learned three things: fast isn't the opposite of careful, good things survive only if someone actually uses them, and good design without good code isn't enough.",
     resume: "CV",
@@ -439,7 +441,7 @@ const en: Dict = {
         a: "Depends. A website starts at €600, a small business site at €1,200, e-commerce or an app on quote. I always send a number after a free call, before we start.",
       },
       {
-        q: "How fast can you build it?",
+        q: "How long does it take to build a website?",
         a: "Landing page: 3–5 days. Business site: 1–2 weeks. App or anything custom: 3–4 weeks. I respect deadlines, which is why I only promise the ones I can hit.",
       },
       {
@@ -455,7 +457,7 @@ const en: Dict = {
   contact: {
     label: "Contact",
     title: "Tell me about the project.",
-    subtitle: "A brief, an idea, a thought you had at 1am. I reply within 24 hours.",
+    subtitle: "I reply within 24 hours.",
     name: "Name",
     namePlaceholder: "Your name",
     email: "Email",

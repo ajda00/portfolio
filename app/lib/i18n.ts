@@ -184,15 +184,15 @@ const sl: Dict = {
     steps: [
       {
         title: "Pogovor",
-        description: "Po e-mailu ali na kratkem klicu se pogovoriva — kaj potrebuješ, kakšni so cilji, časovne omejitve in pričakovanja.",
+        description: "Kaj potrebuješ, kakšni so cilji in časovne omejitve.",
       },
       {
         title: "Prvi osnutek",
-        description: "Pripravim prvi osnutek, da preveriva, v katero smer gre projekt — in od tam gradimo naprej.",
+        description: "Pripravim prvi osnutek, da preveriva smer projekta.",
       },
       {
         title: "Zgradim in objavim",
-        description: "Projekt sproti prilagajava in dopolnjujeva — slišiva se po potrebi, vsebino pregledava skupaj. Pomagam tudi pri razmišljanju o novih idejah.",
+        description: "Sproti prilagajava in dopolnjujeva. Vsebino pregledava skupaj.",
       },
     ],
   },
@@ -383,15 +383,15 @@ const en: Dict = {
     steps: [
       {
         title: "Talk",
-        description: "An email or a short call — we talk through what you need, the goals, the timing, and what we both expect.",
+        description: "What you need, the goals, the timing.",
       },
       {
         title: "First draft",
-        description: "I put together a first draft so we can see where the project is heading — and we build from there.",
+        description: "I put together a first draft so we can check the direction.",
       },
       {
         title: "Build and ship",
-        description: "We adjust and refine the project together — we talk when needed and review content side by side. I also help think through new ideas.",
+        description: "We adjust as we go. We review content together.",
       },
     ],
   },

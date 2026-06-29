@@ -11,7 +11,7 @@ export default function FAQ({ lang }: Props) {
   return (
     <section className="bg-app py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-6">
-        <SectionReveal className="text-center mb-12 md:mb-16">
+        <SectionReveal className="mb-12 md:mb-16">
           <span className="pill-outline mb-6">
             <span>{l.faq.label}</span>
           </span>

@@ -4,7 +4,6 @@ import Nav from "../components/Nav";
 import About from "../components/sections/About";
 import Approach from "../components/sections/Approach";
 import Contact from "../components/sections/Contact";
-import FAQ from "../components/sections/FAQ";
 import Hero from "../components/sections/Hero";
 import MorphMarquee from "../components/sections/MorphMarquee";
 import Process from "../components/sections/Process";
@@ -36,7 +35,6 @@ export default async function Home({ params }: Props) {
         <Process lang={lang} />
         <Approach lang={lang} />
         <About lang={lang} />
-        <FAQ lang={lang} />
         <Contact lang={lang} />
         <TechStack lang={lang} />
         <MorphMarquee lang={lang} />

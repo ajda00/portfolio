@@ -224,7 +224,7 @@ const sl: Dict = {
     title1: "Oblikujem",
     title2: "in kodiram.",
     p1: "V Ljubljani gradim spletne strani in aplikacije za startupe in mala podjetja.",
-    p2: "Začela sem pri Popsy (Y Combinator), nadaljevala v MooHero in Topsi AI. Tam sem se naučila tri stvari: hitrost ni nasprotje natančnosti, dobre stvari preživijo samo, če jih nekdo zares uporablja, in dober dizajn brez dobre kode ni dovolj.",
+    p2: "Najraje sodelujem na produktih od prve ideje do končne izvedbe, s poudarkom na UX in tekočih interakcijah. V hitrem tempu se znajdem, cenim jasno komunikacijo in rada rešujem zapletene probleme s preprostimi rešitvami.",
     resume: "Življenjepis",
   },
   cta: {
@@ -244,10 +244,6 @@ const sl: Dict = {
       {
         q: "Kako dolgo traja izdelava spletne strani?",
         a: "Landing page: 3–5 dni. Predstavitvena stran: 1–2 tedna. Aplikacija ali zahtevnejši projekt: 3–4 tedne. Roke spoštujem (zato jih obljubim, samo če lahko).",
-      },
-      {
-        q: "Katere tehnologije uporabljaš?",
-        a: "Next.js, React, TypeScript, Tailwind. Iste, kot jih uporabljajo Vercel, Netflix in Notion. Stran se naloži v sekundi in jo Google razume.",
       },
       {
         q: "Ponujaš tudi oblikovanje?",
@@ -423,7 +419,7 @@ const en: Dict = {
     title1: "I design",
     title2: "and code.",
     p1: "Based in Ljubljana, I build websites and apps for startups and small businesses.",
-    p2: "I started at Popsy (Y Combinator), then MooHero and Topsi AI. I learned three things: fast isn't the opposite of careful, good things survive only if someone actually uses them, and good design without good code isn't enough.",
+    p2: "I enjoy working on products from the early idea to the final implementation, with a focus on UX and smooth interactions. I work well in fast-paced environments, value clear communication, and like solving tricky problems with simple solutions.",
     resume: "CV",
   },
   cta: {
@@ -443,10 +439,6 @@ const en: Dict = {
       {
         q: "How long does it take to build a website?",
         a: "Landing page: 3–5 days. Business site: 1–2 weeks. App or anything custom: 3–4 weeks. I respect deadlines, which is why I only promise the ones I can hit.",
-      },
-      {
-        q: "What stack do you use?",
-        a: "Next.js, React, TypeScript, Tailwind. Same stack as Vercel, Netflix, Notion. Loads in a second, indexes cleanly.",
       },
       {
         q: "Do you also do design?",

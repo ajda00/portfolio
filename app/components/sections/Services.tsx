@@ -1,5 +1,4 @@
 import {
-  Check,
   CodeXml,
   Cpu,
   Megaphone,
@@ -39,23 +38,16 @@ export default function Services({ lang }: Props) {
               <SectionReveal
                 key={service.title}
                 y={16}
-                className="flex flex-row gap-4 items-start"
+                className="flex flex-row gap-3 items-center"
               >
-                <Check
-                  className="w-5 h-5 mt-1 text-ink shrink-0"
-                  strokeWidth={2.5}
+                <Icon
+                  className="w-5 h-5 text-ink shrink-0"
+                  strokeWidth={1.75}
                   aria-hidden="true"
                 />
-                <div className="flex items-center gap-2.5">
-                  <Icon
-                    className="w-[18px] h-[18px] text-muted shrink-0"
-                    strokeWidth={1.75}
-                    aria-hidden="true"
-                  />
-                  <p className="text-ink font-medium leading-snug">
-                    {service.title}
-                  </p>
-                </div>
+                <p className="text-ink font-medium leading-snug">
+                  {service.title}
+                </p>
               </SectionReveal>
             );
           })}

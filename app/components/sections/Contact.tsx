@@ -128,11 +128,8 @@ export default function Contact({ lang }: Props) {
     <section id={sectionId} className="bg-app py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-6">
         <SectionReveal className="text-center mb-12 md:mb-16">
-          <span className="pill-outline mb-6">
-            <span>{l.contact.label}</span>
-          </span>
           <h2
-            className="font-display text-ink leading-[1.05] tracking-[-0.03em] mb-4 mt-4"
+            className="font-display text-ink leading-[1.05] tracking-[-0.03em] mb-4"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
             <span className="font-light">{l.contact.title.split(" ").slice(0, -1).join(" ")} </span>
@@ -242,7 +239,7 @@ export default function Contact({ lang }: Props) {
             </div>
             <button
               type="submit"
-              className="press inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-ink text-white font-medium text-[14px] hover:opacity-90 disabled:opacity-50"
+              className="press inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-ink text-white font-medium text-[14px] hover:opacity-90 disabled:opacity-50"
               disabled={formStatus.isSubmitting}
             >
               {formStatus.isSubmitting && (

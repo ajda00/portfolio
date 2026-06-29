@@ -83,7 +83,7 @@ export default function HeroPortfolio({
         {/* CTAs */}
         <motion.div
           {...fade(0.3)}
-          className="mt-8 flex justify-center items-center gap-3"
+          className="mt-8 flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 max-w-xs mx-auto sm:max-w-none"
         >
           <a
             href={cta1.href}

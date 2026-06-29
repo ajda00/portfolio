@@ -93,7 +93,7 @@ export default function Stats({ lang }: Props) {
             </div>
 
             {/* Inline stats — no cards */}
-            <div className="grid grid-cols-4 gap-5 md:gap-10 md:border-l md:border-white/15 md:pl-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-5 md:gap-10 md:border-l md:border-white/15 md:pl-12">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <div

@@ -14,11 +14,8 @@ export default function Approach({ lang }: Props) {
     <section className="bg-app pt-20 md:pt-28 pb-24 md:pb-32">
       <div className="max-w-[1360px] mx-auto px-6">
         <SectionReveal className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <span className="pill-outline mb-6">
-            <span>{l.approach.label}</span>
-          </span>
           <h2
-            className="font-display text-ink leading-[1.05] tracking-[-0.03em] mt-4 mb-6"
+            className="font-display text-ink leading-[1.05] tracking-[-0.03em] mb-6"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
             <span className="font-light">

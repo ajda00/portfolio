@@ -11,7 +11,7 @@ export default function TechStack({ lang }: Props) {
   const l = getDictionary(lang);
 
   return (
-    <section className="bg-app pt-12 md:pt-16 pb-16 md:pb-20">
+    <section className="bg-app pt-6 md:pt-8 pb-8 md:pb-10">
       <div className="max-w-[1360px] mx-auto px-6">
         <SectionReveal className="pt-8 border-t border-line flex flex-col md:flex-row md:items-baseline md:justify-between gap-5">
           <p className="text-sm font-medium text-muted shrink-0">

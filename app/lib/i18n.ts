@@ -253,7 +253,7 @@ const sl: Dict = {
   },
   contact: {
     label: "Kontakt",
-    title: "Povej mi o projektu.",
+    title: "Kako lahko pomagam.",
     subtitle: "Odpišem v 24 urah.",
     name: "Ime",
     namePlaceholder: "Tvoje ime",
@@ -448,7 +448,7 @@ const en: Dict = {
   },
   contact: {
     label: "Contact",
-    title: "Tell me about the project.",
+    title: "How I can help.",
     subtitle: "I reply within 24 hours.",
     name: "Name",
     namePlaceholder: "Your name",

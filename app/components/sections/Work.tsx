@@ -144,11 +144,8 @@ export default function Work({ lang }: Props) {
           {...reveal()}
           className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
         >
-          <span className="pill-outline mb-6">
-            <span>{l.work.label}</span>
-          </span>
           <h2
-            className="font-display text-ink leading-[1.05] tracking-[-0.03em] mt-4"
+            className="font-display text-ink leading-[1.05] tracking-[-0.03em]"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
             <span className="font-light">{l.work.title.split(" ").slice(0, -1).join(" ")} </span>

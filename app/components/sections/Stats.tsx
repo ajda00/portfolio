@@ -72,47 +72,42 @@ export default function Stats({ lang }: Props) {
   ];
 
   return (
-    <section className="bg-deep py-20 md:py-28">
+    <section className="bg-deep py-12 md:py-16">
       <div className="max-w-[1360px] mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          {/* Black bio card */}
-          <div className="lg:col-span-4 bg-ink-deep text-white rounded-3xl p-6 md:p-7 flex flex-col justify-between min-h-[300px]">
-            <div>
-              <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">
+        <div className="bg-ink-deep text-white rounded-3xl p-6 md:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] md:items-end gap-8 md:gap-12">
+            {/* Bio */}
+            <div className="max-w-md">
+              <h3 className="font-display text-xl md:text-2xl font-semibold mb-2">
                 {bio}
               </h3>
-              <p className="text-sm text-white/65 leading-relaxed max-w-[36ch]">
+              <p className="text-sm text-white/65 leading-relaxed mb-4">
                 {bioText}
               </p>
-            </div>
-            <a
-              href={`#${l.nav.items[2]}`}
-              className="press mt-6 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white/70 transition-colors"
-            >
-              {aboutLabel} <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          {/* 2x2 white stat cards */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-bg-elev rounded-3xl p-6 md:p-8 min-h-[200px] flex flex-col justify-center"
+              <a
+                href={`#${l.nav.items[2]}`}
+                className="press inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white/70 transition-colors"
               >
-                <div className="flex items-baseline justify-between">
-                  <span
-                    className="font-display font-bold text-ink tabular-nums leading-none"
-                    style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+                {aboutLabel} <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            {/* Inline stats — no cards */}
+            <div className="grid grid-cols-4 gap-5 md:gap-10 md:border-l md:border-white/15 md:pl-12">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <div
+                    className="font-display font-bold text-white tabular-nums leading-none"
+                    style={{ fontSize: "clamp(1.5rem, 2.6vw, 2.25rem)" }}
                   >
                     <StatValue raw={stat.value} />
-                  </span>
-                  <span className="text-sm font-medium text-muted">
+                  </div>
+                  <div className="text-[11px] uppercase tracking-[0.12em] text-white/55 mt-2">
                     {stat.label}
-                  </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

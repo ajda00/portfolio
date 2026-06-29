@@ -4,6 +4,7 @@ import mooheroHero from "../../src/images/moohero-hero.png";
 import ninaHero from "../../src/images/nina-hero.png";
 import ordinemHero from "../../src/images/ordinem-hero.png";
 import popsyLogo from "../../src/images/popsy.png";
+import printpopLogo from "../../src/images/printpop.png";
 import topsiHero from "../../src/images/topsi-hero.png";
 
 export type ProjectKey = "topsi" | "manjatk" | "ordinem" | "moohero" | "nina";
@@ -92,7 +93,7 @@ export const otherProjects: OtherProject[] = [
     key: "printpop",
     name: "PrintPop",
     url: "https://printpop.vercel.app/",
-    logo: null,
+    logo: printpopLogo,
     tags: ["Side Project", "Etsy", "Tool"],
   },
 ];

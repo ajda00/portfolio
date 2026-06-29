@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import azLogo from "../../src/images/AZ.svg";
 import { getDictionary } from "../lib/i18n";
 import type { Lang } from "../lib/types";
 
@@ -22,7 +24,7 @@ export default function Footer({ lang }: Props) {
 
   return (
     <footer
-      className="bg-app text-ink border-t border-line"
+      className="bg-ink-deep text-white"
       style={{
         paddingTop: "2.5rem",
         paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))",
@@ -30,26 +32,37 @@ export default function Footer({ lang }: Props) {
     >
       <div className="max-w-[1360px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <Link href={home} aria-label="Ajda Zajc">
+          <Link
+            href={home}
+            aria-label="Ajda Zajc"
+            className="flex items-center gap-2"
+          >
+            <Image
+              src={azLogo}
+              alt=""
+              width={32}
+              height={18}
+              className="h-5 w-auto brightness-0 invert"
+            />
             <span className="font-display font-semibold text-base">Ajda Zajc</span>
           </Link>
-          <div className="hidden md:flex items-center gap-6 text-[13px] text-muted">
+          <div className="hidden md:flex items-center gap-6 text-[13px] text-white/65">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-ink transition-colors"
+                className="hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-5 text-muted">
+          <div className="flex items-center gap-5 text-white/65">
             <a
               href="https://github.com/ajda00"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-ink transition-colors"
+              className="hover:text-white transition-colors"
               aria-label="GitHub"
             >
               <span className="sr-only">GitHub</span>
@@ -65,7 +78,7 @@ export default function Footer({ lang }: Props) {
               href="https://www.linkedin.com/in/ajda-zajc/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-ink transition-colors"
+              className="hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
               <span className="sr-only">LinkedIn</span>
@@ -75,13 +88,24 @@ export default function Footer({ lang }: Props) {
             </a>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-line flex flex-col md:flex-row items-center justify-between gap-3 text-[12px] text-muted-soft">
+        <div className="mt-8 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-[12px] text-white/50">
           <p>
             &copy; {new Date().getFullYear()} Ajda Zajc s.p. {l.footer.rights}
           </p>
-          <a href="mailto:ajda.zajc@gmail.com" className="hover:text-ink transition-colors">
-            ajda.zajc@gmail.com
-          </a>
+          <div className="flex items-center gap-5">
+            <Link
+              href={`${home}/zasebnost`}
+              className="hover:text-white transition-colors"
+            >
+              {lang === "sl" ? "Zasebnost" : "Privacy"}
+            </Link>
+            <a
+              href="mailto:ajda.zajc@gmail.com"
+              className="hover:text-white transition-colors"
+            >
+              ajda.zajc@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>

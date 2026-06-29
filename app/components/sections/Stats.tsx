@@ -1,9 +1,7 @@
 "use client";
 
 import { animate, useInView, useReducedMotion } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import ajdaWalking from "../../../src/images/ajda-wisteria.jpg";
 import { statsValues } from "../../lib/data";
 import { getDictionary } from "../../lib/i18n";
 import type { Lang } from "../../lib/types";
@@ -78,34 +76,21 @@ export default function Stats({ lang }: Props) {
       <div className="max-w-[1360px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           {/* Black bio card */}
-          <div className="lg:col-span-4 relative bg-ink-deep text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between min-h-[420px]">
+          <div className="lg:col-span-4 bg-ink-deep text-white rounded-3xl p-6 md:p-7 flex flex-col justify-between min-h-[300px]">
             <div>
-              <h3 className="font-display text-xl md:text-2xl font-semibold mb-4">
+              <h3 className="font-display text-xl md:text-2xl font-semibold mb-3">
                 {bio}
               </h3>
               <p className="text-sm text-white/65 leading-relaxed max-w-[36ch]">
                 {bioText}
               </p>
             </div>
-
-            {/* Portrait thumb floating bottom-left of pill */}
-            <div className="relative mt-8">
-              <div className="absolute -top-12 left-1/2 -translate-x-[60%] w-12 h-12 rounded-full overflow-hidden ring-2 ring-ink-deep">
-                <Image
-                  src={ajdaWalking}
-                  alt="Ajda Zajc"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <a
-                href={`#${l.nav.items[2]}`}
-                className="press w-full block text-center bg-white text-ink rounded-full py-3 text-sm font-medium hover:bg-bg-deep transition-colors"
-              >
-                <span className="ml-6">{aboutLabel}</span>
-              </a>
-            </div>
+            <a
+              href={`#${l.nav.items[2]}`}
+              className="press mt-6 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white/70 transition-colors"
+            >
+              {aboutLabel} <span aria-hidden="true">→</span>
+            </a>
           </div>
 
           {/* 2x2 white stat cards */}

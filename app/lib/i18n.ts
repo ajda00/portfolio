@@ -172,7 +172,7 @@ const sl: Dict = {
       },
     },
     otherProjects: {
-      popsy: "No-code gradnik spletnih strani, ki je prišel v Y Combinator. Pisala sem jedro produkta.",
+      popsy: "No-code gradnik spletnih strani, ki je prišel v Y Combinator.",
       devilwears: "Etsy trgovina z digitalnimi printi. Blagovna znamka, identiteta, listingi.",
       talk9: "AI agenti za pogovorne aplikacije. Srebrno priznanje Inovativna Slovenija 2026.",
       printpop: "Orodje za Etsy prodajalce. Samodejno razreže digitalno umetnost v vse formate, ki jih platforma zahteva.",
@@ -371,7 +371,7 @@ const en: Dict = {
       },
     },
     otherProjects: {
-      popsy: "No-code site builder that got into Y Combinator. I wrote the core of the product.",
+      popsy: "No-code site builder that got into Y Combinator.",
       devilwears: "Etsy shop selling digital prints. Brand, identity, listings.",
       talk9: "AI agents for conversational apps. Silver award, Inovativna Slovenija 2026.",
       printpop: "Tool for Etsy sellers. Auto-resizes digital artwork into every print format the platform requires.",

@@ -30,12 +30,12 @@ export default async function Home({ params }: Props) {
       <main id="main-content">
         <Hero lang={lang} />
         <Stats lang={lang} />
-        <Services lang={lang} />
         <Work lang={lang} />
         <Process lang={lang} />
         <Approach lang={lang} />
         <About lang={lang} />
         <Contact lang={lang} />
+        <Services lang={lang} />
         <TechStack lang={lang} />
         <MorphMarquee lang={lang} />
       </main>

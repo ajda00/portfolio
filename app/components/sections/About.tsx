@@ -75,6 +75,37 @@ export default function About({ lang }: Props) {
           </div>
         </div>
 
+        <div className="mt-12 md:mt-16 max-w-4xl mx-auto space-y-3">
+          {l.faq.items.map((faq, i) => (
+            <SectionReveal key={faq.q} delay={i * 0.04}>
+              <details className="group bg-bg-elev rounded-2xl overflow-hidden">
+                <summary className="flex items-start justify-between cursor-pointer px-6 py-5 text-base font-medium text-ink select-none">
+                  <span className="pr-6">{faq.q}</span>
+                  <span className="mt-0.5 w-5 h-5 shrink-0 flex items-center justify-center text-muted">
+                    <svg
+                      aria-hidden="true"
+                      className="w-4 h-4 transition-transform duration-300 group-open:rotate-45"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="px-6 pb-5 pr-12 text-[15px] text-muted leading-relaxed max-w-[65ch]">
+                  {faq.a}
+                </p>
+              </details>
+            </SectionReveal>
+          ))}
+        </div>
+
         <SectionReveal delay={0.1} className="mt-16 md:mt-20 max-w-4xl mx-auto">
           <figure>
             <div className="relative aspect-[3/2] rounded-3xl overflow-hidden bg-bg-deep shadow-soft">
@@ -110,37 +141,6 @@ export default function About({ lang }: Props) {
             </figcaption>
           </figure>
         </SectionReveal>
-
-        <div className="mt-16 md:mt-20 max-w-4xl mx-auto space-y-3">
-          {l.faq.items.map((faq, i) => (
-            <SectionReveal key={faq.q} delay={i * 0.04}>
-              <details className="group bg-bg-elev rounded-2xl overflow-hidden">
-                <summary className="flex items-start justify-between cursor-pointer px-6 py-5 text-base font-medium text-ink select-none">
-                  <span className="pr-6">{faq.q}</span>
-                  <span className="mt-0.5 w-5 h-5 shrink-0 flex items-center justify-center text-muted">
-                    <svg
-                      aria-hidden="true"
-                      className="w-4 h-4 transition-transform duration-300 group-open:rotate-45"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 4.5v15m7.5-7.5h-15"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-                <p className="px-6 pb-5 pr-12 text-[15px] text-muted leading-relaxed max-w-[65ch]">
-                  {faq.a}
-                </p>
-              </details>
-            </SectionReveal>
-          ))}
-        </div>
       </div>
     </section>
   );

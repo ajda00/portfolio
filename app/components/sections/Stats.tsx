@@ -47,46 +47,29 @@ function StatValue({ raw }: { raw: string }) {
 export default function Stats({ lang }: Props) {
   const l = getDictionary(lang);
 
-  const bio = lang === "sl" ? "Jaz sem Ajda." : "I'm Ajda.";
+  const bio = lang === "sl" ? "Živjo, jaz sem Ajda." : "Hi, I'm Ajda.";
   const bioText =
     lang === "sl"
-      ? "Oblikovalka in razvijalka iz Ljubljane. Gradim spletne strani in aplikacije za startupe in mala podjetja."
-      : "Designer and developer from Ljubljana. I build websites and apps for startups and small businesses.";
+      ? "Prihajam iz Ljubljane. Oblikujem in razvijam spletne strani in aplikacije — za tiste, ki šele začenjate, in za tiste, ki točno veste, kaj hočete."
+      : "From Ljubljana. I design and build websites and apps — for people just starting out, and for those who already know exactly what they want.";
   const aboutLabel = lang === "sl" ? "Več o meni" : "More about me";
 
-  // Build 4 stat cards. statsValues = ["20+", "5+", "Web & Mobile"]; pad with one more.
   const stats = [
     {
       value: statsValues[1], // "5+"
       label: lang === "sl" ? "let" : "years",
-      context:
-        lang === "sl"
-          ? "Najprej v Popsy (Y Combinator), zatem v MooHero in Topsi AI."
-          : "Started at Popsy (Y Combinator), then MooHero and Topsi AI.",
     },
     {
       value: statsValues[0], // "20+"
       label: lang === "sl" ? "projektov" : "projects",
-      context:
-        lang === "sl"
-          ? "Od enostranskih landing pageov do mobilnih aplikacij za salone."
-          : "From one-page landings to mobile apps for salons.",
     },
     {
       value: "100%",
       label: lang === "sl" ? "po meri" : "custom",
-      context:
-        lang === "sl"
-          ? "Vsako delo narejeno za točno tvoj projekt. Brez stock fotografij, brez kupljenih predlog."
-          : "Everything made for your specific project. No stock photos, no purchased templates.",
     },
     {
       value: "24h",
       label: lang === "sl" ? "odgovor" : "reply",
-      context:
-        lang === "sl"
-          ? "Odpišem v 24 urah. Tudi ob nedeljah."
-          : "I write back inside a day. Sundays included.",
     },
   ];
 
@@ -130,7 +113,7 @@ export default function Stats({ lang }: Props) {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="bg-bg-elev rounded-3xl p-6 md:p-8 min-h-[200px] flex flex-col"
+                className="bg-bg-elev rounded-3xl p-6 md:p-8 min-h-[200px] flex flex-col justify-center"
               >
                 <div className="flex items-baseline justify-between">
                   <span
@@ -143,9 +126,6 @@ export default function Stats({ lang }: Props) {
                     {stat.label}
                   </span>
                 </div>
-                <p className="mt-auto pt-4 text-[13px] text-muted leading-relaxed">
-                  {stat.context}
-                </p>
               </div>
             ))}
           </div>

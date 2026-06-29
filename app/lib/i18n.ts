@@ -33,12 +33,18 @@ type Dict = {
       "topsi" | "manjatk" | "ordinem" | "moohero" | "nina",
       { desc: string; role: string }
     >;
-    otherProjects: Record<"popsy" | "devilwears", string>;
+    otherProjects: Record<"popsy" | "devilwears" | "talk9", string>;
   };
   process: {
     label: string;
     title: string;
     steps: { title: string; description: string }[];
+  };
+  approach: {
+    label: string;
+    title: string;
+    intro: string;
+    items: { title: string; description: string }[];
   };
   about: {
     label: string;
@@ -94,11 +100,11 @@ const sl: Dict = {
   },
   hero: {
     kicker: "Oblikovanje & razvoj",
-    title1: "Spletne strani in aplikacije,",
+    title1: "Spletne strani in aplikacije,",
     titleEm: "narejene s pozornostjo.",
     titleConnector: "",
     subtitle:
-      "Vsak projekt nastane od prve črte v Figmi do zadnje vrstice kode.",
+      "Pomagam ustvarjati projekte, ki so edinstveni in ne izgledajo, kot bi jih naredil AI.",
     cta1: "Pošlji povpraševanje",
     cta2: "Poglej projekte",
   },
@@ -109,7 +115,7 @@ const sl: Dict = {
   ],
   services: {
     label: "Storitve",
-    title: "Vse iz iste delavnice.",
+    title: "Pogovoriva se na prvem sestanku.",
     items: [
       {
         title: "Spletno oblikovanje",
@@ -168,6 +174,7 @@ const sl: Dict = {
     otherProjects: {
       popsy: "No-code gradnik spletnih strani, ki je prišel v Y Combinator. Pisala sem jedro produkta.",
       devilwears: "Etsy trgovina z digitalnimi printi. Blagovna znamka, identiteta, listingi.",
+      talk9: "AI agenti za pogovorne aplikacije. Srebrno priznanje Inovativna Slovenija 2026.",
     },
   },
   process: {
@@ -185,6 +192,29 @@ const sl: Dict = {
       {
         title: "Zgradim in objavim",
         description: "Pretvorim v kodo, testiram, objavim. Dam ti navodila, da znaš sam zamenjati besedilo.",
+      },
+    ],
+  },
+  approach: {
+    label: "Pristop",
+    title: "Trije načini, kako narediti znamko bolj človeško.",
+    intro:
+      "Zdaj, ko AI piše in oblikuje vse, vse na internetu izgleda enako. Edini način, da izstopaš, je, da pokažeš človeka za znamko. To so trije načini, kako po mojem mnenju lahko znamko naredimo bolj človeško.",
+    items: [
+      {
+        title: "Piši boljše vsebine.",
+        description:
+          "Naslovi, ki jih uporabljaš na svoji spletni strani, opisi pri tvojih objavah — vsaka pisna informacija na vsakem stiku z znamko, v preprostem jeziku, ki res prihaja od tebe.",
+      },
+      {
+        title: "Pokaži prave ljudi.",
+        description:
+          "Še vedno vidim veliko znamk, ki na spletnih straneh uporabljajo stock fotografije. Uporabiti moraš prave slike svoje ekipe, ustanovitelja ali kogarkoli, ki dejansko dela v podjetju.",
+      },
+      {
+        title: "Zmanjšaj vizualne efekte.",
+        description:
+          "Ko imaš veliko scroll animacij, senc, gradientov, vse skupaj deluje preveč produkcijsko. Bolj kot poenostaviš spletno stran in odstraniš nepotrebne efekte, lažje uporabnik razume tvoj izdelek in se odloči za akcijo.",
       },
     ],
   },
@@ -273,10 +303,10 @@ const en: Dict = {
   hero: {
     kicker: "Design & Development",
     title1: "Websites and apps,",
-    titleEm: "built with care.",
+    titleEm: "made with care.",
     titleConnector: "",
     subtitle:
-      "Every project starts at the first Figma stroke and ends at the last line of code.",
+      "I help build projects that feel unique — not yet another site that looks like AI made it.",
     cta1: "Send a brief",
     cta2: "See projects",
   },
@@ -287,7 +317,7 @@ const en: Dict = {
   ],
   services: {
     label: "Services",
-    title: "All from the same workshop.",
+    title: "Let's talk it through at our first meeting.",
     items: [
       {
         title: "Web Design",
@@ -346,6 +376,7 @@ const en: Dict = {
     otherProjects: {
       popsy: "No-code site builder that got into Y Combinator. I wrote the core of the product.",
       devilwears: "Etsy shop selling digital prints. Brand, identity, listings.",
+      talk9: "AI agents for conversational apps. Silver award, Inovativna Slovenija 2026.",
     },
   },
   process: {
@@ -363,6 +394,29 @@ const en: Dict = {
       {
         title: "Build and ship",
         description: "I turn it into code, test it, push it live. You get notes so you can edit text yourself.",
+      },
+    ],
+  },
+  approach: {
+    label: "Approach",
+    title: "Three ways to humanize a brand.",
+    intro:
+      "Right now, with AI writing and designing everything, everything on the internet is starting to look the same. The only way to stand out is to expose the human behind the brand. These are three ways I personally think we can use to humanize a brand.",
+    items: [
+      {
+        title: "Write better content.",
+        description:
+          "The headings you use on your websites, captions you use on your posts — every text-based information you use on every touchpoint of your business, in plain language that comes genuinely from you.",
+      },
+      {
+        title: "Show real people.",
+        description:
+          "I still see a lot of brands use stock images on their websites. You need to use the real images from your team or the founder or the staff or anyone actually working in the business.",
+      },
+      {
+        title: "Reduce visual effects.",
+        description:
+          "When you have a lot of scroll animations, drop shadows, a lot of gradients, everything feels overproduced. The more you simplify your websites and strip away these unnecessary effects, the easier it becomes for users to understand your product and take action.",
       },
     ],
   },

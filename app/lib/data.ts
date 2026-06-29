@@ -1,13 +1,13 @@
 import type { StaticImageData } from "next/image";
-import manjatkShowcase from "../../src/images/manjatk-showcase.png";
-import mooheroShowcase from "../../src/images/moohero-showcase.png";
-import ninaShowcase from "../../src/images/nina-showcase.png";
-import ordinemShowcase from "../../src/images/ordinem-showcase.png";
+import manjatkHero from "../../src/images/manjatk-hero.png";
+import mooheroHero from "../../src/images/moohero-hero.png";
+import ninaHero from "../../src/images/nina-hero.png";
+import ordinemHero from "../../src/images/ordinem-hero.png";
 import popsyLogo from "../../src/images/popsy.png";
-import topsiShowcase from "../../src/images/topsi-showcase.png";
+import topsiHero from "../../src/images/topsi-hero.png";
 
 export type ProjectKey = "topsi" | "manjatk" | "ordinem" | "moohero" | "nina";
-export type OtherProjectKey = "popsy" | "devilwears";
+export type OtherProjectKey = "popsy" | "devilwears" | "talk9";
 
 export interface FeaturedProject {
   key: ProjectKey;
@@ -31,35 +31,35 @@ export const featuredProjects: FeaturedProject[] = [
     key: "topsi",
     name: "Topsi.ai",
     url: "https://www.topsi.ai/",
-    image: topsiShowcase,
+    image: topsiHero,
     tags: ["Angular", "TypeScript", "Ionic", "AI"],
   },
   {
     key: "manjatk",
     name: "manjatk.com",
     url: "https://manjatk.com/",
-    image: manjatkShowcase,
+    image: manjatkHero,
     tags: ["Next.js", "Design", "Booking"],
   },
   {
     key: "ordinem",
     name: "Ordinem",
     url: "https://ordinem.ink",
-    image: ordinemShowcase,
+    image: ordinemHero,
     tags: ["Next.js", "TypeScript", "Web App"],
   },
   {
     key: "moohero",
     name: "MooHero",
     url: "https://www.moohero.com/",
-    image: mooheroShowcase,
+    image: mooheroHero,
     tags: ["UI Design", "Mobile", "Marketing"],
   },
   {
     key: "nina",
     name: "ninahribar.art",
     url: "https://ninahribar.art",
-    image: ninaShowcase,
+    image: ninaHero,
     tags: ["Next.js", "Portfolio", "Design"],
   },
 ];
@@ -79,6 +79,14 @@ export const otherProjects: OtherProject[] = [
     url: "https://www.etsy.com/shop/DevilWearsDesign",
     logo: null,
     tags: ["Brand Design", "Digital Prints", "Etsy"],
+  },
+  {
+    key: "talk9",
+    name: "Talk9",
+    url: "https://talk9.ai/",
+    logo: null,
+    badge: "Inovativna SI",
+    tags: ["AI", "Voice", "Product Design"],
   },
 ];
 

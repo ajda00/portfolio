@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import About from "../components/sections/About";
+import Approach from "../components/sections/Approach";
 import Contact from "../components/sections/Contact";
 import CTABanner from "../components/sections/CTABanner";
 import FAQ from "../components/sections/FAQ";
@@ -34,6 +35,7 @@ export default async function Home({ params }: Props) {
         <Services lang={lang} />
         <Work lang={lang} />
         <Process lang={lang} />
+        <Approach lang={lang} />
         <About lang={lang} />
         <CTABanner lang={lang} />
         <FAQ lang={lang} />

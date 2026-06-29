@@ -44,14 +44,9 @@ export default function Services({ lang }: Props) {
                 strokeWidth={2.5}
                 aria-hidden="true"
               />
-              <div className="flex flex-col gap-1">
-                <p className="text-ink font-medium leading-snug">
-                  {service.title}
-                </p>
-                <p className="text-sm text-muted leading-relaxed max-w-[42ch]">
-                  {service.description}
-                </p>
-              </div>
+              <p className="text-ink font-medium leading-snug">
+                {service.title}
+              </p>
             </SectionReveal>
           ))}
         </div>

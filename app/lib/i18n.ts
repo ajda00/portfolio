@@ -235,7 +235,7 @@ const sl: Dict = {
   },
   faq: {
     label: "Vprašanja",
-    title: "Stvari, ki me ljudje najpogosteje vprašajo",
+    title: "Najpogostejša vprašanja",
     items: [
       {
         q: "Koliko stane spletna stran?",
@@ -434,7 +434,7 @@ const en: Dict = {
   },
   faq: {
     label: "Questions",
-    title: "Things people ask me most",
+    title: "Frequently asked questions",
     items: [
       {
         q: "How much does a website cost?",

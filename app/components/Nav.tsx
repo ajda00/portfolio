@@ -40,7 +40,7 @@ export default function Nav({ lang, variant = "home" }: Props) {
   return (
     <header className="fixed top-0 left-0 w-full z-40 px-4 pt-4">
       <nav
-        className="max-w-[1360px] mx-auto bg-bg-elev/95 backdrop-blur-md border border-line rounded-full px-4 py-2.5 flex justify-between items-center shadow-soft"
+        className="max-w-[1360px] mx-auto bg-bg-elev/60 backdrop-blur-xl backdrop-saturate-150 border border-line rounded-full px-4 py-2.5 flex justify-between items-center shadow-soft"
         aria-label="Main navigation"
       >
         <Link
@@ -111,7 +111,7 @@ export default function Nav({ lang, variant = "home" }: Props) {
       </nav>
 
       {open && (
-        <div className="md:hidden absolute top-full mt-2 left-4 right-4 bg-bg-elev border border-line rounded-2xl shadow-card animate-fadeIn">
+        <div className="md:hidden absolute top-full mt-2 left-4 right-4 bg-bg-elev/80 backdrop-blur-xl backdrop-saturate-150 border border-line rounded-2xl shadow-card animate-fadeIn">
           <div className="px-5 py-5 flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link

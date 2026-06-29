@@ -179,19 +179,19 @@ const sl: Dict = {
   },
   process: {
     label: "Proces",
-    title: "Trije koraki, brez 30 strani uvoda.",
+    title: "Kako poteka sodelovanje:",
     steps: [
       {
         title: "Pogovor",
-        description: "Po e-mailu ali na kratkem klicu razumem cilj, obseg in rok. Brez zaslišanja.",
+        description: "Po e-mailu ali na kratkem klicu se pogovoriva — kaj potrebuješ, kakšni so cilji, časovne omejitve in pričakovanja.",
       },
       {
-        title: "Prvi osnutek v 24–72 urah",
-        description: "Ne 30 strani strategije. En zaslon v Figmi, ki ga lahko presodiš na pogled.",
+        title: "Prvi osnutek",
+        description: "Pripravim prvi osnutek, da preveriva, v katero smer gre projekt — in od tam gradimo naprej.",
       },
       {
         title: "Zgradim in objavim",
-        description: "Pretvorim v kodo, testiram, objavim. Dam ti navodila, da znaš sam zamenjati besedilo.",
+        description: "Projekt sproti prilagajava in dopolnjujeva — slišiva se po potrebi, vsebino pregledava skupaj. Pomagam tudi pri razmišljanju o novih idejah.",
       },
     ],
   },
@@ -381,19 +381,19 @@ const en: Dict = {
   },
   process: {
     label: "Process",
-    title: "Three steps, not thirty slides.",
+    title: "How we'll work together:",
     steps: [
       {
         title: "Talk",
-        description: "An email or a short call. I learn the goal, the scope, the deadline. No interrogation.",
+        description: "An email or a short call — we talk through what you need, the goals, the timing, and what we both expect.",
       },
       {
-        title: "First draft in 24–72 hours",
-        description: "Not thirty pages of strategy. One Figma screen you can judge on sight.",
+        title: "First draft",
+        description: "I put together a first draft so we can see where the project is heading — and we build from there.",
       },
       {
         title: "Build and ship",
-        description: "I turn it into code, test it, push it live. You get notes so you can edit text yourself.",
+        description: "We adjust and refine the project together — we talk when needed and review content side by side. I also help think through new ideas.",
       },
     ],
   },

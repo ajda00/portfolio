@@ -102,14 +102,12 @@ export default function About({ lang }: Props) {
                 {lang === "sl" ? (
                   <>
                     <span className="font-medium text-ink">MooHero</span> — finalist
-                    Slovenskega start:upa leta 2026. Dizajn, marketing in koda za
-                    pametne ovratnice za govedo.
+                    Slovenskega start:upa leta 2026.
                   </>
                 ) : (
                   <>
                     <span className="font-medium text-ink">MooHero</span> — Slovenian
-                    Startup of the Year 2026 finalist. Design, marketing, and code
-                    for smart cattle collars.
+                    Startup of the Year 2026 finalist.
                   </>
                 )}
               </span>

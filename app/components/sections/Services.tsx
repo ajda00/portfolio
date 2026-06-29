@@ -1,5 +1,4 @@
 import { Check } from "lucide-react";
-import { techStack } from "../../lib/data";
 import { getDictionary } from "../../lib/i18n";
 import type { Lang } from "../../lib/types";
 import SectionReveal from "../SectionReveal";
@@ -34,21 +33,6 @@ export default function Services({ lang }: Props) {
           ))}
         </div>
 
-        <SectionReveal className="mt-16 pt-8 border-t border-line flex flex-col md:flex-row md:items-baseline md:justify-between gap-5">
-          <p className="text-sm font-medium text-muted shrink-0">
-            {l.services.techLabel}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1.5 rounded-full bg-bg-elev border border-line text-[12px] font-medium text-muted"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </SectionReveal>
       </div>
     </section>
   );

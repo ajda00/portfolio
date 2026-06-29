@@ -10,6 +10,7 @@ import MorphMarquee from "../components/sections/MorphMarquee";
 import Process from "../components/sections/Process";
 import Services from "../components/sections/Services";
 import Stats from "../components/sections/Stats";
+import TechStack from "../components/sections/TechStack";
 import Work from "../components/sections/Work";
 import { isLang } from "../lib/types";
 
@@ -37,6 +38,7 @@ export default async function Home({ params }: Props) {
         <About lang={lang} />
         <FAQ lang={lang} />
         <Contact lang={lang} />
+        <TechStack lang={lang} />
         <MorphMarquee lang={lang} />
       </main>
       <Footer lang={lang} />

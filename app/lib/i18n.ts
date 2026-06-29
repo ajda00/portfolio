@@ -104,7 +104,7 @@ const sl: Dict = {
     titleEm: "narejene s pozornostjo.",
     titleConnector: "",
     subtitle:
-      "Pomagam ustvarjati projekte, ki so edinstveni in ne izgledajo, kot bi jih naredil AI.",
+      "Pomagam ustvarjati projekte, ki so edinstveni.",
     cta1: "Pošlji povpraševanje",
     cta2: "Poglej projekte",
   },
@@ -303,7 +303,7 @@ const en: Dict = {
     titleEm: "made with care.",
     titleConnector: "",
     subtitle:
-      "I help build projects that feel unique — not yet another site that looks like AI made it.",
+      "I help build projects that feel unique.",
     cta1: "Send a brief",
     cta2: "See projects",
   },

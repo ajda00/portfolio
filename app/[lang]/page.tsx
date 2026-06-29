@@ -6,7 +6,6 @@ import Approach from "../components/sections/Approach";
 import Contact from "../components/sections/Contact";
 import Hero from "../components/sections/Hero";
 import MorphMarquee from "../components/sections/MorphMarquee";
-import Process from "../components/sections/Process";
 import Services from "../components/sections/Services";
 import Stats from "../components/sections/Stats";
 import TechStack from "../components/sections/TechStack";
@@ -31,7 +30,6 @@ export default async function Home({ params }: Props) {
         <Hero lang={lang} />
         <Stats lang={lang} />
         <Work lang={lang} />
-        <Process lang={lang} />
         <Approach lang={lang} />
         <About lang={lang} />
         <Contact lang={lang} />

@@ -249,6 +249,10 @@ const sl: Dict = {
         q: "Ponujaš tudi oblikovanje?",
         a: "Da, to je polovica posla. Figma do produkcije, brez ločenega dizajnerja in razvijalca, ki si pošiljata e-maile.",
       },
+      {
+        q: "Kako poteka sodelovanje?",
+        a: "Najprej se pogovoriva — kaj potrebuješ, kakšni so cilji in časovne omejitve. Pripravim prvi osnutek, da preveriva smer projekta. Naprej sproti prilagajava in dopolnjujeva, vsebino pregledava skupaj.",
+      },
     ],
   },
   contact: {
@@ -443,6 +447,10 @@ const en: Dict = {
       {
         q: "Do you also do design?",
         a: "Yes, that's half the job. Figma through to production. No separate designer and developer emailing each other.",
+      },
+      {
+        q: "How does the collaboration work?",
+        a: "We talk first — what you need, the goals, the timing. I put together a first draft so we can check the direction. From there we adjust as we go and review the content together.",
       },
     ],
   },

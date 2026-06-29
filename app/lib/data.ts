@@ -3,6 +3,7 @@ import manjatkHero from "../../src/images/manjatk-hero.png";
 import mooheroHero from "../../src/images/moohero-hero.png";
 import ninaHero from "../../src/images/nina-hero.png";
 import ordinemHero from "../../src/images/ordinem-hero.png";
+import devilwearsLogo from "../../src/images/devilwears.webp";
 import popsyLogo from "../../src/images/popsy.png";
 import printpopLogo from "../../src/images/printpop.png";
 import topsiHero from "../../src/images/topsi-hero.png";
@@ -78,7 +79,7 @@ export const otherProjects: OtherProject[] = [
     key: "devilwears",
     name: "DevilWearsDesign",
     url: "https://www.etsy.com/shop/DevilWearsDesign",
-    logo: null,
+    logo: devilwearsLogo,
     tags: ["Brand Design", "Digital Prints", "Etsy"],
   },
   {

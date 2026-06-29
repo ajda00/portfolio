@@ -72,7 +72,7 @@ export default function Stats({ lang }: Props) {
   ];
 
   return (
-    <section className="bg-deep py-12 md:py-16">
+    <section className="bg-app py-12 md:py-16">
       <div className="max-w-[1360px] mx-auto px-6">
         <div className="bg-ink-deep text-white rounded-3xl p-6 md:p-8">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] md:items-end gap-8 md:gap-12">

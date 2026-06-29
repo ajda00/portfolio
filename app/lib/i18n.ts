@@ -228,7 +228,7 @@ const sl: Dict = {
     resume: "Življenjepis",
   },
   cta: {
-    title: "Slišiva se na prvem klicu, da predebatirava idejo.",
+    title: "Slišimo se.",
     subtitle: "Pošlji par stavkov o projektu. V 24 urah dobiš odgovor in prvo oceno.",
     cta1: "Pošlji povpraševanje",
     cta2: "Poglej projekte",
@@ -427,7 +427,7 @@ const en: Dict = {
     resume: "CV",
   },
   cta: {
-    title: "Let's hop on a first call to talk the idea through.",
+    title: "Let's talk.",
     subtitle: "Send a few sentences about the project. You get a reply and a first estimate inside 24 hours.",
     cta1: "Send a brief",
     cta2: "See projects",
